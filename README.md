@@ -8,3 +8,9 @@ Project Setup
 
 Username : davidhearl
 Password : J*********
+
+Registration and User Accounts
+
+- pip3 install django-allauth
+- python3 manage.py migrate
+- pip3 freeze > requirements.txt
