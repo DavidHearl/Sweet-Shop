@@ -14,3 +14,7 @@ Registration and User Accounts
 - pip3 install django-allauth
 - python3 manage.py migrate
 - pip3 freeze > requirements.txt
+
+Create the home app
+
+- python3 manage.py startapp home
