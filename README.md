@@ -5,6 +5,7 @@ Project Setup
 - add .sqlite3 to the git ignore file
 - python3 manage.py migrate
 - python3 manage.py createsuperuser
+- pip3 install Pillow
 
 Username : davidhearl
 Password : J*********
@@ -15,6 +16,11 @@ Registration and User Accounts
 - python3 manage.py migrate
 - pip3 freeze > requirements.txt
 
-Create the home app
+Create the applications
 
 - python3 manage.py startapp home
+- python3 manage.py startapp products
+
+Images taken form
+
+https://thesweetieco.co.uk/shop/build-your-box/build-a-sweet-box/
