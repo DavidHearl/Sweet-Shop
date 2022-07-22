@@ -24,3 +24,13 @@ Create the applications
 Images taken form
 
 https://thesweetieco.co.uk/shop/build-your-box/build-a-sweet-box/
+
+
+
+
+
+
+Areas to work on
+
+- Fix drop down navigation not working
+- Add an id to products or think of a better way to do it
