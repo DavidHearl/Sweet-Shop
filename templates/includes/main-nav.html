@@ -5,8 +5,8 @@
                 All Sweets
             </a>
             <div class="dropdown-menu" aria-labelledby="all-sweets-link">
-                <a href="" class="dropdown-item">Sweets</a>
-                <a href="" class="dropdown-item">Chocolate</a>
+                <a href="{% url 'products' %}?category=sweets" class="dropdown-item">Sweets</a>
+                <a href="{% url 'products' %}?category=chocolate" class="dropdown-item">Chocolate</a>
                 <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
             </div>
         </li>
@@ -16,13 +16,14 @@
                 Sweets By Colour
             </a>
             <div class="dropdown-menu" aria-labelledby="sweet-color-link">
+                <!-- Yellow, Red, Brown, White, Green, Black, Blue, Pink, Purple, Assorted -->
                 <a href="" class="dropdown-item">Black</a>
                 <a href="" class="dropdown-item">Blue</a>
-                <a href="" class="dropdown-item">Red</a>
+                <a href="" class="dropdown-item">Red</a>-
                 <a href="" class="dropdown-item">Green</a>
                 <a href="" class="dropdown-item">Red</a>
                 <a href="" class="dropdown-item">Pink</a>
-                <a href="" class="dropdown-item">Yellow</a>
+                <a href="" class="dropdown-item">Yellow</a>-
             </div>
         </li>
 
@@ -31,6 +32,7 @@
                 Sweets By Flavour
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="sweet-flavour-link">
+                <!-- Toffee, Strawberry, Lemon, Raspberry, Mint, Blackcurrant, Cola, Banana, Watermelon, Cherry, Peach, Bubblegum, Coconut, Butterscotch, Chocolate, Apple -->
                 <a href="" class="dropdown-item">Apple</a>
                 <a href="" class="dropdown-item">Lemon</a>
                 <a href="" class="dropdown-item">Lime</a>
@@ -43,12 +45,12 @@
                 Sweets By Brand
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="sweet-manufacturer-link">
+                <!-- Haribo, Maynards, Hannahs, Kingsway, Maxons -->
                 <a href="" class="dropdown-item">Haribo</a>
-                <a href="" class="dropdown-item">Maynards Bassetts</a>
-                <a href="" class="dropdown-item">Rowntrees</a>
-                <a href="" class="dropdown-item">Skittles</a>
-                <a href="" class="dropdown-item">Drumsticks</a>
-                <a href="" class="dropdown-item">Barratt</a>
+                <a href="" class="dropdown-item">Maynards</a>
+                <a href="" class="dropdown-item">Hannahs</a>
+                <a href="" class="dropdown-item">Kingsway</a>
+                <a href="" class="dropdown-item">Maxons</a>
             </div>
         </li>
     </ul>
