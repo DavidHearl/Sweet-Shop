@@ -20,6 +20,7 @@ Create the applications
 
 - python3 manage.py startapp home
 - python3 manage.py startapp products
+- python3 manage.py startapp shopping_bag
 
 Images taken form
 
