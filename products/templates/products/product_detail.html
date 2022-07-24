@@ -12,7 +12,7 @@
 {% endblock %}
 
 {% block content %}
-<div class="container-fluid">
+<div class="container-fluid push-down">
     <div class="row">
         <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
             <div class="image-container my-5">
@@ -31,6 +31,13 @@
             <div class="mb-5 mt-md-5">
                 <p class="mb-0">{{ product.name }}</p>
                 <p class="lead mb-0">{{ product.price }}</p>
+                {% if product.category %}
+                <p class="mt-1 mb-0">
+                    <a href="{% url 'products' %}?category={{ product.category.name }}">
+                        <i class="fas fa-tag mr-1">{{ product.category.friendly_name }}</i>
+                    </a>
+                </p>
+                {% endif %}
                 {% if product.rating %}
                 <small><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
                 {% else %}

@@ -12,16 +12,52 @@
 {% endblock %}
 
 {% block content %}
-<div class="container-fluid">
+<div class="container push-down">
     <div class="row">
         <div class="col mt-3">
             <h2>Sweets</h2>
+            {% for current in current_categories %}
+                <a href="{% url 'products' %}?categories={{ current.name }}">
+                    <span>{{ current.friendly_name }}</span>
+                </a>
+            {% endfor %}
             <hr>
+        </div>
+    </div>
+    <div class="row mt-1 mb-2">
+        <div class="col-10 offset-1">
+            <div class="row mt-1 mb-2">
+                <div class="col-12 col-md-6 my-auto order-md-last d-flex justifiy-content-center justify-content-md-end">
+                    <div class="w-50">
+                        <select class="" name="" id="sort-selector">
+                            <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
+                                <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
+                                <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
+                                <option value="rating_asc" {% if current_sorting == 'rating_asc' %}selected{% endif %}>Rating (low to high)</option>
+                                <option value="rating_desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>Rating (high to low)</option>
+                                <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
+                                <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
+                                <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Category (A-Z)</option>
+                                <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>Category (Z-A)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 order-md-first">
+                    <p>
+                        {% if search_term or current_categories or current_sorting != 'None_None' %}
+                            <span>
+                                <a href="{% url 'products' %}">Products Home</a> |
+                            </span>
+                        {% endif %}
+                        {{ products|length }} Products {% if search_term %} found for {{ search_term }}{% endif %}
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
     <div class="row">
         {% for product in products %}
-        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
             <div class="card h-100">
                 {% if product.image %}
                 <a href="{% url 'product_detail' product.id %}">
@@ -39,8 +75,15 @@
                     <div class="row">
                         <div class="col">
                             <p class="lead mb-0">£{{ product.price }} / 100g</p>
+                            {% if product.category %}
+                            <p class="mt-1 mb-0">
+                                <a href="{% url 'products' %}?category={{ product.category.name }}">
+                                    <i class="fas fa-tag mr-1">{{ product.category.friendly_name }}</i>
+                                </a>
+                            </p>
+                            {% endif %}
                             {% if product.rating %}
-                            <small><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+                            <small><i class="fas fa-star mr-1"></i> {{ product.rating }} / 5.00</small>
                             {% else %}
                             <small>No Rating</small>
                             {% endif %}
@@ -49,22 +92,22 @@
                 </div>
             </div>
         </div>
-        {% if forloop.counter|divisibleby:1 %}
+        {% if forloop.counter|divisibleby:2 %}
         <div class="col-12 d-sm-none mb-5">
             <hr>
         </div>
         {% endif %}
-        {% if forloop.counter|divisibleby:2 %}
+        {% if forloop.counter|divisibleby:3 %}
         <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
             <hr>
         </div>
         {% endif %}
-        {% if forloop.counter|divisibleby:3 %}
+        {% if forloop.counter|divisibleby:4 %}
         <div class="col-12 d-none d-lg-block d-xl-none mb-5">
             <hr>
         </div>
         {% endif %}
-        {% if forloop.counter|divisibleby:4 %}
+        {% if forloop.counter|divisibleby:6 %}
         <div class="col-12 d-none d-xl-block mb-5">
             <hr>
         </div>
