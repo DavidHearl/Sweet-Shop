@@ -26,8 +26,60 @@
         <div class="row">
             <div class="col">
                 {% if shopping_bag_items %}
-                    <div>
-                        {{ shopping_bag_items }}
+                    <div class="table-responsive">
+                        <table class="table table-sm table-borderless">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Product Information</th>
+                                    <th scope="col"></th>
+                                    <th scope="col">Price</th>
+                                    <th scope="col">Quantity</th>
+                                    <th scope="col">Subtotal</th>
+                                </tr>
+                            </thead>
+
+                            {% for item in shopping_bag_items %}
+                                <tr>
+                                    <td class="p-3 w-25">
+                                        <img class="img-fluid rounded" src="{{ item.product.image.url }}" alt="product image">
+                                    </td>
+                                    <td class="p-3">
+                                        <p class="my-0">{{ item.product.name }}</p>
+                                    </td>
+                                    <td class="p-3">
+                                        <p class="my-0">£{{ item.product.price }}</p>
+                                    </td>
+                                    <td class="p-3">
+                                        <p class="my-0">{{ item.quantity }}</p>
+                                    </td>
+                                    <td class="p-3">
+                                        <p class="my-0">£{{ item.product.price }}</p>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                            <tr>
+                                <td colspan="5" class="pt-4 text-end">
+                                    <h6>Total: £{{ total|floatformat:2 }}</h6>
+                                    <h4 class="mt-4"></h4>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="5" class="text-end">
+                                    <a href="{% url 'products' %}" class="btn">
+                                        <span>
+                                            <i class="fas fa-chevron-left"></i>
+                                        </span>
+                                        <span>Keep Shopping</span>
+                                    </a>
+                                    <a href="" class="btn">
+                                        <span>Secure Checkout</span>
+                                        <span>
+                                            <i class="fas fa-lock"></i>
+                                        </span>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
                     </div>
                 {% else %}
                     <p class="mb-5">There are no Items in your Shopping Bag</p>
