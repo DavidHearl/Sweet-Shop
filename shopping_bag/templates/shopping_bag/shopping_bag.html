@@ -26,7 +26,9 @@
         <div class="row">
             <div class="col">
                 {% if shopping_bag_items %}
-                    <div></div>
+                    <div>
+                        {{ shopping_bag_items }}
+                    </div>
                 {% else %}
                     <p class="mb-5">There are no Items in your Shopping Bag</p>
                     <a href="{% url 'products' %}" class="btn btn-lg">
