@@ -1,21 +1,25 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block page_header %}
-    <div class="container">
-        <div class="row">
-            <div class="col">
-
-            </div>
-        </div>
-    </div>
-{% endblock %}
-
 {% block content %}
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                
+    <div class="container push-down">
+        <div class="row h-100">
+            <div class="col my-auto">
+                <div>
+                    <p>Over 120 retro and modern sweets and treats available to buy online</p>
+                    <h4>
+                        <a href="{% url 'products' %}" class="btn py-3">View All Products</a>
+                    </h4>
+                    <p>
+                        Excellent
+                        <i class="fas fa-star mr-1"></i>
+                        <i class="fas fa-star mr-1"></i>
+                        <i class="fas fa-star mr-1"></i>
+                        <i class="fas fa-star mr-1"></i>
+                        <i class="fas fa-star mr-1"></i>
+                        Based on 10,000 Reviews 
+                    </p>
+                </div>
             </div>
         </div>
     </div>

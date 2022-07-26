@@ -44,6 +44,11 @@
     overflow-y: auto;    
 }
 
+.btn {
+    background-color: #f4768a;
+    color: black;
+}
+
 @media only screen and (max-width: 1006px) {
     .push-down{
         margin-top: 64px;
