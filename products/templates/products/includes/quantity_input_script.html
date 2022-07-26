@@ -8,18 +8,18 @@
         $(`#increment-quantity_${itemId}`).prop('disabled', plusDisabled);
     }
 
-    // // Prevent Impropper Enabling and Disabling of buttons
-    // var allQuantityInputs = ('.quantity_input');
-    // for(var i = 0; i < allQuantityInputs.length; i++){
-    //     var itemId = $(allQuantityInputs[i]).data('item_id');
-    //     QuantityEnableDisable(itemId);
-    // }
+    // Prevent Impropper Enabling and Disabling of buttons
+    var allQuantityInputs = $('.quantity_input');
+    for(var i = 0; i < allQuantityInputs.length; i++){
+        var itemId = $(allQuantityInputs[i]).data('item_id');
+        QuantityEnableDisable(itemId);
+    }
 
-    // // Check enable/disable state at button trigger
-    // $('.quantity_input').change(function() {
-    //     var itemId = $(this).data('item_id');
-    //     QuantityEnableDisable(itemId);
-    // });
+    // Check enable/disable state at button trigger
+    $('.quantity_input').change(function() {
+        var itemId = $(this).data('item_id');
+        QuantityEnableDisable(itemId);
+    });
 
     // Increase quantity
     $('.increment-quantity').click(function(e){
