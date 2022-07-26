@@ -19,13 +19,18 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="sweet-color-link">
                 <!-- Yellow, Red, Brown, White, Green, Black, Blue, Pink, Purple, Assorted -->
-                <a href="" class="dropdown-item">Black</a>
-                <a href="" class="dropdown-item">Blue</a>
-                <a href="" class="dropdown-item">Red</a>-
-                <a href="" class="dropdown-item">Green</a>
-                <a href="" class="dropdown-item">Red</a>
-                <a href="" class="dropdown-item">Pink</a>
-                <a href="" class="dropdown-item">Yellow</a>-
+                <a href="{% url 'products' %}?color=Black" class="dropdown-item">Black</a>
+                <a href="{% url 'products' %}?color=White" class="dropdown-item">White</a>
+                <a href="{% url 'products' %}?color=Brown" class="dropdown-item">Brown</a>
+                <a href="{% url 'products' %}?color=Blue" class="dropdown-item">Blue</a>
+                <a href="{% url 'products' %}?color=Red" class="dropdown-item">Red</a>
+                <a href="{% url 'products' %}?color=Green" class="dropdown-item">Green</a>
+                <a href="{% url 'products' %}?color=Red" class="dropdown-item">Red</a>
+                <a href="{% url 'products' %}?color=Pink" class="dropdown-item">Pink</a>
+                <a href="{% url 'products' %}?color=Purple" class="dropdown-item">Purple</a>
+                <a href="{% url 'products' %}?color=Yellow" class="dropdown-item">Yellow</a>
+                <hr>
+                <a href="{% url 'products' %}?color=Assorted" class="dropdown-item">Assorted</a>
             </div>
         </li>
 
@@ -35,10 +40,22 @@
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="sweet-flavour-link">
                 <!-- Toffee, Strawberry, Lemon, Raspberry, Mint, Blackcurrant, Cola, Banana, Watermelon, Cherry, Peach, Bubblegum, Coconut, Butterscotch, Chocolate, Apple -->
-                <a href="" class="dropdown-item">Apple</a>
-                <a href="" class="dropdown-item">Lemon</a>
-                <a href="" class="dropdown-item">Lime</a>
-                <a href="" class="dropdown-item">Cola</a>
+                <a href="{% url 'products' %}?flavour=Apple" class="dropdown-item">Apple</a>
+                <a href="{% url 'products' %}?flavour=Strawberry" class="dropdown-item">Strawberry</a>
+                <a href="{% url 'products' %}?flavour=Lemon" class="dropdown-item">Lemon</a>
+                <a href="{% url 'products' %}?flavour=Raspberry" class="dropdown-item">Raspberry</a>
+                <a href="{% url 'products' %}?flavour=Lime" class="dropdown-item">Lime</a>
+                <a href="{% url 'products' %}?flavour=Cola" class="dropdown-item">Cola</a>
+                <a href="{% url 'products' %}?flavour=Mint" class="dropdown-item">Mint</a>
+                <a href="{% url 'products' %}?flavour=Blackcurrant" class="dropdown-item">Blackcurrant</a>
+                <a href="{% url 'products' %}?flavour=Banana" class="dropdown-item">Banana</a>
+                <a href="{% url 'products' %}?flavour=Watermelon" class="dropdown-item">Watermelon</a>
+                <a href="{% url 'products' %}?flavour=Cherry" class="dropdown-item">Cherry</a>
+                <a href="{% url 'products' %}?flavour=Peach" class="dropdown-item">Peach</a>
+                <a href="{% url 'products' %}?flavour=Bubblegum" class="dropdown-item">Bubblegum</a>
+                <a href="{% url 'products' %}?flavour=Coconut" class="dropdown-item">Coconut</a>
+                <a href="{% url 'products' %}?flavour=Butterscotch" class="dropdown-item">Butterscotch</a>
+                <a href="{% url 'products' %}?flavour=Chocolate" class="dropdown-item">Chocolate</a>
             </div>
         </li>
 
@@ -48,11 +65,11 @@
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="sweet-manufacturer-link">
                 <!-- Haribo, Maynards, Hannahs, Kingsway, Maxons -->
-                <a href="" class="dropdown-item">Haribo</a>
-                <a href="" class="dropdown-item">Maynards</a>
-                <a href="" class="dropdown-item">Hannahs</a>
-                <a href="" class="dropdown-item">Kingsway</a>
-                <a href="" class="dropdown-item">Maxons</a>
+                <a href="{% url 'products' %}?brand=Haribo" class="dropdown-item">Haribo</a>
+                <a href="{% url 'products' %}?brand=Maynards" class="dropdown-item">Maynards</a>
+                <a href="{% url 'products' %}?brand=Hannahs" class="dropdown-item">Hannahs</a>
+                <a href="{% url 'products' %}?brand=Kingsway" class="dropdown-item">Kingsway</a>
+                <a href="{% url 'products' %}?brand=Maxons" class="dropdown-item">Maxons</a>
             </div>
         </li>
     </ul>

@@ -21,6 +21,18 @@ def all_products(request):
             products = products.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
 
+        if 'color' in request.GET:
+            color = request.GET['color'].split(',')
+            products = products.filter(color__in=color)
+
+        if 'flavour' in request.GET:
+            flavour = request.GET['flavour'].split(',')
+            products = products.filter(flavour__in=flavour)
+
+        if 'brand' in request.GET:
+            brand = request.GET['brand'].split(',')
+            products = products.filter(brand__in=brand)
+
         if 'sort' in request.GET:
             sortkey = request.GET['sort']
             sort = sortkey

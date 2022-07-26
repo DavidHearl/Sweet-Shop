@@ -32,6 +32,18 @@
     cursor: pointer;
 }
 
+.message-container{
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    z-index: 999;
+}
+
+.shopping-bag-wrapper {
+    overflow-x: hidden;
+    overflow-y: auto;    
+}
+
 @media only screen and (max-width: 1006px) {
     .push-down{
         margin-top: 64px;

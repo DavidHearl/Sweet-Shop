@@ -1,0 +1,48 @@
+<div class="toast custom-toast rounded-0 border-top-0" data-autohide="false">
+    <div class="arrow-up arrow-success"></div>
+    <div class="w-100 toast-capper bg-success"></div>
+    <div class="toast-header">
+        <strong class="mr-auto">Success!</strong>
+        <button type="button" class="ml-2 mb-1" data-dismiss="toast" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="toast-body">
+        <div class="row">
+            <div class="col">
+                {{ message }}
+                <hr class="mt-1 mb-3">
+            </div>
+        </div>
+        {% if grand_total %}
+            <p class="logo-font py-1">Your Bag ({{ product_count }})</p>
+            <div class="shopping-bag-wrapper">
+                {% for item in shopping_bag_items %}
+                    <div class="row">
+                        <div class="col-3 my-1">
+                            <img class="w-100" src="{{ item.product.image.url }}">
+                        </div>
+                        <div class="col-9">
+                            <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                            <p class="my-0 small text-muted">Quantity: {{ item.quantity }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p class="mt-3 mb-1">
+                        Total: 
+                        <span class="float-right">£{{ total|floatformat:2 }}</span>
+                    </p>
+                    <a href="{% url 'view_shopping_bag' %}" class="btn btn-black btn-block rounded-0">
+                        <span>Go To Secure Checkout</span>
+                        <span class="icon">
+                            <i class="fas fa-lock"></i>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+</div>
