@@ -9,13 +9,13 @@ def shopping_bag_contents(request):
     shopping_bag = request.session.get('shopping_bag', {})
     
 
-    for item_id, quantity in shopping_bag.items():
+    for item_id, item_data in shopping_bag.items():
         product = get_object_or_404(Product, pk=item_id)
-        total += quantity * product.price
-        product_count += quantity
+        total += item_data * product.price
+        product_count += item_data
         shopping_bag_items.append({
             'item_id': item_id,
-            'quantity': quantity,
+            'quantity': item_data,
             'product': product,
         })
 

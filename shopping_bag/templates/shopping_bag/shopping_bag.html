@@ -63,7 +63,7 @@
                                                         </button>
                                                     </div>
                                                     <!-- Max 30 = 3kg -->
-                                                    <input class="form-control quantity_input" type="number" name="quantity" value="1" min="1" max="30" value="{{ item.quantity }}" data-item_id="{{ item.item_id }}" id="id_quantity_{{ item.item_id }}">
+                                                    <input class="form-control quantity_input" type="number" name="quantity" min="1" max="30" value="{{ item.quantity }}" data-item_id="{{ item.item_id }}" id="id_quantity_{{ item.item_id }}">
                                                     <div class="input-group-append">
                                                         <button class="increment-quantity btn" data-item_id="{{ item.item_id }}" id="increment-quantity_{{ item.item_.id }}">
                                                             <span>
@@ -74,8 +74,8 @@
                                                 </div>
                                             </div>
                                         </form>
-                                        <a class="update-link" href="">Update</a>
-                                        <a class="remove-item float-end" href="">Remove</a>
+                                        <a class="update-link">Update</a>
+                                        <a class="remove-item float-end" id="remove_{{ item.item_id }}">Remove</a>
                                     </td>
                                     <td class="p-3">
                                         <p class="my-0">£{{ item.product.price | calculate_subtotal:item.quantity }}</p>
@@ -133,10 +133,10 @@
     })
 
     // Remove item on click
-    $('.remove-item').clikc(function(e) {
-        var csrftoken = "{{ csrf_token }}";
+    $('.remove-item').click(function(e) {
+        var csrfToken = "{{ csrf_token }}";
         var itemId = $(this).attr('id').split('remove_')[1];
-        var url = `/shoping_bag/remove/${itemId}/`;
+        var url = `/shopping_bag/remove/${itemId}/`;
         var data = {'csrfmiddlewaretoken': csrfToken}
 
         $.post(url, data)
