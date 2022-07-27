@@ -17,7 +17,6 @@
 {% endblock %}
 
 {% block content %}
-
     <div class="container push-down">
         <div class="row">
             <div class="col">
@@ -40,6 +39,7 @@
                     </div>
                 </div>
             </div>
+            {% for item in shopping_bag_items %}
             <div class="row">
                 <div class="col-2 mb-1">
                     <a href="{% url 'product_detail' item.product.id %}">
@@ -54,6 +54,7 @@
                     <p class="my-0">{{ item.product.price | calculate_subtotal:item.quantity }}</p>
                 </div>
             </div>
+            {% endfor %}
             <hr class="my-0">
             <div class="row text-end">
                 <div class="col-7 offset-2">
@@ -72,7 +73,7 @@
                     <fieldset class="rounded px-3 mb-5">
                         <legend class="fieldset-label px-2 w-auto">Details
                             {{ order_form.full_name | as_crispy_field }}
-                            {{ order_from.email | as_crispy_field }}
+                            {{ order_form.email | as_crispy_field }}
                         </legend>
                     </fieldset>
                     <fieldset class="px-3 mb-5">
