@@ -94,12 +94,13 @@
                                 <input class="ml-2 mr-0" type="checkbox" name="save-info" id="id-save-info">
                             {% else %}
                                 <label class="form-check-label" for="id-save-info">
-                                    <a href="{% url 'account_signup' %}">Create an Account</a>
+                                    <a href="{% url 'account_signup' %}">Create an Account</a> or
                                     <a href="{% url 'account_login' %}">Login</a> to save this information
                                 </label>
                             {% endif %}
                         </div>
                     </fieldset>
+                    
                     <fieldset class="px-3">
                         <legend class="fieldset-label px-2 w-auto">Payment</legend>
                         <div class="mb-3" id="card-element"></div>
@@ -123,7 +124,7 @@
                             <span>
                                 <i class="fas fa-exclamation-circle"></i>
                             </span>
-                            <span>Your card will be charhed £{{ grand_total|floatformat:2}}</span>
+                            <span>Your card will be charged £{{ grand_total|floatformat:2}}</span>
                         </p>
                     </div>
                 </form>
@@ -131,4 +132,11 @@
         </div>
     </div>
 
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    {{ stripe_public_key|json_script:"id_stripe_public_key" }}
+    {{ client_secret|json_script:"id_client_secret" }}
+    <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
 {% endblock %}

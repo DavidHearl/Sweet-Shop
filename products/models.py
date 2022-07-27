@@ -1,7 +1,3 @@
-from audioop import mul
-from email.mime import image
-from pyexpat import model
-from unicodedata import category
 from django.db import models
 
 class Category(models.Model):

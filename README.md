@@ -65,26 +65,26 @@ Order anything between 0.1 and 3.0 Kg
 |:-:|:----------|:---:|
 | | Section 1  |
 |1.1|Implement at least one Django app containing some e-commerce functionality using an online payment processing system (e.g. Stripe). This may be a shopping cart checkout, subscription-based payments or single payments, donations, etc. ||
-|1.2|Implement a feedback system that reports successful and unsuccessful purchases to the user, with a helpful message ||
-|1.3|Develop and implement a Full-Stack web application built using the Django framework, to incorporate a relational database, an interactive Front-End and multiple apps (an app for each potentially reusable component) ||
+|1.2|Implement a feedback system that reports successful and unsuccessful purchases to the user, with a helpful message |[x]|
+|1.3|Develop and implement a Full-Stack web application built using the Django framework, to incorporate a relational database, an interactive Front-End and multiple apps (an app for each potentially reusable component) |[x]|
 |1.4|Implement at least one form, with validation, that allows users to create and edit models in the backend ||
-|1.5|Build a Django file structure that is consistent and logical, following the Django conventions. ||
-|1.6|Write code that demonstrates characteristics of ‘clean code.’ ||
-|1.7|Define application URLs in a consistent manner ||
-|1.8|Incorporate a main navigation menu and structured layout ||
+|1.5|Build a Django file structure that is consistent and logical, following the Django conventions. |[x]|
+|1.6|Write code that demonstrates characteristics of ‘clean code.’ |[x]|
+|1.7|Define application URLs in a consistent manner |[x]|
+|1.8|Incorporate a main navigation menu and structured layout |[x]|
 |1.9|Demonstrate proficiency in the Python language by including sufficient custom logic in your project ||
-|1.10|Write Python code that includes functions with compound statements such as if conditions and loops ||
-|1.11|Design a relational database schema with clear relationships between entities ||
+|1.10|Write Python code that includes functions with compound statements such as if conditions and loops |[x]|
+|1.11|Design a relational database schema with clear relationships between entities |[x]|
 |1.12|Create at least THREE original custom Django models. ||
-|1.13|All CRUD (create, select/read, update, delete) functionality is implemented. ||
+|1.13|All CRUD (create, select/read, update, delete) functionality is implemented. |[x]|
 |1.14|Deploy the final version of your code to a hosting platform and test that it matches the development version. ||
 |1.15|Ensure that all final deployed code is free of commented out code and has no broken internal links ||
 |1.16|Ensure the security of the deployed version, making sure to not include any passwords in the git repository, that all secret keys are hidden in environment variables or in files that are in .gitignore, and that DEBUG mode is turned off ||
-|1.17|Use a git-based version control system for the entire application, generating documentation through regular commits and in the project README. ||
+|1.17|Use a git-based version control system for the entire application, generating documentation through regular commits and in the project README. |[x]|
 |1.18|Create a project README that is well-structured and written using a consistent markdown format ||
 |1.19|Document the complete deployment procedure, including the database, and the testing procedure, in a README file that also explains the application’s purpose and the value that it provides to its users ||
 | | Section 2  |
-|2.1|Design a Front-End for a full stack web application that meets accessibility guidelines, follows the principles of UX design, meets its given purpose and provide a set of user interactions ||
+|2.1|Design a Front-End for a full stack web application that meets accessibility guidelines, follows the principles of UX design, meets its given purpose and provide a set of user interactions |[x]|
 |2.2|Document and implement all User Stories within an Agile tool and map them to the project goals ||
 |2.3|Design and implement manual or automated test procedures to assess functionality, usability, responsiveness and data management within the entire web application ||
 |2.4|Present a clear rationale for the development of the project in the README, demonstrating that it has a clear, well-defined purpose addressing the needs of and user stories for a particular target audience (or multiple related audiences). ||
@@ -92,7 +92,7 @@ Order anything between 0.1 and 3.0 Kg
 |2.6|Use an Agile tool to manage the planning and implementation of all primary functionality ||
 |2.7|Document and implement all User Stories and map them to the project within an Agile tool ||
 | | Section 3  |
-|3.1|Ensure that all pages on the site can be reached by a link from another findable page. ||
+|3.1|Ensure that all pages on the site can be reached by a link from another findable page. |[x]|
 |3.2|Include Meta Description tags in the application HTML ||
 |3.3|Include a site title on the parent template ||
 |3.4|When defining the relationship between the current document and a linked document, ensure the following: Use “nofollow” for any paid links and distrusted content. Use “sponsored” for any sponsored or compensated links. ||
