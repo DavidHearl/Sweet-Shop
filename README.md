@@ -1,6 +1,5 @@
 # The Sweet Shop - [Live Website](https://the-sweet-shop.herokuapp.com)
 
-
 https://github.com/DavidHearl/sweet-shop
 
 Multi Device Layout will go here
@@ -22,6 +21,12 @@ Order anything between 0.1 and 3.0 Kg
 7. [Bugs Found](#BugsFound)
 8. [Deployment](#Deployment)
 9. [Acknowledgement](#Acknowledgement)
+
+## Project Requirements
+---
+- pip3 install django
+- pip3 install django-allauth
+- pip3 install Pillow
 
 ## User Stories
 ---
