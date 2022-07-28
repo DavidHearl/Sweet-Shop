@@ -29,6 +29,7 @@ Order anything between 0.1 and 3.0 Kg
 - pip3 install Pillow
 - pip3 install django-crispy-forms
 - pip3 install stripe
+- pip3 install django-countries
 
 ## User Stories
 
