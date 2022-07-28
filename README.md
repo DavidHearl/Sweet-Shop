@@ -22,49 +22,108 @@ Order anything between 0.1 and 3.0 Kg
 8. [Deployment](#Deployment)
 9. [Acknowledgement](#Acknowledgement)
 
-## Project Requirements
+## Project Installation Requirements
 ---
 - pip3 install django
 - pip3 install django-allauth
 - pip3 install Pillow
+- pip3 install django-crispy-forms
+- pip3 install stripe
 
 ## User Stories
+
+| User Stories | Met |
+|:----------|:---:|
+|As a site user I want to be able to easily register for an account so that I can have a personal account and be able to view my profile|[x]|
+|As a site user I want to be able to easily login and logout of an account so I can access my personal account information|[x]|
+|As a site user I want to be able to recover my password so that I can still login even if I have forgotten my details||
+|As a site user I want to recive an email confirmation after I have registered for an account so that I can verify my account was created successfully|[x]|
+|As a site user I want to have a personalised profile so that I can view my previous orders and order confirmations|[x]|
+|As a site user I want to be able to save my payment information so that I can checkout quicker next time I visit the site|[x]|
+|||
+|As a shopper I want to view a list of products so that I can choose items to purchase|[x]|
+|As a shopper I want to view individual product details so that I can see the product description, price, and rating|[x]|
+|As a shopper I want to identify deals easily so that I can take advantage of savings on products that I would like to purchase|[x]|
+|As a shopper I want to see my purchase total at all times so I can keep track of how much I am going to spend|[x]|
+|As a shopper I want to be able to sort the list of available products so that I can easily find the products with the best rating and best price|[x]|
+|As a shopper I want to be able to sort for a specific category of product so that I can look for products with the best price and best rating in that category|[x]|
+|As a shopper I want to be able to sort by price or rating within a specific category so that I can find products easily|[x]|
+|As a shopper I want to search for a product by name or description so I can find a specific product I would like to purchase|[x]|
+|As a shopper I want to see what I have searched for and how many result have been returned so I can quickly see if the product I want to purchase is available|[x]|
+|As a shopper I want to be able to select the quantity when purchasing an item so that I can order more then 1 item|[x]|
+|As a shopper I want to view the items currently in my bad to summarise my purchases and the cost|[x]|
+|As a shopper I want to adjust the quantity of items in my shopping bag so I can easily make changes to my purchases before checkout|[x]|
+|As a shopper I want to be able to easily enter in my payment information so I can have a hassel free experience|[x]|
+|As a shopper I want to feel that my personal information is safe so that I can confiently provide the information required to make a purchase|[x]|
+|As a shopper I want to view and order confirmation after checkout to verify that I haven't made any mistakes|[x]|
+|As a shopper I want to recieve and email confirmation after checkout so I can keep the confirmation of the purchase for my records|[x]|
+|||
+|As a store owner I want to be able to add new items to my store so that I can add newly released products to the store|[x]|
+|As a store owner I want to be able to edit/update products in my store so that I can adjust price, descriptions, images and other criteria|[x]|
+|As a store owner I want to be able to delete a product so that I can remove items that are no longer in stock or are not for sale|[x]|
+
+## Wireframes
+---
+Wireframes created with Balsamiq. The project was developed from initial wireframes.
+
+Click the links below to see the wireframes for each page.
+
+[Home Page]()
+
+[Products Page]()
+
+[Shopping Bag]()
+
+[Checkout]()
+
+## Models
 ---
 
-### Viewing and Navigation
-
-### Registration and User Accounts
-
-### Sorting and Searching
-
-### Purchasing and Checkout
-
-### Admin and Store Management
-
-## Databases
----
-
-### Structure
-
-    category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
-    name = models.CharField(max_length=254)
-    description = models.TextField(null=True, blank=True)
-    price = models.DecimalField(max_digits=6, decimal_places=2)
-    color = models.CharField(max_length=254, null=True, blank=True)
-    flavour = models.CharField(max_length=254, null=True, blank=True)
-    brand = models.CharField(max_length=254, null=True, blank=True)
-    vegetarian = models.BooleanField()
-    rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
-    image = models.ImageField(null=True, blank=True)
+### Order Line Item
+| Key | Name | Type |
+|:-:|:----------:|:-:|
+|FK|Order|CharField|
+|FK|Product Name|CharField|
+||Quantity|Integer Field|
+||Line Item Total|Decimal Field|
 
 ## Technologies Used
+---
+
+### Languages
 ---
 - HTML
 - CSS
 - Python
 - JavaScript
+- JQuery
+- Markdown
 
-## Manual Testing
+### Tools, Libaries and Frameworks
+---
+
+| Libraries / Frameworks / Tools | Description | Link |
+|:-:|:----------:|:-:|
+|Django|Database Driven Framework||
+|gunicorn|HTTP Interface Server||
+|psycopg2|Database adaptor||
+|cloudinary|Image management||
+|django allauth|User authentication||
+|django crispy forms|Styling forms||
+|HTML Validation|Validating HTML|w3.org|
+|CSS Validation|Validating CSS|w3.org|
+|JS Validation|Validating JS & jQuery|jshint|
+|PEP8|Validating python|PEP8|
+|Site mockup|Mockup of site on different screen sizes|https://techsini.com/multi-mockup/index.php|
+|Balsamic|Wireframes|Balsamic|
+|Visual Studio Code|IDE||
+|Bootstrap|Responsive design||
+|Font Awesome|Icons||
+|Pillow|Image processing tool||
+|generateprivacypolicy.com|Privacy Policy Generator||
+|Stripe|online payments||
+
+## Pass Criteria
 ---
 | Number | Marking Criteria | Met |
 |:-:|:----------|:---:|
@@ -118,7 +177,13 @@ Order anything between 0.1 and 3.0 Kg
 | | Section 6  |
 |6.1|Document the e-commerce business model underlying your application ||
 
-## Validator Testing
+## Manual Testing
+
+## Automated Testing
+
+## Responsive Testing
+
+## E-Commerce Business Model & Business Page
 
 ## Bugs found
 
@@ -126,5 +191,7 @@ Order anything between 0.1 and 3.0 Kg
 
 ## Acknowledgements
 
-
-
+- Code Institute for the default template
+- Code Institute's Boutique Ado project for Stripe payments and guidance
+- Code Institute Tutors, General Steer in the right direction when bugs were found
+- Focus Group for testing and feedback
