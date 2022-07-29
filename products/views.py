@@ -86,11 +86,11 @@ def product_detail(request, product_id):
 def add_product(request):
     """ Add a product to the store """
     if not request.user.is_superuser:
-        message.error(request, 'This function is only available for superusers')
+        messages.error(request, 'This function is only available for superusers')
         return redirect(reverse('home'))
 
     if request.method == 'POST':
-        form = ProductForm(request.POST, request.FILES)
+        form = ModifyProductForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
             messages.success(request, 'New Product Added')
@@ -100,7 +100,7 @@ def add_product(request):
     else:
         form = ModifyProductsForm()
         
-    template = 'products\add_product.html'
+    template = 'products/add_product.html'
     context = {
         'form': form,
     }
@@ -112,13 +112,13 @@ def add_product(request):
 def modify_product(request, product_id):
     """ Modify a product in the database """
     if not request.user.is_superuser:
-        message.error(request, 'This function is only available for superusers')
+        messages.error(request, 'This function is only available for superusers')
         return redirect(reverse('home'))
 
     product = get_object_or_404(Product, pk=product_id)
 
     if request.method == 'POST':
-        form = ProductForm(request.POST, request.FILES, instance=product)
+        form = ModifyProductsForm(request.POST, request.FILES, instance=product)
         if form.is_valid():
             form.save()
             messages.success(request, 'Product Updated')
@@ -129,7 +129,7 @@ def modify_product(request, product_id):
         form = ModifyProductsForm(instance=product)
         messages.info(request, f'{product.name} is being modified')
         
-    template = 'products\modify_product.html'
+    template = 'products/modify_product.html'
     context = {
         'form': form,
         'product': product,
@@ -142,7 +142,7 @@ def modify_product(request, product_id):
 def delete_product(request, product_id):
     """ Modify a product in the database """
     if not request.user.is_superuser:
-        message.error(request, 'This function is only available for superusers')
+        messages.error(request, 'This function is only available for superusers')
         return redirect(reverse('home'))
 
     product = get_object_or_404(Product, pk=product_id)

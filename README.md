@@ -37,7 +37,7 @@ Order anything between 0.1 and 3.0 Kg
 |:----------|:---:|
 |As a site user I want to be able to easily register for an account so that I can have a personal account and be able to view my profile|[x]|
 |As a site user I want to be able to easily login and logout of an account so I can access my personal account information|[x]|
-|As a site user I want to be able to recover my password so that I can still login even if I have forgotten my details||
+|As a site user I want to be able to recover my password so that I can still login even if I have forgotten my details|[x]|
 |As a site user I want to recive an email confirmation after I have registered for an account so that I can verify my account was created successfully|[x]|
 |As a site user I want to have a personalised profile so that I can view my previous orders and order confirmations|[x]|
 |As a site user I want to be able to save my payment information so that I can checkout quicker next time I visit the site|[x]|
@@ -132,12 +132,12 @@ Click the links below to see the wireframes for each page.
 |1.1|Implement at least one Django app containing some e-commerce functionality using an online payment processing system (e.g. Stripe). This may be a shopping cart checkout, subscription-based payments or single payments, donations, etc. |[x]|
 |1.2|Implement a feedback system that reports successful and unsuccessful purchases to the user, with a helpful message |[x]|
 |1.3|Develop and implement a Full-Stack web application built using the Django framework, to incorporate a relational database, an interactive Front-End and multiple apps (an app for each potentially reusable component) |[x]|
-|1.4|Implement at least one form, with validation, that allows users to create and edit models in the backend ||
+|1.4|Implement at least one form, with validation, that allows users to create and edit models in the backend |[x]|
 |1.5|Build a Django file structure that is consistent and logical, following the Django conventions. |[x]|
 |1.6|Write code that demonstrates characteristics of ‘clean code.’ |[x]|
 |1.7|Define application URLs in a consistent manner |[x]|
 |1.8|Incorporate a main navigation menu and structured layout |[x]|
-|1.9|Demonstrate proficiency in the Python language by including sufficient custom logic in your project ||
+|1.9|Demonstrate proficiency in the Python language by including sufficient custom logic in your project |[x]|
 |1.10|Write Python code that includes functions with compound statements such as if conditions and loops |[x]|
 |1.11|Design a relational database schema with clear relationships between entities |[x]|
 |1.12|Create at least THREE original custom Django models. ||
@@ -146,8 +146,8 @@ Click the links below to see the wireframes for each page.
 |1.15|Ensure that all final deployed code is free of commented out code and has no broken internal links ||
 |1.16|Ensure the security of the deployed version, making sure to not include any passwords in the git repository, that all secret keys are hidden in environment variables or in files that are in .gitignore, and that DEBUG mode is turned off ||
 |1.17|Use a git-based version control system for the entire application, generating documentation through regular commits and in the project README. |[x]|
-|1.18|Create a project README that is well-structured and written using a consistent markdown format ||
-|1.19|Document the complete deployment procedure, including the database, and the testing procedure, in a README file that also explains the application’s purpose and the value that it provides to its users ||
+|1.18|Create a project README that is well-structured and written using a consistent markdown format |[x]|
+|1.19|Document the complete deployment procedure, including the database, and the testing procedure, in a README file that also explains the application’s purpose and the value that it provides to its users |[x]|
 | | Section 2  |
 |2.1|Design a Front-End for a full stack web application that meets accessibility guidelines, follows the principles of UX design, meets its given purpose and provide a set of user interactions |[x]|
 |2.2|Document and implement all User Stories within an Agile tool and map them to the project goals ||

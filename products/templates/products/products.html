@@ -87,7 +87,7 @@
                                 {% if request.user.is_superuser %}
                                     <p class="ml-3">
                                         <a href="{% url 'modify_product' product.id %}">Edit</a>
-                                        <a class="text-danger" href="{% url 'delete_product' %}">Delete</a>
+                                        <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
                                     </p>
                                 {% endif %}
 
