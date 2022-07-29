@@ -15,9 +15,11 @@ def user_profile(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'Profile updated successfully')
-
-    form = UserProfileForm(instance=profile)
-    orders = profile.orders.all()
+        else:
+            messages.error(request, 'Update Failed!, Please ensure the form is correct and there are no missing fields')
+    else:
+        form = UserProfileForm(instance=profile)
+        orders = profile.orders.all()
 
     template = 'profiles/user_profiles.html'
     context = {
