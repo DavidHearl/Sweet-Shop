@@ -1,6 +1,6 @@
 # The Sweet Shop - [Live Website](https://the-sweet-shop.herokuapp.com)
 
-https://github.com/DavidHearl/sweet-shop
+https://the-sweet-shop-davidhearl.herokuapp.com
 
 Multi Device Layout will go here
 https://techsini.com/multi-mockup/index.php
