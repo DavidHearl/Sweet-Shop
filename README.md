@@ -33,6 +33,8 @@ Order anything between 0.1 and 3.0 Kg
 - pip3 install dj_database_url
 - pip3 install psycopg2-binary
 - pip3 install gunicorn
+- pip3 install boto3
+- pip3 install django-storages
 
 ## User Stories
 
