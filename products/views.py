@@ -100,3 +100,28 @@ def add_product(request):
     }
 
     return render(request, template, context)
+
+
+def modify_product(request):
+    """ Modify a product in the database """
+    product = get_object_or_404(Product, pk=product_id)
+
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES, instance=product)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Product Updated')
+            return redirect(reverse('product_detail', args=[product.id]))
+        else:
+            messages.error(request, 'Product could not be modified, Please ensure the form is correct and there are no missing fields')
+    else:
+        form = ModifyProductsForm(instance=product)
+        messages.info(request, f'{product.name} is being modified')
+        
+    template = 'products\modify_product.html'
+    context = {
+        'form': form,
+        'product': product,
+    }
+
+    return render(request, template, context)
