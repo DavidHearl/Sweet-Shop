@@ -81,7 +81,7 @@
                             {% if request.user.is_superuser %}
                             <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
                             {% endif %}
-                            <a href="{% url 'user_profiles' %}" class="dropdown-item">My Profile</a>
+                            <a href="{% url 'user_profile' %}" class="dropdown-item">My Profile</a>
                             <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                             {% else %}
                             <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
@@ -95,9 +95,9 @@
                                 <div><i class="fas fa-shopping-bag fa-lg"></i></div>
                                 <p class="my-auto">
                                     {% if grand_total %}
-                                    £{{ grand_total|floatformat:2 }}
+                                        £{{ grand_total|floatformat:2 }}
                                     {% else %}
-                                    £0.00
+                                        £0.00
                                     {% endif %}
                                 </p>
                             </div>
