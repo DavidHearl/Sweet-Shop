@@ -208,7 +208,11 @@ SQLite database in the local environment
 - create a procfile
 - freeze the requirements with "pip3 freeze > requirements.txt"
 - login to heroku with the CLI "heroku login -i"
-- 
+- temporarily disable collect static files with "heroku config:set DISABLE_COLLECTSTATIC=1"
+- add the heroku website link to the allowed hosts in settings.py
+- commit to github
+- set up a git remote with "heroku git:remote -a the-sweet-shop-davidhearl"
+- push to heroku main
 
 
 ## Acknowledgements
