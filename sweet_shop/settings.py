@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-)wrovkj0h76t3e)@s3(rpswnc$bf&sz*_5d91kbvb4dw40y@q!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['the-sweet-shop-davidhearl.heroku.com', 'localhost']
 
 # Application definition
 
@@ -115,7 +115,6 @@ LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
 
 WSGI_APPLICATION = 'sweet_shop.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases

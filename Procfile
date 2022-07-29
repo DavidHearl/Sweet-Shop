@@ -1,0 +1,1 @@
+web: gunicorn the-sweet-shop.wsgi:application

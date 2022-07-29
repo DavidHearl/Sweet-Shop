@@ -32,6 +32,7 @@ Order anything between 0.1 and 3.0 Kg
 - pip3 install django-countries
 - pip3 install dj_database_url
 - pip3 install psycopg2-binary
+- pip3 install gunicorn
 
 ## User Stories
 
@@ -175,7 +176,7 @@ Click the links below to see the wireframes for each page.
 |4.5|Ensure the current login state is reflected to the user ||
 |4.6|Users should not be permitted to access restricted content or functionality before role-based login ||
 | | Section 5  |
-|5.1|Create a Facebook Business Page dedicated to your product ||
+|5.1|Create a Facebook Business Page dedicated to your product |[x]|
 |5.2|Add a newsletter signup form to your application. ||
 | | Section 6  |
 |6.1|Document the e-commerce business model underlying your application ||
@@ -188,9 +189,27 @@ Click the links below to see the wireframes for each page.
 
 ## E-Commerce Business Model & Business Page
 
+Facebook : Business Page (https://m.facebook.com/The-Sweet-Shop-111602038303857)
+
 ## Bugs found
 
 ## Deployment
+
+- Create a new app on heroku
+- Add the postgres database the the herkou app
+- Copy the value from the config vars
+- Change the settings.py database file to either point to the herkoku postgres database or the
+SQLite database in the local environment
+- Create an env.py file and add a "DATABASE_URL" add the valuec copied from herkou
+- Comment out the heroku postgres database and ensure you are conencted to the local SQLite database
+- dump the database into a json file with this command "python3 manage.py dumpdata app_name > filename.json"
+- now connect back to the heroku postgres database and load data with this command "python3 manage.py loaddata filename.json"
+- install guinicorn with "pip3 install gunicorn"
+- create a procfile
+- freeze the requirements with "pip3 freeze > requirements.txt"
+- login to heroku with the CLI "heroku login -i"
+- 
+
 
 ## Acknowledgements
 
