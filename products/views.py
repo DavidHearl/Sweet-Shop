@@ -88,7 +88,7 @@ def add_product(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'New Product Added')
-            return redirect(reverse('add_product'))
+            return redirect(reverse('product_detail', args=[product.id]))
         else:
             messages.error(request, 'Product could not be created, Please ensure the form is correct and there are no missing fields')
     else:
@@ -102,7 +102,7 @@ def add_product(request):
     return render(request, template, context)
 
 
-def modify_product(request):
+def modify_product(request, product_id):
     """ Modify a product in the database """
     product = get_object_or_404(Product, pk=product_id)
 
@@ -125,3 +125,11 @@ def modify_product(request):
     }
 
     return render(request, template, context)
+
+
+def delete_product(request, product_id):
+    """ Modify a product in the database """
+    product = get_object_or_404(Product, pk=product_id)
+    product.delete()
+    messages.success(request, 'Item deleted successfully')
+    return redirect(reverse('products'))
