@@ -24,12 +24,14 @@ Order anything between 0.1 and 3.0 Kg
 
 ## Project Installation Requirements
 ---
-- pip3 install django
+- pip3 install Django==3.2
 - pip3 install django-allauth
 - pip3 install Pillow
 - pip3 install django-crispy-forms
 - pip3 install stripe
 - pip3 install django-countries
+- pip3 install dj_database_url
+- pip3 install psycopg2-binary
 
 ## User Stories
 
