@@ -6,11 +6,11 @@ from django.dispatch import receiver
 from django_countries.fields import CountryField
 
 
-class User_Profile(models.Model):
+class UserProfile(models.Model):
     """ A model for to maintain the default delivery information and order history for a user """
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     default_phone_number = models.CharField(max_length=20, null=True, blank=True)
-    default_country = CountryField(blank_label='Country *', null=True, blank=True)
+    default_country = CountryField(blank_label='Country', null=True, blank=True)
     default_postcode = models.CharField(max_length=20, null=True, blank=True)
     default_town_or_city = models.CharField(max_length=40, null=True, blank=True)
     default_street_address1 = models.CharField(max_length=80, null=True, blank=True)
@@ -25,6 +25,6 @@ class User_Profile(models.Model):
 def create_or_update_user_profile(sender, instance, created, **kwargs):
     """ Create/update the user profile """
     if created:
-        User_Profile.objects.create(user=instance)
+        UserProfile.objects.create(user=instance)
     # Existing users: just save the profile
     instance.user_profile.save()
