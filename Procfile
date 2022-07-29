@@ -1,1 +1,1 @@
-web: gunicorn sweet-shop.wsgi:application
+web: gunicorn sweet_shop.wsgi:application
