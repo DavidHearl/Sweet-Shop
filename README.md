@@ -129,7 +129,7 @@ Click the links below to see the wireframes for each page.
 | Number | Marking Criteria | Met |
 |:-:|:----------|:---:|
 | | Section 1  |
-|1.1|Implement at least one Django app containing some e-commerce functionality using an online payment processing system (e.g. Stripe). This may be a shopping cart checkout, subscription-based payments or single payments, donations, etc. ||
+|1.1|Implement at least one Django app containing some e-commerce functionality using an online payment processing system (e.g. Stripe). This may be a shopping cart checkout, subscription-based payments or single payments, donations, etc. |[x]|
 |1.2|Implement a feedback system that reports successful and unsuccessful purchases to the user, with a helpful message |[x]|
 |1.3|Develop and implement a Full-Stack web application built using the Django framework, to incorporate a relational database, an interactive Front-End and multiple apps (an app for each potentially reusable component) |[x]|
 |1.4|Implement at least one form, with validation, that allows users to create and edit models in the backend ||
