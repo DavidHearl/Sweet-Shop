@@ -164,7 +164,7 @@ Click the links below to see the wireframes for each page.
 |3.5|Include a sitemap on your application to allow search engine bot crawling ||
 |3.6|Include a robots.txt file to control search engine bot crawling ||
 |3.7|Include a 404 response page with an appropriate redirect for attempted access to non-existent content ||
-|3.8|Ensure all text content supports the purpose of the application - no Lorem Ipsum text to be used. ||
+|3.8|Ensure all text content supports the purpose of the application - no Lorem Ipsum text to be used. |[x]|
 | | Section 4  |
 |4.1|Implement an authentication mechanism, allowing a user to register and log in, addressing a clear reason as to why the users would need to do so. ||
 |4.2|Implement login and registration pages that are only available to anonymous users. ||
