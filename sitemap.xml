@@ -1,0 +1,782 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/accounts/signup/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/accounts/login/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/?category=sweets</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/?category=chocolate</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/?sort=rating&amp;direction=desc</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/?sort=price&amp;direction=asc</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/?color=Black</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/?color=White</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/?color=Brown</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/?color=Blue</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/?color=Red</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/?color=Green</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/?color=Pink</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/?color=Purple</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/?color=Yellow</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/?color=Assorted</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/?flavour=Apple</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/?flavour=Lemon</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/?flavour=Raspberry</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/?flavour=Lime</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/?flavour=Cola</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/?flavour=Mint</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/?flavour=Blackcurrant</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/?flavour=Banana</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/?flavour=Watermelon</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/?flavour=Cherry</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/?flavour=Peach</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/?flavour=Bubblegum</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/?flavour=Coconut</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/?flavour=Butterscotch</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/?flavour=Chocolate</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/?flavour=Rainbow</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/?flavour=Assorted</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/?brand=Haribo</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/?brand=Maynards</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/?brand=Hannahs</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/?brand=Kingsway</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/?brand=Maxons</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/?brand=Brays</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/?brand=Vidal</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/accounts/password/reset/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/?categories=sweets</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/72/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/64/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/63/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/62/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/61/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/60/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/58/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/57/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/53/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/52/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/51/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/48/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/47/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/46/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/42/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/41/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/21/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/20/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/16/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/19/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/18/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/17/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/15/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/12/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/11/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/9/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/5/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/118/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/117/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/124/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/123/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/113/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/122/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/116/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/106/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/114/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/105/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/111/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/104/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/115/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/94/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/103/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/102/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/100/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/101/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/99/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/98/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/97/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/96/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/93/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/110/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/92/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/91/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/87/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/85/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/83/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/81/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/80/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/79/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/76/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/109/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/108/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/107/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/95/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/90/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/89/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/84/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/78/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/75/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/74/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/73/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/71/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/70/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/69/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/68/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/67/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/66/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/65/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/59/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/56/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/55/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/54/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/50/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/45/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/44/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/43/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/40/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/39/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/38/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/37/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/35/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/34/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/33/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/32/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/14/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/13/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/7/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/6/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/29/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/28/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/27/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/26/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/25/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/24/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/22/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/121/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/119/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/86/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/82/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://the-sweet-shop-davidhearl.herokuapp.com/products/31/</loc>
+  <lastmod>2022-07-30T10:11:55+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>

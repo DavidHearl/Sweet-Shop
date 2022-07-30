@@ -2,9 +2,6 @@
 
 https://the-sweet-shop-davidhearl.herokuapp.com
 
-Multi Device Layout will go here
-https://techsini.com/multi-mockup/index.php
-
 ## About
 ---
 The Sweet Shop, is your one stop shop to find any popular sweets often found in pick and mixes.
@@ -83,7 +80,6 @@ I wanted to keep the design for the website simple yet elegant so I have gone fo
 ![iPhone Home Page](./media/iPhone%20Home%20Page.png "Title")
 ![iPhone Products Page](./media/iPhone%20Products%20Page.png "Title")
 
-
 ## Models
 ---
 
@@ -144,23 +140,20 @@ I wanted to keep the design for the website simple yet elegant so I have gone fo
 ||Quantity|IntgerField|
 ||Line Item Total|DecimalField|
 
-
-
-
-
-
-
 ## Technologies Used
 ---
 
 ### Languages
 ---
-- HTML
-- CSS
-- Python
-- JavaScript
-- JQuery
-- Markdown
+
+| Key | Name |
+|:-:|:----------:|
+|HTML|https://en.wikipedia.org/wiki/HTML5|
+|CSS|https://en.wikipedia.org/wiki/CSS|
+|Python|https://en.wikipedia.org/wiki/JavaScript|
+|JavaScript|https://jquery.com/|
+|JQuery|https://en.wikipedia.org/wiki/Python_(programming_language)|
+|Markdown|https://en.wikipedia.org/wiki/Markdown|
 
 ### Tools, Libaries and Frameworks
 ---
@@ -217,10 +210,10 @@ I wanted to keep the design for the website simple yet elegant so I have gone fo
 |2.6|Use an Agile tool to manage the planning and implementation of all primary functionality |[x]|
 |2.7|Document and implement all User Stories and map them to the project within an Agile tool |[x]|
 |3.1|Ensure that all pages on the site can be reached by a link from another findable page. |[x]|
-|3.2|Include Meta Description tags in the application HTML ||
+|3.2|Include Meta Description tags in the application HTML |[x]|
 |3.3|Include a site title on the parent template |[x]|
-|3.4|When defining the relationship between the current document and a linked document, ensure the following: Use “nofollow” for any paid links and distrusted content. Use “sponsored” for any sponsored or compensated links. ||
-|3.5|Include a sitemap on your application to allow search engine bot crawling ||
+|3.4|When defining the relationship between the current document and a linked document, ensure the following: Use “nofollow” for any paid links and distrusted content. Use “sponsored” for any sponsored or compensated links. |[x]|
+|3.5|Include a sitemap on your application to allow search engine bot crawling |[x]|
 |3.6|Include a robots.txt file to control search engine bot crawling ||
 |3.7|Include a 404 response page with an appropriate redirect for attempted access to non-existent content |[x]|
 |3.8|Ensure all text content supports the purpose of the application - no Lorem Ipsum text to be used. |[x]|
@@ -236,7 +229,11 @@ I wanted to keep the design for the website simple yet elegant so I have gone fo
 
 ## Manual Testing
 
+
+
 ## Automated Testing
+
+![Business Model](./media/test_urls.png "Title")
 
 ## Responsive Testing
 
