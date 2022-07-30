@@ -95,6 +95,61 @@ I wanted to keep the design for the website simple yet elegant so I have gone fo
 ||Quantity|Integer Field|
 ||Line Item Total|Decimal Field|
 
+### Category
+| Key | Name | Type |
+|:-:|:----------:|:-:|
+||Name|CharField|
+||Friendly Name|CharField|
+
+### Products
+| Key | Name | Type |
+|:-:|:----------:|:-:|
+|FK|Category|CharField|
+||Name|CharField|
+||Description|TextField|
+||Price|DecimalField|
+||Color|CharField|
+||Flavour|CharField|
+||Brand|CharField|
+||Vegiterian|BooleanField|
+||Rating|DecimalField|
+||Image|ImageField|
+
+### Order
+| Key | Name | Type |
+|:-:|:----------:|:-:|
+||Order Number|CharField|
+|FK|User Profile||
+||Full Name|CharField|
+||Email|EmailField|
+||Phone Number|CharField|
+||Country|CountryField|
+||Postcode|CharField|
+||Town or City|CharField|
+||Street Address 1|CharField|
+||Street Address 2|CharField|
+||County|CharField|
+||Date|DateTimeField|
+||Delivery Cost|DecimalField|
+||Order Total|DecimalField|
+||Grand Total|DecimalField|
+||Original Shopping Bag|Text Field|
+||Stripe ID|CharField|
+
+### Order Line Item
+| Key | Name | Type |
+|:-:|:----------:|:-:|
+|FK|Order||
+|FK|Product||
+||Quantity|IntgerField|
+||Line Item Total|DecimalField|
+
+
+
+
+
+
+
 ## Technologies Used
 ---
 
