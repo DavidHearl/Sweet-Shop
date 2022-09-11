@@ -39,33 +39,29 @@
 </head>
 
 <body>
-
     <header class="container-fluid fixed-top top-navigation">
 
         <div id="topnav" class="row d-none d-lg-flex">
-
             <!-- Search Field -->
             <div class="col-12 col-lg-4 my-auto my-auto py-1 py-lg-1">
                 <form method="GET" action="{% url 'products' %}">
                     <div class="input-group w-100">
                         <input class="form-control border border-black rounded-3" type="text" name="q"
                             placeholder="Search for your favourite Sweets">
-                        <button type="submit">
-                            <span class="icon">
+                        <button class="search" type="submit">
+                            <span class="search-icon">
                                 <i class="fas fa-search"></i>
                             </span>
                         </button>
                     </div>
                 </form>
             </div>
-
             <!-- Title -->
             <div class="col-12 col-lg-4 my-auto text-center py-1 py-lg-0">
                 <a href="{% url 'home' %}" class="nav-link">
                     <h2 class="my-0">The <span class="pink">Sweet</span> Shop</h2>
                 </a>
             </div>
-
             <!-- My account and shopping cart -->
             <div class="col-12 col-lg-4 py-auto my-auto">
                 <ul class="list-inline list-unstyled text-center text-lg-end my-3">
@@ -107,7 +103,6 @@
                 </ul>
             </div>
         </div>
-
         <!-- Navigation -->
         <div class="row navigation-menu">
             <nav class="navbar navbar-expand-lg navbar-light w-100">
@@ -121,14 +116,13 @@
         </div>
 
     </header>
-
     {% block toasts %}
         {% if messages %}
-        <div class="message-container">
-            {% for message in messages %}
-                {% include 'includes/toasts/toast_success.html' %}
-            {% endfor %}
-        </div>
+            <div class="message-container">
+                {% for message in messages %}
+                    {% include 'includes/toasts/toast_success.html' %}
+                {% endfor %}
+            </div>
         {% endif %}
     {% endblock%}
 
@@ -139,9 +133,9 @@
     {% endblock %}
 
     {% block postloadjs %}
-    <script type="text/javascript">
-        $('.toast').toast('show');
-    </script>
+        <script type="text/javascript">
+            $('.toast').toast('show');
+        </script>
     {% endblock %}
 
 </body>
