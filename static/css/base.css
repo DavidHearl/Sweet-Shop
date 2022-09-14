@@ -48,22 +48,46 @@
 
 /* Home */
 
+.main-banner {
+    margin: 10px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.home-heading {
+    color: #f4768a;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.home-action {
+    width: 100px;
+    border: 1px solid black;
+    padding: 15px;
+    border-radius: 10px;
+}
+
 .home-left,
 .home-right {
     border: 1px solid black;
-    background-image: linear-gradient(to right top, #ffc6cf, #feb3be, #fb9fad, #f88b9c, #f4768a);
+    background-image: linear-gradient(to right top, #ffecef, #ffe5e9, #ffdee3, #ffd7dd, #ffd0d7);
     min-height: 400px;
     margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
 }
 
 .logo-container {
-    /* border: 1px solid black; */
     text-align: center;
+    padding: 10px;
 }
 
 .placeholder {
     border: 1px solid black;
     min-height: 100px;
+    min-width: 100%;
 }
 
 /* Cards */
@@ -126,9 +150,6 @@ hr {
     margin: 8px 0;
 }
 
-
-
-
 p {
     margin-bottom: 0;
 }
@@ -173,11 +194,15 @@ p {
 }
 
 .btn {
-    background-color: #f4768a;
-    color: black;
+    background-image: linear-gradient(to right top, #c593f9, #df86df, #ef7cc2, #f577a6, #f4768a);
+    width: 180px;
+    padding: 10px;
+    border-radius: 23px;
+    border: none;
+    color: white;
 }
 
-@media only screen and (max-width: 1006px) {
+@media only screen and (max-width: 992px) {
     .push-down{
         margin-top: 64px;
     }

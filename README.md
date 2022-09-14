@@ -278,5 +278,6 @@ SQLite database in the local environment
 
 - Code Institute for the default template
 - Code Institute's Boutique Ado project for Stripe payments and guidance
+- https://mycolor.space to generate gradient background-image
 - Code Institute Tutors, General Steer in the right direction when bugs were found
 - Focus Group for testing and feedback

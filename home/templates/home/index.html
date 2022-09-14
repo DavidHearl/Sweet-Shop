@@ -4,54 +4,50 @@
 {% block content %}
     <div class="container push-down">
         <div class="row">
-            <div class="col">
-                <p>Over 120 retro and modern sweets and treats available to buy online</p>
+            <div class="col main-banner">
+                <p>Over 120+ retro and modern sweets and treats available to buy online</p>
+                <p>Excellent</p>
                 <p>
-                    Excellent
                     <i class="fas fa-star mr-1"></i>
                     <i class="fas fa-star mr-1"></i>
                     <i class="fas fa-star mr-1"></i>
                     <i class="fas fa-star mr-1"></i>
                     <i class="fas fa-star mr-1"></i>
-                    Based on 10,000 Reviews 
                 </p>
             </div>
         </div>
         <div class="row">
-            <div class="col-6 home-left my-auto">
-                <div>
-                    <h4><a href="{% url 'products' %}" class="btn py-3">View All Products</a></h4>
+            <div class="col-md-8">
+                <div class="home-left">
+                    <h4>Build Your Own Pick and Mix</h4>
+                    <p>Placeholder Text Goes Here</p>
+                    <a href="{% url 'products' %}" class="btn">All Products</a>
                 </div>
             </div>
-            <div class="col-6 home-right my-auto">
-                <div>
-                    <p>Over 120 retro and modern sweets and treats available to buy online</p>
-                    <h4>
-                        <a href="{% url 'products' %}" class="btn py-3">View All Products</a>
-                    </h4>
-                    <p>
-                        Excellent
-                        <i class="fas fa-star mr-1"></i>
-                        <i class="fas fa-star mr-1"></i>
-                        <i class="fas fa-star mr-1"></i>
-                        <i class="fas fa-star mr-1"></i>
-                        <i class="fas fa-star mr-1"></i>
-                        Based on 10,000 Reviews 
-                    </p>
+            <div class="col-md-4">
+                <div class="home-right">
+                    <h4>CHOCOLATE !</h4>
+                    <p>It's all about the choc</p>
+                    <a href="{% url 'products' %}?category=chocolate" class="btn">Chocolate</a>
                 </div>
             </div>
         </div>
         <div class="row">
-            <h2>Have a look at some fan favourites</h2>
-            <div class="col-2 placeholder"></div>
-            <div class="col-2 placeholder"></div>
-            <div class="col-2 placeholder"></div>
-            <div class="col-2 placeholder"></div>
-            <div class="col-2 placeholder"></div>
-            <div class="col-2 placeholder"></div>
+            <h2 class="home-heading">Some of our favorites...</h2>
+            <div class="col-3">
+                <div class="placeholder"></div>
+            </div>
+            <div class="col-3">
+                <div class="placeholder"></div>
+            </div>
+            <div class="col-3"><div class="placeholder"></div></div>
+            <div class="col-3"><div class="placeholder"></div></div>
         </div>
         <div class="row">
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 logo-container"><img class="logo" src="/media/Logo_Barrat.webp" alt=""></div>
+            <h2 class="home-heading">Shop by Brand...</h2>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 logo-container">
+                <a href="{% url 'products' %}?brand=Haribo"><img class="logo" src="/media/Logo_Barrat.webp" alt=""></a>
+            </div>
             <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 logo-container"><img class="logo" src="/media/Logo_Cadbury.webp" alt=""></div>
             <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 logo-container"><img class="logo" src="/media/Logo_Haribo.webp" alt=""></div>
             <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 logo-container"><img class="logo" src="/media/Logo_Hershey.webp" alt=""></div>
