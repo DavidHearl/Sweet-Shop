@@ -11,6 +11,7 @@
 /* Navigation */
 .navbar{
     border-bottom: 1px solid black;
+    background-image: linear-gradient(to right top, #ffc6cf, #feb3be, #fb9fad, #f88b9c, #f4768a);
 }
 
 .navigation-menu {
@@ -43,6 +44,26 @@
     margin-left: 8px;
     background: none;
     border: none;
+}
+
+/* Home */
+
+.home-left,
+.home-right {
+    border: 1px solid black;
+    background-image: linear-gradient(to right top, #ffc6cf, #feb3be, #fb9fad, #f88b9c, #f4768a);
+    min-height: 400px;
+    margin-top: 10px;
+}
+
+.logo-container {
+    /* border: 1px solid black; */
+    text-align: center;
+}
+
+.placeholder {
+    border: 1px solid black;
+    min-height: 100px;
 }
 
 /* Cards */
