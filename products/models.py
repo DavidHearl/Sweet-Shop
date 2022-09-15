@@ -1,3 +1,4 @@
+from logging import PlaceHolder
 from django.db import models
 
 class Category(models.Model):
@@ -24,6 +25,7 @@ class Product(models.Model):
     flavour = models.CharField(max_length=254, null=True, blank=True)
     brand = models.CharField(max_length=254, null=True, blank=True)
     vegetarian = models.BooleanField()
+    featured = models.BooleanField(default=False)
     rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
 

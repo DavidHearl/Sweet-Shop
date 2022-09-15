@@ -19,9 +19,9 @@
         <div class="row">
             <div class="col-md-8">
                 <div class="home-left">
-                    <h4>Build Your Own Pick and Mix</h4>
-                    <p>Placeholder Text Goes Here</p>
-                    <a href="{% url 'products' %}" class="btn">All Products</a>
+                    <h4>All your favorites...</h4>
+                    <p>Retro, Fizzy, Jelly, Gummy, Chocolate plus so much more !</p>
+                    <a href="{% url 'products' %}" class="btn">Shop Now</a>
                 </div>
             </div>
             <div class="col-md-4">
@@ -34,14 +34,49 @@
         </div>
         <div class="row">
             <h2 class="home-heading">Some of our favorites...</h2>
-            <div class="col-3">
-                <div class="placeholder"></div>
-            </div>
-            <div class="col-3">
-                <div class="placeholder"></div>
-            </div>
-            <div class="col-3"><div class="placeholder"></div></div>
-            <div class="col-3"><div class="placeholder"></div></div>
+            {% for product in products %}
+                {% if product.featured %}
+                    <div class="col-3">
+                        <div class="card h-100">
+                            <a href="{% url 'product_detail' product.id %}">
+                                <img class="card-img-top img-fluid product-image" src="{{ product.image.url }}" alt="{{ product.name }}">
+                            </a>
+                            <div class="card-body">
+                                <div>{{ product.name }}</div>
+                            </div>
+                            <div class="card-footer bg-white pt-0">
+                                <div class="row">
+                                    <div class="col">
+                                        <p class="price">£{{ product.price }} / 100g</p>
+        
+                                        {% if product.category %}
+                                            <p class="label">
+                                                <a href="{% url 'products' %}?category={{ product.category.name }}">
+                                                    <i class="fas fa-tag mr-2">{{ product.category.friendly_name }}</i>
+                                                </a>
+                                            </p>
+                                        {% endif %}
+        
+                                        {% if product.rating %}
+                                            <p><i class="fas fa-star mr-1"></i> {{ product.rating }} / 5.00</p>
+                                        {% else %}
+                                            <p>No Rating</p>
+                                        {% endif %}
+        
+                                        {% if request.user.is_superuser %}
+                                            <p class="ml-3">
+                                                <a href="{% url 'modify_product' product.id %}">Edit</a>
+                                                <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                                            </p>
+                                        {% endif %}
+        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
         </div>
         <div class="row">
             <h2 class="home-heading">Shop by Brand...</h2>
