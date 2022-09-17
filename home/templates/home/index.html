@@ -17,10 +17,19 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-8">
-                <div class="home-left">
+            <div class="col-12">
+                <div class="home-main">
                     <h4>All your favorites...</h4>
                     <p>Retro, Fizzy, Jelly, Gummy, Chocolate plus so much more !</p>
+                    <a href="{% url 'products' %}" class="btn">Shop Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <div class="home-left">
+                    <h4>Sweets, Glorious Sweets</h4>
+                    <p>Whatever your fancy</p>
                     <a href="{% url 'products' %}" class="btn">Shop Now</a>
                 </div>
             </div>
@@ -34,66 +43,94 @@
         </div>
         <div class="row">
             <h2 class="home-heading">Some of our favorites...</h2>
-            {% for product in products %}
-                {% if product.featured %}
-                    <div class="col-3">
-                        <div class="card h-100">
-                            <a href="{% url 'product_detail' product.id %}">
-                                <img class="card-img-top img-fluid product-image" src="{{ product.image.url }}" alt="{{ product.name }}">
-                            </a>
-                            <div class="card-body">
-                                <div>{{ product.name }}</div>
-                            </div>
-                            <div class="card-footer bg-white pt-0">
-                                <div class="row">
-                                    <div class="col">
-                                        <p class="price">£{{ product.price }} / 100g</p>
-        
-                                        {% if product.category %}
-                                            <p class="label">
-                                                <a href="{% url 'products' %}?category={{ product.category.name }}">
-                                                    <i class="fas fa-tag mr-2">{{ product.category.friendly_name }}</i>
-                                                </a>
-                                            </p>
-                                        {% endif %}
-        
-                                        {% if product.rating %}
-                                            <p><i class="fas fa-star mr-1"></i> {{ product.rating }} / 5.00</p>
-                                        {% else %}
-                                            <p>No Rating</p>
-                                        {% endif %}
-        
-                                        {% if request.user.is_superuser %}
-                                            <p class="ml-3">
-                                                <a href="{% url 'modify_product' product.id %}">Edit</a>
-                                                <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
-                                            </p>
-                                        {% endif %}
-        
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            {% for product in products %}
+                                {% if product.featured %}
+                                    <div class="col-4 col-md-3 featured-col">
+                                        <div class="card h-100">
+                                            <a href="{% url 'product_detail' product.id %}">
+                                                <img class="card-img-top img-fluid product-image" src="{{ product.image.url }}" alt="{{ product.name }}">
+                                            </a>
+                                            <div class="card-body">
+                                                <div>{{ product.name }}</div>
+                                            </div>
+                                            <div class="card-footer bg-white pt-0">
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <p class="price">£{{ product.price }} / 100g</p>
+                        
+                                                        {% if product.category %}
+                                                            <p class="label">
+                                                                <a href="{% url 'products' %}?category={{ product.category.name }}">
+                                                                    <i class="fas fa-tag mr-2">{{ product.category.friendly_name }}</i>
+                                                                </a>
+                                                            </p>
+                                                        {% endif %}
+                        
+                                                        {% if product.rating %}
+                                                            <p><i class="fas fa-star mr-1"></i> {{ product.rating }} / 5.00</p>
+                                                        {% else %}
+                                                            <p>No Rating</p>
+                                                        {% endif %}
+                        
+                                                        {% if request.user.is_superuser %}
+                                                            <p class="ml-3">
+                                                                <a href="{% url 'modify_product' product.id %}">Edit</a>
+                                                                <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                                                            </p>
+                                                        {% endif %}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
+                                {% endif %}
+                            {% endfor %}
                         </div>
                     </div>
-                {% endif %}
-            {% endfor %}
+                </div>
+
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
         </div>
         <div class="row">
             <h2 class="home-heading">Shop by Brand...</h2>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 logo-container">
-                <a href="{% url 'products' %}?brand=Haribo"><img class="logo" src="/media/Logo_Barrat.webp" alt=""></a>
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2 logo-container">
+                <a href="{% url 'products' %}?brand=Haribo">
+                    <img class="logo" src="/media/Logo_Barrat.webp" alt="">
+                </a>
             </div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 logo-container"><img class="logo" src="/media/Logo_Cadbury.webp" alt=""></div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 logo-container"><img class="logo" src="/media/Logo_Haribo.webp" alt=""></div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 logo-container"><img class="logo" src="/media/Logo_Hershey.webp" alt=""></div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 logo-container"><img class="logo" src="/media/Logo_Jelly_Belly.webp" alt=""></div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 logo-container"><img class="logo" src="/media/Logo_Kinder.webp" alt=""></div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 logo-container"><img class="logo" src="/media/Logo_Maoam.webp" alt=""></div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 logo-container"><img class="logo" src="/media/Logo_Nestle.webp" alt=""></div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 logo-container"><img class="logo" src="/media/Logo_Reese.webp" alt=""></div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 logo-container"><img class="logo" src="/media/Logo_Swizzels.webp" alt=""></div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 logo-container"><img class="logo" src="/media/Logo_Warheads.webp" alt=""></div>
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 logo-container"><img class="logo" src="/media/Logo_Wonka.webp" alt=""></div>
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2 logo-container">
+                <a href="">
+                    <img class="logo" src="/media/Logo_Cadbury.webp" alt="">
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2 logo-container"><img class="logo" src="/media/Logo_Haribo.webp" alt=""></div>
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2 logo-container"><img class="logo" src="/media/Logo_Hershey.webp" alt=""></div>
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2 logo-container"><img class="logo" src="/media/Logo_Jelly_Belly.webp" alt=""></div>
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2 logo-container"><img class="logo" src="/media/Logo_Kinder.webp" alt=""></div>
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2 logo-container"><img class="logo" src="/media/Logo_Maoam.webp" alt=""></div>
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2 logo-container"><img class="logo" src="/media/Logo_Nestle.webp" alt=""></div>
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2 logo-container"><img class="logo" src="/media/Logo_Reese.webp" alt=""></div>
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2 logo-container"><img class="logo" src="/media/Logo_Swizzels.webp" alt=""></div>
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2 logo-container"><img class="logo" src="/media/Logo_Warheads.webp" alt=""></div>
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2 logo-container"><img class="logo" src="/media/Logo_Wonka.webp" alt=""></div>
         </div>
     </div>
 {% endblock %}

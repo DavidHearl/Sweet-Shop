@@ -1,3 +1,13 @@
+.carousel-inner {
+    border: 1px solid red;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: black;
+    border-radius: 5px;
+}
+
 .cover {
 	height: 100%;
 	width: 100%;
@@ -9,6 +19,10 @@
 }
 
 /* Navigation */
+.title {
+    font-family: Permanent Marker;
+}
+
 .navbar{
     border-bottom: 1px solid black;
     background-image: linear-gradient(to right top, #ffc6cf, #feb3be, #fb9fad, #f88b9c, #f4768a);
@@ -55,6 +69,7 @@
 }
 
 .home-heading {
+    font-family: Permanent Marker;
     color: #f4768a;
     font-size: 1.5rem;
     text-align: center;
@@ -67,11 +82,24 @@
     border-radius: 10px;
 }
 
+.home-main {
+    background-image: linear-gradient(to right top, #c97569, #d3685b, #db594c, #e2483e, #e93030);
+}
+
+.home-left {
+    background-image: linear-gradient(to right top, #ffecef, #ffe5e9, #ffdee3, #ffd7dd, #ffd0d7);
+}
+
+.home-right {
+    background-image: linear-gradient(to right top, #986627, #885e2f, #785735, #67503a, #55493f);
+    color: white;
+}
+
+.home-main,
 .home-left,
 .home-right {
     border: 1px solid black;
-    background-image: linear-gradient(to right top, #ffecef, #ffe5e9, #ffdee3, #ffd7dd, #ffd0d7);
-    min-height: 400px;
+    min-height: 300px;
     margin-top: 10px;
     display: flex;
     justify-content: center;
@@ -170,6 +198,8 @@ p {
 .pink {
     color: #f4768a;
     font-style: italic;
+    text-decoration: underline;
+    text-decoration-style: wavy;
 }
 
 .push-down{
