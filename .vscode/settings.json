@@ -26,5 +26,6 @@
    "editor.defaultFormatter": "HookyQR.beautify",
    "[html]": {
       "editor.defaultFormatter": "HookyQR.beautify"
-   }
+   },
+   "workbench.preferredDarkColorTheme": "Default Dark+"
 }

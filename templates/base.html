@@ -42,8 +42,8 @@
 
 <body>
     <header class="container-fluid fixed-top top-navigation">
-
         <div id="topnav" class="row d-none d-lg-flex">
+
             <!-- Search Field -->
             <div class="col-12 col-lg-4 my-auto my-auto py-1 py-lg-1">
                 <form method="GET" action="{% url 'products' %}">
@@ -58,12 +58,14 @@
                     </div>
                 </form>
             </div>
+
             <!-- Title -->
             <div class="col-12 col-lg-4 my-auto text-center py-1 py-lg-0">
                 <a href="{% url 'home' %}" class="nav-link">
                     <h2 class="title">The <span class="pink">Sweet</span>  Shop</h2>
                 </a>
             </div>
+
             <!-- My account and shopping cart -->
             <div class="col-12 col-lg-4 py-auto my-auto">
                 <ul class="list-inline list-unstyled text-center text-lg-end my-3">
@@ -105,6 +107,7 @@
                 </ul>
             </div>
         </div>
+
         <!-- Navigation -->
         <div class="row navigation-menu">
             <nav class="navbar navbar-expand-lg navbar-light w-100">
@@ -118,6 +121,7 @@
         </div>
 
     </header>
+
     {% block toasts %}
         {% if messages %}
             <div class="message-container">
@@ -133,6 +137,21 @@
 
     {% block content %}
     {% endblock %}
+
+    <footer>
+        <div class="row">
+            <div class="col-8">
+                <p>Check out our instagram page</p>
+                <i class="fa-brands fa-square-instagram"></i>
+                <i class="fa-brands fa-square-facebook"></i>
+                <i class="fa-brands fa-square-twitter"></i>
+            </div>
+            <div class="col-4">
+                <p>Contact</p>
+                <p>Please dont hesatate to contact us at</p>
+            </div>
+        </div>
+    </footer>
 
     {% block postloadjs %}
         <script type="text/javascript">

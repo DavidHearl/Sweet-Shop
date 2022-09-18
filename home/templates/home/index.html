@@ -5,39 +5,31 @@
     <div class="container push-down">
         <div class="row">
             <div class="col main-banner">
-                <p>Over 120+ retro and modern sweets and treats available to buy online</p>
-                <p>Excellent</p>
-                <p>
-                    <i class="fas fa-star mr-1"></i>
-                    <i class="fas fa-star mr-1"></i>
-                    <i class="fas fa-star mr-1"></i>
-                    <i class="fas fa-star mr-1"></i>
-                    <i class="fas fa-star mr-1"></i>
-                </p>
+                <h2 class="home-heading">Over 120+ retro and modern sweets and treats available to buy online</h2>
             </div>
         </div>
         <div class="row">
             <div class="col-12">
                 <div class="home-main">
-                    <h4>All your favorites...</h4>
-                    <p>Retro, Fizzy, Jelly, Gummy, Chocolate plus so much more !</p>
-                    <a href="{% url 'products' %}" class="btn">Shop Now</a>
+                    <h2 class="hero-heading">All your favorites</h2>
+                    <p class="hero-body">Retro, Fizzy, Jelly, Gummy, Chocolate plus so much more !</p>
+                    <a href="{% url 'products' %}" class="hero-button">Shop Now</a>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-md-8">
                 <div class="home-left">
-                    <h4>Sweets, Glorious Sweets</h4>
-                    <p>Whatever your fancy</p>
-                    <a href="{% url 'products' %}" class="btn">Shop Now</a>
+                    <h2 class="hero-heading">Sweets, Glorious Sweets</h2>
+                    <p class="hero-body">Whatever you fancy</p>
+                    <a href="{% url 'products' %}" class="hero-button">Shop Now</a>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="home-right">
-                    <h4>CHOCOLATE !</h4>
-                    <p>It's all about the choc</p>
-                    <a href="{% url 'products' %}?category=chocolate" class="btn">Chocolate</a>
+                    <h2 class="hero-heading">Chocolate !</h2>
+                    <p class="hero-body">It's all about the choc</p>
+                    <a href="{% url 'products' %}?category=chocolate" class="hero-button">Chocolate</a>
                 </div>
             </div>
         </div>
@@ -50,54 +42,50 @@
                     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                 </ol>
 
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="row">
-                            {% for product in products %}
-                                {% if product.featured %}
-                                    <div class="col-4 col-md-3 featured-col">
+                {% for sub_list in carousel_list %}
+                    <p>Test - Level 1 </p>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row">
+                                {% for product in sub_list %}
+                                    <div class="col-3">
                                         <div class="card h-100">
                                             <a href="{% url 'product_detail' product.id %}">
                                                 <img class="card-img-top img-fluid product-image" src="{{ product.image.url }}" alt="{{ product.name }}">
                                             </a>
                                             <div class="card-body">
-                                                <div>{{ product.name }}</div>
+                                                <p>{{ product.name }}</p>
                                             </div>
                                             <div class="card-footer bg-white pt-0">
-                                                <div class="row">
-                                                    <div class="col">
-                                                        <p class="price">£{{ product.price }} / 100g</p>
-                        
-                                                        {% if product.category %}
-                                                            <p class="label">
-                                                                <a href="{% url 'products' %}?category={{ product.category.name }}">
-                                                                    <i class="fas fa-tag mr-2">{{ product.category.friendly_name }}</i>
-                                                                </a>
-                                                            </p>
-                                                        {% endif %}
-                        
-                                                        {% if product.rating %}
-                                                            <p><i class="fas fa-star mr-1"></i> {{ product.rating }} / 5.00</p>
-                                                        {% else %}
-                                                            <p>No Rating</p>
-                                                        {% endif %}
-                        
-                                                        {% if request.user.is_superuser %}
-                                                            <p class="ml-3">
-                                                                <a href="{% url 'modify_product' product.id %}">Edit</a>
-                                                                <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
-                                                            </p>
-                                                        {% endif %}
-                                                    </div>
-                                                </div>
+                                                <p class="price">£{{ product.price }} / 100g</p>
+                                                {% if product.category %}
+                                                <p class="label">
+                                                    <a href="{% url 'products' %}?category={{ product.category.name }}">
+                                                        <i class="fas fa-tag mr-2">{{ product.category.friendly_name }}</i>
+                                                    </a>
+                                                </p>
+                                                {% endif %}
+                                                
+                                                {% if product.rating %}
+                                                    <p><i class="fas fa-star mr-1"></i> {{ product.rating }} / 5.00</p>
+                                                {% else %}
+                                                    <p>No Rating</p>
+                                                {% endif %}
+                                                
+                                                {% if request.user.is_superuser %}
+                                                <p class="ml-3">
+                                                    <a href="{% url 'modify_product' product.id %}">Edit</a>
+                                                    <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                                                </p>
+                                                {% endif %}
                                             </div>
                                         </div>
-                                    </div>
-                                {% endif %}
-                            {% endfor %}
+                                    </div>   
+                                {% endfor %}
+                            </div>
                         </div>
                     </div>
-                </div>
+                {% endfor %}
 
                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>

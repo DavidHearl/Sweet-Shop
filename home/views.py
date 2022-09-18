@@ -5,23 +5,19 @@ from products.models import Product
 def index(request):
     """ A view to return the index page """
 
-    products = Product.objects.all()
-    featured_count = 0
-    featured = 0
+    products = Product.objects.filter(featured=True)
+    carousel_list = []
+    featured_count = []
 
-    if request.GET:
-        for product in products:
-            if product.featured:
-                featured_count += 1
-
-            return featured_count
-
-    # context['featured'] = range[1,3]
+    for product in products:
+        featured_count.append(product)
+        if len(featured_count) == 4:
+            carousel_list.append(featured_count[:])
+            featured_count.clear()
 
     context = {
-        'loop_times' : range(1,3),
+        'carousel_list': carousel_list,
         'featured_count': featured_count,
-        'featured': featured,
         'products': products,
     }
 

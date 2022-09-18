@@ -1,13 +1,3 @@
-.carousel-inner {
-    border: 1px solid red;
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    background-color: black;
-    border-radius: 5px;
-}
-
 .cover {
 	height: 100%;
 	width: 100%;
@@ -64,7 +54,6 @@
 
 .main-banner {
     margin: 10px;
-    border: 1px solid black;
     text-align: center;
 }
 
@@ -73,6 +62,37 @@
     color: #f4768a;
     font-size: 1.5rem;
     text-align: center;
+    margin-top: 10px;
+}
+
+.hero-heading {
+    font-family: Permanent Marker;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    color: white;
+    font-size: 2rem;
+}
+
+.hero-body {
+    font-family: Permanent Marker;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.hero-button {
+    background-image: linear-gradient(to right top, #c593f9, #df86df, #ef7cc2, #f577a6, #f4768a);
+    justify-content: center;
+    width: 200px;
+    padding: 15px;
+    border-radius: 30px;
+    border: none;
+    color: black;
+    margin: 20px auto;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    color: white;
+    font-family: Permanent Marker;
+    font-size: 1.1rem;
 }
 
 .home-action {
@@ -83,23 +103,24 @@
 }
 
 .home-main {
-    background-image: linear-gradient(to right top, #c97569, #d3685b, #db594c, #e2483e, #e93030);
+    background-image: linear-gradient(to right top, #874087, #a34d9b, #c15aaf, #df67c2, #ff74d5);
+    margin-bottom: 12px;
 }
 
 .home-left {
-    background-image: linear-gradient(to right top, #ffecef, #ffe5e9, #ffdee3, #ffd7dd, #ffd0d7);
+    background-image: linear-gradient(to right top, #ebc7cd, #efbbc3, #f3afba, #f6a2af, #f895a5);
 }
 
 .home-right {
-    background-image: linear-gradient(to right top, #986627, #885e2f, #785735, #67503a, #55493f);
-    color: white;
+    background-image: linear-gradient(to right top, #964817, #854a21, #754b2b, #654a35, #55493f);
 }
 
 .home-main,
 .home-left,
 .home-right {
+    border-radius: 25px;
     border: 1px solid black;
-    min-height: 300px;
+    min-height: 250px;
     margin-top: 10px;
     display: flex;
     justify-content: center;
@@ -108,14 +129,37 @@
 }
 
 .logo-container {
+    padding: 8px;
     text-align: center;
+}
+
+.logo {
+    border-radius: 25px;
     padding: 10px;
+}
+
+.logo:hover {
+    box-shadow: 1px 1px 10px rgb(221, 183, 236), 0 0 20px rgb(207, 110, 240), 0 0 30px rgb(127, 3, 118);
 }
 
 .placeholder {
     border: 1px solid black;
     min-height: 100px;
     min-width: 100%;
+}
+
+
+
+/* Carousel */
+
+.carousel-inner {
+    border: 1px solid red;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: black;
+    border-radius: 5px;
 }
 
 /* Cards */
@@ -230,6 +274,13 @@ p {
     border-radius: 23px;
     border: none;
     color: white;
+}
+
+footer {
+    margin-top: 25px;
+    width: 100%;
+    min-height: 100px;
+    background-image: linear-gradient(to right top, #ffc6cf, #feb3be, #fb9fad, #f88b9c, #f4768a);
 }
 
 @media only screen and (max-width: 992px) {
