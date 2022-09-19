@@ -44,7 +44,7 @@
     background-color: white;
 }
 
-.input-group {
+.input-group>:not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
     margin-left: 8px;
     background: none;
     border: none;
@@ -80,7 +80,7 @@
     margin-bottom: 20px;
 }
 
-.hero-button {
+.action-button {
     background-image: linear-gradient(to right top, #c593f9, #df86df, #ef7cc2, #f577a6, #f4768a);
     justify-content: center;
     width: 200px;
@@ -93,6 +93,17 @@
     color: white;
     font-family: Permanent Marker;
     font-size: 1.1rem;
+    border: 1px solid #0C0404;
+}
+
+.control-button {
+    background-image: linear-gradient(to right top, #c593f9, #df86df, #ef7cc2, #f577a6, #f4768a);
+    border: 1px solid black;
+    width: 180px;
+    padding: 10px;
+    border-radius: 23px;
+    color: white;
+    margin: 20px 0;
 }
 
 .home-action {
@@ -148,14 +159,7 @@
     min-width: 100%;
 }
 
-
-
 /* Carousel */
-
-.carousel-inner {
-    border: 1px solid red;
-}
-
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
     background-color: black;
@@ -167,6 +171,11 @@
 .card-body {
     margin: 8px 8px 2px 8px;
     padding: 4px;
+}
+
+.featured-card {
+    border: 1px solid black;
+    max-width: 200px;
 }
 
 .product-image {
@@ -185,7 +194,7 @@
 /* Forms */
 
 .form {
-    margin-top: 145px;
+    margin-top: 175px;
 }
 
 label {
@@ -250,6 +259,10 @@ p {
     margin-top: 140px;
 }
 
+.product-database-title {
+    margin-top: 12px;
+}
+
 .update-link,
 .remove-item {
     cursor: pointer;
@@ -267,24 +280,49 @@ p {
     overflow-y: auto;    
 }
 
-.btn {
+/* .btn {
     background-image: linear-gradient(to right top, #c593f9, #df86df, #ef7cc2, #f577a6, #f4768a);
     width: 180px;
     padding: 10px;
     border-radius: 23px;
     border: none;
     color: white;
+} */
+
+/* Alerts */
+.alert {
+    margin-top: 12px;
 }
 
+/* Account */
+.account-forms {
+    max-width: 800px;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+/* Footer */
 footer {
+    position: absolute;
+    bottom: 0;
     margin-top: 25px;
     width: 100%;
-    min-height: 100px;
+    height: 100px;
     background-image: linear-gradient(to right top, #ffc6cf, #feb3be, #fb9fad, #f88b9c, #f4768a);
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 1000px) {
+    .navigation-text {
+        margin: 0 29px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
     .push-down{
         margin-top: 64px;
+    }
+
+    .form {
+        margin-top: 100px;
     }
 }

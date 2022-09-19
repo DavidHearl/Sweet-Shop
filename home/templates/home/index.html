@@ -2,101 +2,107 @@
 {% load static %}
 
 {% block content %}
-    <div class="container push-down">
+    <div class="container-md push-down">
+        <!-- Main Content -->
         <div class="row">
             <div class="col main-banner">
                 <h2 class="home-heading">Over 120+ retro and modern sweets and treats available to buy online</h2>
             </div>
         </div>
+        <!-- Featured Navigation -->
         <div class="row">
             <div class="col-12">
                 <div class="home-main">
                     <h2 class="hero-heading">All your favorites</h2>
                     <p class="hero-body">Retro, Fizzy, Jelly, Gummy, Chocolate plus so much more !</p>
-                    <a href="{% url 'products' %}" class="hero-button">Shop Now</a>
+                    <a href="{% url 'products' %}" class="action-button">Shop Now</a>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-6">
                 <div class="home-left">
-                    <h2 class="hero-heading">Sweets, Glorious Sweets</h2>
+                    <h2 class="hero-heading">Sweets</h2>
                     <p class="hero-body">Whatever you fancy</p>
-                    <a href="{% url 'products' %}" class="hero-button">Shop Now</a>
+                    <a href="{% url 'products' %}" class="action-button">Shop Now</a>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <div class="home-right">
                     <h2 class="hero-heading">Chocolate !</h2>
                     <p class="hero-body">It's all about the choc</p>
-                    <a href="{% url 'products' %}?category=chocolate" class="hero-button">Chocolate</a>
+                    <a href="{% url 'products' %}?category=chocolate" class="action-button">Chocolate</a>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <h2 class="home-heading">Some of our favorites...</h2>
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                </ol>
 
-                {% for sub_list in carousel_list %}
-                    <p>Test - Level 1 </p>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="row">
-                                {% for product in sub_list %}
-                                    <div class="col-3">
-                                        <div class="card h-100">
-                                            <a href="{% url 'product_detail' product.id %}">
-                                                <img class="card-img-top img-fluid product-image" src="{{ product.image.url }}" alt="{{ product.name }}">
-                                            </a>
-                                            <div class="card-body">
-                                                <p>{{ product.name }}</p>
+        <!-- Featured Products -->
+        <div class="row">
+            <div class="col">
+                <h2 class="home-heading">Some of our favorites...</h2>
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    
+                    {% for sub_list in carousel_list %}
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="row">
+                                    {% for product in sub_list %}
+                                        <div class="col-3">
+                                            <div class="card featured-card h-100">
+                                                <a href="{% url 'product_detail' product.id %}">
+                                                    <img class="card-img-top img-fluid product-image" src="{{ product.image.url }}" alt="{{ product.name }}">
+                                                </a>
+                                                <div class="card-body">
+                                                    <p>{{ product.name }}</p>
+                                                </div>
+                                                <div class="card-footer bg-white pt-0">
+                                                    <p class="price">£{{ product.price }} / 100g</p>
+                                                    {% if product.category %}
+                                                    <p class="label">
+                                                        <a href="{% url 'products' %}?category={{ product.category.name }}">
+                                                            <i class="fas fa-tag mr-2">{{ product.category.friendly_name }}</i>
+                                                        </a>
+                                                    </p>
+                                                    {% endif %}
+                                                    
+                                                    {% if product.rating %}
+                                                        <p><i class="fas fa-star mr-1"></i> {{ product.rating }} / 5.00</p>
+                                                    {% else %}
+                                                        <p>No Rating</p>
+                                                    {% endif %}
+                                                    
+                                                    {% if request.user.is_superuser %}
+                                                    <p class="ml-3">
+                                                        <a href="{% url 'modify_product' product.id %}">Edit</a>
+                                                        <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                                                    </p>
+                                                    {% endif %}
+                                                </div>
                                             </div>
-                                            <div class="card-footer bg-white pt-0">
-                                                <p class="price">£{{ product.price }} / 100g</p>
-                                                {% if product.category %}
-                                                <p class="label">
-                                                    <a href="{% url 'products' %}?category={{ product.category.name }}">
-                                                        <i class="fas fa-tag mr-2">{{ product.category.friendly_name }}</i>
-                                                    </a>
-                                                </p>
-                                                {% endif %}
-                                                
-                                                {% if product.rating %}
-                                                    <p><i class="fas fa-star mr-1"></i> {{ product.rating }} / 5.00</p>
-                                                {% else %}
-                                                    <p>No Rating</p>
-                                                {% endif %}
-                                                
-                                                {% if request.user.is_superuser %}
-                                                <p class="ml-3">
-                                                    <a href="{% url 'modify_product' product.id %}">Edit</a>
-                                                    <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
-                                                </p>
-                                                {% endif %}
-                                            </div>
-                                        </div>
-                                    </div>   
-                                {% endfor %}
+                                        </div>   
+                                    {% endfor %}
+                                </div>
                             </div>
                         </div>
-                    </div>
-                {% endfor %}
+                    {% endfor %}
 
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
             </div>
         </div>
+
         <div class="row">
             <h2 class="home-heading">Shop by Brand...</h2>
             <div class="col-6 col-md-4 col-lg-3 col-xl-2 logo-container">
@@ -122,3 +128,29 @@
         </div>
     </div>
 {% endblock %}
+
+<script>
+    $(document).ready(function(){
+      // Activate Carousel with a specified interval
+      $("#myCarousel").carousel({interval: 500});
+            
+      // Enable Carousel Indicators
+      $(".item1").click(function(){
+        $("#myCarousel").carousel(0);
+      });
+      $(".item2").click(function(){
+        $("#myCarousel").carousel(1);
+      });
+      $(".item3").click(function(){
+        $("#myCarousel").carousel(2);
+      });
+        
+      // Enable Carousel Controls
+      $(".carousel-control-prev").click(function(){
+        $("#myCarousel").carousel("prev");
+      });
+      $(".carousel-control-next").click(function(){
+        $("#myCarousel").carousel("next");
+      });
+    });
+</script>
