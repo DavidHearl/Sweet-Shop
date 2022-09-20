@@ -91,6 +91,45 @@
         </div>
     </div>
 </div>
+
+<!-- Post Review -->
+{% with reviews.count as total_reviews %}
+    <h2 class="review-title">
+        <i class="far fa-comments"></i>
+        {{ total_reviews }} Reviews{{ total_reviews|pluralize}}
+    </h2>
+{% endwith %}
+
+<!-- List reviews in the product detail -->
+{% for review in reviews %}
+    <div class="review">
+        <p class="info">
+            {{ review.name }} - {{ review.created }}
+            {% if request.user.id == review.username.id %}
+                <button class="delete-review">
+                    <a href="">Delete</a>
+                </button>
+            {% endif %}
+        </p>
+        {{ review.content|linebreaks }}
+    </div>
+{% empty %}
+    <p>There are no reviews yet.</p>
+{% endfor %}
+
+<!-- Add a new review -->
+{% if new_review %}
+    <p>There are no reviews yet</p>
+{% else %}
+    {% if user.is_authenticated %}
+        <form class="add-review-form" method="post">
+            {{ review_form | crispy }}
+            {% csrf_token %}
+            <input type="submit" class="add-review" value="Add Review">
+        </form>
+    {% endif %}
+{% endif %}
+
 {% endblock %}
 
 {% block postloadjs %}

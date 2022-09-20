@@ -38,9 +38,9 @@ class Product(models.Model):
 
 class Review(models.Model):
     product = models.ForeignKey(
-        Product, on_delete=models.CASCADE, related_name='comments')
+        Product, on_delete=models.CASCADE, related_name='reviews')
     username = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name='comments')
+        User, on_delete=models.CASCADE, related_name='reviews')
     name = models.CharField(max_length=100)
     rating = models.DecimalField(
         max_digits=5, decimal_places=2, null=True, blank=False)
@@ -53,4 +53,4 @@ class Review(models.Model):
         ordering = ('created',)
 
     def __str__(self):
-        return f'Comment by {self.name} on {self.post}'
+        return f'Review by {self.name} on {self.post}'

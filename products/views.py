@@ -4,8 +4,8 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 
-from .models import Product, Category
-from .forms import ModifyProductsForm
+from .models import Product, Category, Review
+from .forms import ModifyProductsForm, ReviewForm
 
 
 def all_products(request):
@@ -75,12 +75,39 @@ def product_detail(request, product_id):
     """ A view to show individual product details """
 
     product = get_object_or_404(Product, pk=product_id)
+    reviews = product.reviews.filter(active=True)
+    review_form = None
+    new_review = None
+
+    if request.method == 'POST':
+        review_form = ReviewForm(data=request.POST)
+        if review_form.is_valid():
+            new_review = review_form.save(commit=False)
+            new_review.username = request.user
+            new_review.product = product
+            new_review.save()
+        else:
+            review_form = ReviewForm() 
 
     context = {
         'product': product,
+        'review': reviews,
+        'new_review': new_review,
+        'review_form': review_form,
     }
 
     return render(request, 'products/product_detail.html', context)
+
+
+@login_required()
+def delete_review(request, review_id):
+    review = get_object_or_404(Review, pk=review_id)
+    logged_user = request.user.id
+
+    review.delete()
+    messages.success(request, f"Your review has been removed")
+
+    return redirect(reverse('product/product_detail.html'))
 
 
 @login_required()
