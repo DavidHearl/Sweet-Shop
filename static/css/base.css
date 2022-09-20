@@ -10,7 +10,7 @@
 
 /* Navigation */
 .title {
-    font-family: Permanent Marker;
+    font-family: "Permanent Marker";
 }
 
 .navbar{
@@ -58,7 +58,7 @@
 }
 
 .home-heading {
-    font-family: Permanent Marker;
+    font-family: "Permanent Marker";
     color: #f4768a;
     font-size: 1.5rem;
     text-align: center;
@@ -66,14 +66,14 @@
 }
 
 .hero-heading {
-    font-family: Permanent Marker;
+    font-family: "Permanent Marker";
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     color: white;
     font-size: 2rem;
 }
 
 .hero-body {
-    font-family: Permanent Marker;
+    font-family: "Permanent Marker";
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     color: white;
     font-size: 1rem;
@@ -91,7 +91,7 @@
     margin: 20px auto;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     color: white;
-    font-family: Permanent Marker;
+    font-family: "Permanent Marker";
     font-size: 1.1rem;
     border: 1px solid #0C0404;
 }
@@ -188,7 +188,7 @@
 }
 
 .label {
-    font-size: 0.9 rem;
+    font-size: 0.9rem;
 }
 
 /* Forms */

@@ -1,4 +1,5 @@
-from django.shortcuts import get_object_or_404, redirect, render, reverse, get_object_or_404, HttpResponse
+from django.shortcuts import get_object_or_404, redirect, \
+    render, reverse, get_object_or_404, HttpResponse
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
@@ -13,13 +14,15 @@ from shopping_bag.contexts import shopping_bag_contents
 import stripe
 import json
 
+
 @require_POST
 def cache_checkout_data(request):
     try:
         pid = request.POST.get('client_secret').split(_secret)[0]
         stripe.api_key = settings.STRIPE_SECRET_KEY
         stripe.PaymentIntent.modify(pid, metadata={
-            'shopping_bag': json.dumps(request.session.get('shopping_bag', {})),
+            'shopping_bag': json.dumps(
+                request.session.get('shopping_bag', {})),
             'save_info': request.POST.get('save_info'),
             'username': request.user
         })
@@ -27,7 +30,7 @@ def cache_checkout_data(request):
     except Exception as e:
         messages.error(request, 'Sorry, your payment cannot be \
             processed right now. Please try again later.')
-        return HttpResponse(content=e, status= 400)
+        return HttpResponse(content=e, status=400)
 
 
 def checkout(request):
@@ -67,15 +70,17 @@ def checkout(request):
                     order_line_item.save()
 
             request.session['save_info'] = 'save-info' in request.POST
-            return redirect(reverse('checkout_success', args=[order.order_number]))
+            return redirect(reverse(
+                'checkout_success', args=[order.order_number]))
         else:
             messages.error(request, 'There was an error with this form \
                 Please ensure that the information entered is correct')
-                
+
     else:
         shopping_bag = request.session.get('shopping_bag', {})
         if not shopping_bag:
-            messages.error(request, "There's nothing in your bag at the moment")
+            messages.error(request, "There's nothing in your \
+                bag at the moment")
             return redirect(reverse('products'))
 
         current_shopping_bag = shopping_bag_contents(request)
@@ -147,7 +152,7 @@ def checkout_completed_successfully(request, order_number):
         We hope you enjoy your order. See important order details below. \
         Your Order Number is {order_number}. A confirmation \
         email will be sent to {order.email}.')
-    
+
     if 'shopping_bag' in request.session:
         del request.session['shopping_bag']
 

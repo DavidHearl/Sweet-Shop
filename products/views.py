@@ -10,7 +10,7 @@ from .forms import ModifyProductsForm
 
 def all_products(request):
     """ A view to return all products, including sorting and searching """
-    
+
     products = Product.objects.all()
     query = None
     categories = None
@@ -55,9 +55,10 @@ def all_products(request):
                 messages.error(request, "No Search Criteria Present")
                 return redirect(reverse('products'))
 
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            queries = Q(name__icontains=query) | \
+                Q(description__icontains=query)
             products = products.filter(queries)
-            
+
     current_sorting = f'{sort}_{direction}'
 
     context = {
@@ -86,7 +87,8 @@ def product_detail(request, product_id):
 def add_product(request):
     """ Add a product to the store """
     if not request.user.is_superuser:
-        messages.error(request, 'This function is only available for superusers')
+        messages.error(
+            request, 'This function is only available for superusers')
         return redirect(reverse('home'))
 
     if request.method == 'POST':
@@ -96,10 +98,12 @@ def add_product(request):
             messages.success(request, 'New Product Added')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Product could not be created, Please ensure the form is correct and there are no missing fields')
+            messages.error(request,
+                           'Product could not be created, Please ensure the \
+                           form is correct and there are no missing fields')
     else:
         form = ModifyProductsForm()
-        
+
     template = 'products/add_product.html'
     context = {
         'form': form,
@@ -112,23 +116,27 @@ def add_product(request):
 def modify_product(request, product_id):
     """ Modify a product in the database """
     if not request.user.is_superuser:
-        messages.error(request, 'This function is only available for superusers')
+        messages.error(
+            request, 'This function is only available for superusers')
         return redirect(reverse('home'))
 
     product = get_object_or_404(Product, pk=product_id)
 
     if request.method == 'POST':
-        form = ModifyProductsForm(request.POST, request.FILES, instance=product)
+        form = ModifyProductsForm(
+            request.POST, request.FILES, instance=product)
         if form.is_valid():
             form.save()
             messages.success(request, 'Product Updated')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Product could not be modified, Please ensure the form is correct and there are no missing fields')
+            messages.error(request,
+                           'Product could not be modified, Please ensure the \
+                           form is correct and there are no missing fields')
     else:
         form = ModifyProductsForm(instance=product)
         messages.info(request, f'{product.name} is being modified')
-        
+
     template = 'products/modify_product.html'
     context = {
         'form': form,
@@ -142,7 +150,8 @@ def modify_product(request, product_id):
 def delete_product(request, product_id):
     """ Modify a product in the database """
     if not request.user.is_superuser:
-        messages.error(request, 'This function is only available for superusers')
+        messages.error(
+            request, 'This function is only available for superusers')
         return redirect(reverse('home'))
 
     product = get_object_or_404(Product, pk=product_id)

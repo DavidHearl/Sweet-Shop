@@ -19,7 +19,9 @@ def user_profile(request):
             form.save()
             messages.success(request, 'Profile updated successfully')
         else:
-            messages.error(request, 'Update Failed!, Please ensure the form is correct and there are no missing fields')
+            messages.error(request,
+                           'Update Failed!, Please ensure the form is \
+                           correct and there are no missing fields')
     else:
         form = UserProfileForm(instance=profile)
         orders = profile.orders.all()
@@ -27,8 +29,8 @@ def user_profile(request):
     template = 'profiles/user_profiles.html'
     context = {
         'form': form,
-        'orders' : orders,
-        'on_profile_page' : True
+        'orders': orders,
+        'on_profile_page': True
     }
 
     return render(request, template, context)
@@ -39,9 +41,10 @@ def order_history(request, order_number):
     order = get_object_or_404(Order, order_number=order_number)
 
     messages.info(request, (
-        f'An Email for The past order confirmation: { order_number } was sent on the date of order'
+        f'An Email for The past order confirmation: \
+        { order_number } was sent on the date of order'
     ))
-    
+
     template = 'checkout/checkout_success.html'
     context = {
         'order': order,
