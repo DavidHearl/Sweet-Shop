@@ -179,6 +179,13 @@ I wanted to keep the design for the website simple yet elegant so I have gone fo
 |generateprivacypolicy.com|Privacy Policy Generator||
 |Stripe|online payments||
 
+## Testing
+---
+
+Visit the testing Page to view testing Information
+
+See Below to see marking criteria
+
 ## Pass Criteria
 ---
 | Number | Marking Criteria | Met |
@@ -226,25 +233,6 @@ I wanted to keep the design for the website simple yet elegant so I have gone fo
 |5.1|Create a Facebook Business Page dedicated to your product |[x]|
 |5.2|Add a newsletter signup form to your application. ||
 |6.1|Document the e-commerce business model underlying your application |[x]|
-
-## Validator Testing
-
-To keep readability some lines will ignore PEP 8 style guidelines
-- checkout > webhook_handler.py > line 71, 72 > line too long 80 > 79
-- checkout > webhook_handler.py > line 132 > line too long 81 > 79
-
-
-
-
-## Manual Testing
-
-
-
-## Automated Testing
-
-![Business Model](./media/test_urls.png "Title")
-
-## Responsive Testing
 
 ## E-Commerce Business Model & Business Page
 
