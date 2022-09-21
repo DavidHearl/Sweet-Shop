@@ -280,6 +280,27 @@ p {
     overflow-y: auto;    
 }
 
+/* Product Detail */
+.product-heading {
+    text-decoration: underline;
+}
+
+.image-container {
+    text-align: center;
+}
+
+.product-image {
+    width: 100%;
+    height: 100%;
+    max-width: 275px;
+    max-height: 275px;
+    margin-top: 20px;
+}
+
+.quantity-input {
+    width: 90%;
+}
+
 /* .btn {
     background-image: linear-gradient(to right top, #c593f9, #df86df, #ef7cc2, #f577a6, #f4768a);
     width: 180px;

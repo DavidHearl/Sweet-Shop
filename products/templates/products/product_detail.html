@@ -14,19 +14,21 @@
 {% endblock %}
 
 {% block content %}
-<div class="container-fluid push-down">
+<div class="container push-down">
     <div class="row">
-        <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
-            <div class="image-container my-5">
+        <!-- Image -->
+        <div class="col-12 col-md-4">
+            <div class="image-container">
                 <a href="{{ product.image.url }}" target="_blank">
-                    <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                    <img class="product-image" src="{{ product.image.url }}" alt="{{ product.name }}">
                 </a>
             </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-4">
-            <div class="mb-5 mt-md-5">
-                <p class="mb-0">{{ product.name }}</p>
-                <p class="lead mb-0">£{{ product.price }} / 100g</p>
+        <!-- Content/Desciption -->
+        <div class="col-12 col-md-8">
+            <div>
+                <p class="home-heading product-heading">{{ product.name }}</p>
+                <p class="lead mb-0">Price : £{{ product.price }} / 100g</p>
                 {% if product.category %}
                     <p class="mt-1 mb-0">
                         <a href="{% url 'products' %}?category={{ product.category.name }}">
@@ -47,14 +49,15 @@
                     <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
                 {% endif %}
 
-                <p class="mt-3">{{ product.description }}</p>
+                <p>{{ product.description }}</p>
 
+                <hr>
                 <!-- Add item to basket form -->
                 <form action="{% url 'add_to_shopping_bag' product.id %}" method="POST">
                     {% csrf_token %}
                     <div class="form-row">
                         <div class="col-12">
-                            <p class="mt-3">Quantity:</p>
+                            <p>Quantity:</p>
                             <div class="form-group w-50">
                                 <div class="input-group">
                                     <div class="input-group-prepend">
@@ -78,13 +81,13 @@
                         </div>
                     
                         <div class="col-12">
-                            <a class="btn" href="{% url 'products' %}">
+                            <a href="{% url 'products' %}">
                                 <span>
                                     <i class="fas fa-chevron-left"></i>
                                 </span>
                                 <span>Keep Shopping</span>
                             </a>
-                            <input class="btn mt-5" type="submit" value="Add to Bag">
+                            <input class="action-button" type="submit" value="Add to Bag">
                         </div>
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     </div>
@@ -93,6 +96,8 @@
         </div>
     </div>
 </div>
+
+<hr>
 
 <!-- Post Review -->
 {% with reviews.count as total_reviews %}
