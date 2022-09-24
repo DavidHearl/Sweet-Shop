@@ -16,11 +16,26 @@
 {% block content %}
 <div class="container push-down">
     <div class="row">
-        <!-- Image -->
         <div class="col-12 col-md-4">
+            <!-- Edit/Delete Product -->
+            {% if request.user.is_superuser %}
+                <div class="row">
+                    <div class="col-6">
+                        <button class="edit-button">
+                            <a href="{% url 'modify_product' product.id %}">Edit</a>
+                        </button>
+                    </div>
+                    <div class="col-6">
+                        <button class="delete-button">
+                            <a href="{% url 'delete_product' product.id %}">Delete</a>
+                        </button>
+                    </div>
+                </div>
+            {% endif %}
+            <!-- Image -->
             <div class="image-container">
                 <a href="{{ product.image.url }}" target="_blank">
-                    <img class="product-image" src="{{ product.image.url }}" alt="{{ product.name }}">
+                    <img class="product-image product-detail-image" src="{{ product.image.url }}" alt="{{ product.name }}">
                 </a>
             </div>
         </div>
@@ -28,25 +43,19 @@
         <div class="col-12 col-md-8">
             <div>
                 <p class="home-heading product-heading">{{ product.name }}</p>
-                <p class="lead mb-0">Price : £{{ product.price }} / 100g</p>
+                <p class="lead">Price : £{{ product.price }} / 100g</p>
                 {% if product.category %}
-                    <p class="mt-1 mb-0">
+                    <p>
                         <a href="{% url 'products' %}?category={{ product.category.name }}">
-                            <i class="fas fa-tag mr-1">{{ product.category.friendly_name }}</i>
+                            <i class="fas fa-tag"> {{ product.category.friendly_name }}</i>
                         </a>
                     </p>
                 {% endif %}
+
                 {% if product.rating %}
-                    <p><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</p>
+                    <p class="text-end">{{ product.rating }} <i class="fas fa-star"></i></p>
                 {% else %}
                     <p>No Rating</p>
-                {% endif %}
-
-                {% if request.user.is_superuser %}
-                    <p class="ml-3">
-                        <a href="{% url 'modify_product' product.id %}">Edit</a>
-                    </p>
-                    <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
                 {% endif %}
 
                 <p>{{ product.description }}</p>
@@ -58,10 +67,10 @@
                     <div class="form-row">
                         <div class="col-12">
                             <p>Quantity:</p>
-                            <div class="form-group w-50">
+                            <div class="form-group">
                                 <div class="input-group">
                                     <div class="input-group-prepend">
-                                        <button class="decrement-quantity btn" data-item_id="{{ product.id }}" id="decrement-quantity_{{ product.id }}">
+                                        <button class="decrement-quantity" data-item_id="{{ product.id }}" id="decrement-quantity_{{ product.id }}">
                                             <span>
                                                 <i class="fas fa-minus"></i>
                                             </span>
@@ -70,7 +79,7 @@
                                     <!-- Max 30 = 3kg -->
                                     <input class="form-control quantity_input" type="number" name="quantity" value="1" min="1" max="30" data-item_id="{{ product.id }}" id="id_quantity_{{ product.id }}">
                                     <div class="input-group-append">
-                                        <button class="increment-quantity btn" data-item_id="{{ product.id }}" id="increment-quantity_{{ product.id }}">
+                                        <button class="increment-quantity" data-item_id="{{ product.id }}" id="increment-quantity_{{ product.id }}">
                                             <span>
                                                 <i class="fas fa-plus"></i>
                                             </span>
@@ -79,63 +88,77 @@
                                 </div>
                             </div>
                         </div>
-                    
-                        <div class="col-12">
-                            <a href="{% url 'products' %}">
-                                <span>
-                                    <i class="fas fa-chevron-left"></i>
-                                </span>
-                                <span>Keep Shopping</span>
-                            </a>
-                            <input class="action-button" type="submit" value="Add to Bag">
+                        
+                        <div class="row">
+                            <div class="col-6 text-center">
+                                <button class="action-button">
+                                    <a href="{% url 'products' %}">
+                                        <span>
+                                            <i class="fas fa-chevron-left"></i>
+                                        </span>
+                                        <span>Keep Shopping</span>
+                                    </a>
+                                </button>
+                            </div>
+                            <div class="col-6 text-center">
+                                <input class="action-button" type="submit" value="Add to Bag">
+                                <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                            </div>
                         </div>
-                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                        
                     </div>
                 </form>
             </div>
         </div>
     </div>
-</div>
+    <hr>
 
-<hr>
-
-<!-- Post Review -->
-{% with reviews.count as total_reviews %}
-    <h2 class="review-title">
-        <i class="far fa-comments"></i>
-        {{ total_reviews }} Reviews{{ total_reviews|pluralize}}
-    </h2>
-{% endwith %}
-
-<!-- List reviews in the product detail -->
-{% for review in reviews %}
-    <div class="review">
-        <p class="info">
-            {{ review.name }} - {{ review.created }}
-            {% if request.user.id == review.username.id %}
-                <button class="delete-review">
-                    <a href="">Delete</a>
-                </button>
-            {% endif %}
-        </p>
-        {{ review.content|linebreaks }}
+    <!-- Reviews -->
+    <div class="row">
+        <div class="col">
+            {% with reviews.count as total_reviews %}
+                <h2 class="review-title">
+                    <i class="far fa-comments"></i>
+                    {{ total_reviews }} Reviews{{ total_reviews|pluralize}}
+                </h2>
+            {% endwith %}
+        </div>
     </div>
-{% empty %}
-    <p>There are no reviews yet.</p>
-{% endfor %}
 
-<!-- Add a new review -->
-{% if new_review %}
-    <p>There are no reviews yet</p>
-{% else %}
-    {% if user.is_authenticated %}
-        <form class="add-review-form" method="post">
-            {{ review_form | crispy }}
-            {% csrf_token %}
-            <input type="submit" class="add-review" value="Add Review">
-        </form>
-    {% endif %}
-{% endif %}
+    <!-- List reviews in the product detail -->
+    {% for review in reviews %}
+        <div class="review">
+            <p class="info">
+                {{ review.name }} - {{ review.created }}
+                {% if request.user.id == review.username.id %}
+                    <button class="delete-review">
+                        <a href="">Delete</a>
+                    </button>
+                {% endif %}
+            </p>
+            {{ review.content|linebreaks }}
+        </div>
+    {% empty %}
+        <p>There are no reviews yet.</p>
+    {% endfor %}
+
+    <!-- Add a review -->
+    <div class="row">
+        <div class="col">
+            {% if new_review %}
+                <p>There are no reviews yet</p>
+            {% else %}
+                {% if user.is_authenticated %}
+                    <form class="add-review-form" method="post">
+                        {{ review_form | crispy }}
+                        {% csrf_token %}
+                        <input type="submit" class="add-review full-width-action-button" value="Add Review">
+                    </form>
+                {% endif %}
+            {% endif %}
+        </div>
+    </div>
+</div>
 
 {% endblock %}
 

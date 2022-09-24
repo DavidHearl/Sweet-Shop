@@ -19,10 +19,7 @@
     <div class="container push-down">
         <div class="row">
             <div class="col">
-                <hr>
-                <h2 class="mb-4">
-                    My Profile
-                </h2>
+                <h2 class="page-title">My Profile</h2>
                 <hr>
             </div>
         </div>
@@ -33,7 +30,7 @@
                 <form action="{% url 'user_profile' %}" class="mt-3" method="POST" id="profile-update-form">
                     {% csrf_token %}
                     {{ form|crispy }}
-                    <button class="btn">Update Information</button>
+                    <button class="full-width-action-button">Update Information</button>
                 </form>
             </div>
 

@@ -33,7 +33,7 @@
                 <a href="{% url 'add_product' %}" class="dropdown-item">Add Product</a>
                 <a href="{% url 'modify_pricing' %}" class="dropdown-item">Manage Inventory</a>
             {% endif %}
-             <a href="" class="dropdown-item">My Profile</a>
+            <a href="{% url 'user_profile' %}" class="dropdown-item">My Profile</a>
             <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
         {% else %}
             <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>

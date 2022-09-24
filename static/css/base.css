@@ -1,3 +1,4 @@
+/* General */
 .cover {
 	height: 100%;
 	width: 100%;
@@ -6,6 +7,10 @@
 	position: fixed;
 	background: white;
 	z-index: -1;
+}
+
+a {
+    text-decoration: none;
 }
 
 /* Navigation */
@@ -42,12 +47,6 @@
 
 .top-navigation {
     background-color: white;
-}
-
-.input-group>:not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
-    margin-left: 8px;
-    background: none;
-    border: none;
 }
 
 /* Home */
@@ -94,6 +93,26 @@
     font-family: "Permanent Marker";
     font-size: 1.1rem;
     border: 1px solid #0C0404;
+}
+
+.full-width-action-button {
+    background-image: linear-gradient(to right top, #c593f9, #df86df, #ef7cc2, #f577a6, #f4768a);
+    justify-content: center;
+    width: 100%;
+    padding: 6px;
+    border-radius: 5px;
+    border: none;
+    color: black;
+    margin: 10px auto;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    color: white;
+    font-size: 1.1rem;
+    border: 1px solid #0C0404;
+}
+
+/* Profile Buttons */
+.form-control {
+    margin-top: 10px;
 }
 
 .control-button {
@@ -255,12 +274,12 @@ p {
     text-decoration-style: wavy;
 }
 
-.push-down{
-    margin-top: 140px;
+.page-title {
+    margin-top: 12px;
 }
 
-.product-database-title {
-    margin-top: 12px;
+.push-down{
+    margin-top: 140px;
 }
 
 .update-link,
@@ -294,21 +313,60 @@ p {
     height: 100%;
     max-width: 275px;
     max-height: 275px;
-    margin-top: 20px;
 }
 
-.quantity-input {
+.product-detail-image {
+    margin-top: 30px;
+}
+
+.quantity_input {
     width: 90%;
+    border: 1px solid black !important;
+    border-radius: 4px !important;
 }
 
-/* .btn {
-    background-image: linear-gradient(to right top, #c593f9, #df86df, #ef7cc2, #f577a6, #f4768a);
-    width: 180px;
-    padding: 10px;
-    border-radius: 23px;
+.input-group>:not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+    margin-left: 8px;
+    margin-top: 2px;
+    background: none;
     border: none;
+}
+
+.fa-tag {
+    color: gray;
+}
+
+.increment-quantity,
+.decrement-quantity {
+    border: 1px solid black;
+    background: none;
+    border-radius: 4px;
+    padding: 4px 8px 4px 10px;
+    margin-top: 1px;
+}
+
+.edit-button,
+.delete-button {
+    width: 100%;
+    padding: 6px;
+    margin: 10px 0;
+    border-radius: 8px;
     color: white;
-} */
+    border: 1px solid black;
+}
+
+.edit-button > a,
+.delete-button > a {
+    color: white;
+}
+
+.edit-button {
+    background-color: #0d6efd;    
+}
+
+.delete-button {
+    background-color: #dc3545;
+}
 
 /* Alerts */
 .alert {

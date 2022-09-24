@@ -14,13 +14,10 @@
 
 {% block content %}
 
-    <div class="container push-down mb-2">
+    <div class="container push-down">
         <div class="row">
             <div class="col">
-                <hr>
-                <h2 class="mb-4">
-                    Shopping Bag
-                </h2>
+                <h2 class="page-title">Shopping Bag</h2>
                 <hr>
             </div>
         </div>
@@ -108,7 +105,7 @@
                     </div>
                 {% else %}
                     <p class="mb-5">There are no Items in your Shopping Bag</p>
-                    <a href="{% url 'products' %}" class="btn btn-lg">
+                    <a href="{% url 'products' %}" class="action-button">
                         <span>
                             <i class="fas fa-chevron-left"></i>
                         </span>
