@@ -1,11 +1,10 @@
-from dataclasses import field
 from django import forms
 from .widgets import CustomClearableFileInput
 from .models import Product, Category, Review
 
 
 class ModifyProductsForm(forms.ModelForm):
-
+    """ Form to add a product to the database """
     class Meta:
         model = Product
         fields = '__all__'
@@ -23,7 +22,15 @@ class ModifyProductsForm(forms.ModelForm):
             field.widget.attrs['class'] = 'border-black'
 
 
+class ManageInventoryForm(forms.ModelForm):
+    """ Form to modify the pricing of products """
+    class Meta:
+        model = Product
+        fields = ('name', 'price')
+
+
 class ReviewForm(forms.ModelForm):
+    """ Form to add a review about the product """
     class Meta:
         model = Review
         fields = ('name', 'content')

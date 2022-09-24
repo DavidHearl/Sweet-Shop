@@ -30,7 +30,8 @@
     <div class="dropdown-menu" id="search-bar" aria-labelledby="user-options">
         {% if request.user.is_authenticated %}
             {% if request.user.is_superuser %}
-                <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
+                <a href="{% url 'add_product' %}" class="dropdown-item">Add Product</a>
+                <a href="{% url 'modify_pricing' %}" class="dropdown-item">Manage Inventory</a>
             {% endif %}
              <a href="" class="dropdown-item">My Profile</a>
             <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>

@@ -5,7 +5,7 @@ from django.db.models import Q
 from django.db.models.functions import Lower
 
 from .models import Product, Category, Review
-from .forms import ModifyProductsForm, ReviewForm
+from .forms import ManageInventoryForm, ModifyProductsForm, ReviewForm
 
 
 def all_products(request):
@@ -112,28 +112,29 @@ def delete_review(request, review_id):
 
 @login_required()
 def add_product(request):
-    """ Add a product to the store """
+    """ Add aditional products to the store """
     if not request.user.is_superuser:
         messages.error(
-            request, 'This function is only available for superusers')
+            request, 'Sorry, this function is only \
+                available to admins and superusers')
         return redirect(reverse('home'))
 
     if request.method == 'POST':
-        form = ModifyProductForm(request.POST, request.FILES)
-        if form.is_valid():
-            form.save()
+        modify_product = ModifyProductsForm(request.POST, request.FILES)
+        if modify_product.is_valid():
+            modify_product.save()
             messages.success(request, 'New Product Added')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
             messages.error(request,
-                           'Product could not be created, Please ensure the \
+                           'Product could not be addedd, Please ensure the \
                            form is correct and there are no missing fields')
     else:
-        form = ModifyProductsForm()
+        modify_product = ModifyProductsForm()
 
     template = 'products/add_product.html'
     context = {
-        'form': form,
+        'modify_product': modify_product,
     }
 
     return render(request, template, context)
@@ -144,33 +145,59 @@ def modify_product(request, product_id):
     """ Modify a product in the database """
     if not request.user.is_superuser:
         messages.error(
-            request, 'This function is only available for superusers')
+            request, 'Sorry, this function is only \
+                available to admins and superusers')
         return redirect(reverse('home'))
 
     product = get_object_or_404(Product, pk=product_id)
 
     if request.method == 'POST':
-        form = ModifyProductsForm(
+        modify_product = ModifyProductsForm(
             request.POST, request.FILES, instance=product)
-        if form.is_valid():
-            form.save()
-            messages.success(request, 'Product Updated')
+        if modify_product.is_valid():
+            modify_product.save()
+            messages.success(request, 'Product has been Updated')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
             messages.error(request,
                            'Product could not be modified, Please ensure the \
                            form is correct and there are no missing fields')
     else:
-        form = ModifyProductsForm(instance=product)
+        modify_product = ModifyProductsForm(instance=product)
         messages.info(request, f'{product.name} is being modified')
 
     template = 'products/modify_product.html'
     context = {
-        'form': form,
+        'modify_product': modify_product,
         'product': product,
     }
 
     return render(request, template, context)
+
+
+@login_required()
+def modify_pricing(request):
+    """ Modify Pricing for the whole database """
+
+    products = Product.objects.all()
+    manage_inventory = None
+
+    # if request.method == 'POST':
+    #     manage_inventory = ManageInventoryForm(data=request.POST)
+    #     if manage_inventory.is_valid():
+    #         new_review = manage_inventory.save(commit=False)
+    #         new_review.username = request.user
+    #         new_review.product = product
+    #         new_review.save()
+    #     else:
+    #         manage_inventory = ManageInventoryForm() 
+
+    context = {
+        'products': products,
+        'manage_inventory': manage_inventory,
+    }
+
+    return render(request, 'products/modify_pricing.html', context)
 
 
 @login_required()
