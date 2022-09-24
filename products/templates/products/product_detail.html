@@ -21,13 +21,13 @@
             {% if request.user.is_superuser %}
                 <div class="row">
                     <div class="col-6">
-                        <button class="edit-button">
-                            <a href="{% url 'modify_product' product.id %}">Edit</a>
+                        <button class="delete-button">
+                            <a href="{% url 'delete_product' product.id %}">Delete</a>
                         </button>
                     </div>
                     <div class="col-6">
-                        <button class="delete-button">
-                            <a href="{% url 'delete_product' product.id %}">Delete</a>
+                        <button class="edit-button">
+                            <a href="{% url 'modify_product' product.id %}">Edit</a>
                         </button>
                     </div>
                 </div>
@@ -35,7 +35,7 @@
             <!-- Image -->
             <div class="image-container">
                 <a href="{{ product.image.url }}" target="_blank">
-                    <img class="product-image product-detail-image" src="{{ product.image.url }}" alt="{{ product.name }}">
+                    <img class="product-detail-image product-detail-image" src="{{ product.image.url }}" alt="{{ product.name }}">
                 </a>
             </div>
         </div>

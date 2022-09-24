@@ -1,6 +1,14 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_css %}
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+{% endblock %}
+
+{% block extra_js %}
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+{% endblock %}
+
 {% block content %}
     <div class="container-md push-down">
         <!-- Main Content -->
@@ -37,68 +45,51 @@
         </div>
 
         <!-- Featured Products -->
-        <div class="row">
-            <div class="col">
-                <h2 class="home-heading">Some of our favorites...</h2>
-                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                    </ol>
-                    
-                    {% for sub_list in carousel_list %}
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <div class="row">
-                                    {% for product in sub_list %}
-                                        <div class="col-3">
-                                            <div class="card featured-card h-100">
-                                                <a href="{% url 'product_detail' product.id %}">
-                                                    <img class="card-img-top img-fluid product-image" src="{{ product.image.url }}" alt="{{ product.name }}">
-                                                </a>
-                                                <div class="card-body">
-                                                    <p>{{ product.name }}</p>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2 class="home-heading">Some of our favorites...</h2>
+                    <div class="main-carousel" data-flickity='{ "wrapAround": true, "imagesLoaded": true }'>
+                        {% for product in products %}
+                        <div class="card-group col-sm-6 col-md-4 col-lg-3 col-xl-2 bg-white">
+                            <div class="card card-featured h-100">
+                                <div class="card-img-top flex-fill">
+                                    <a href="{% url 'product_detail' product.id %}">
+                                        <img class="card-img-top img-fluid product-image" src="{{ product.image.url }}" alt="{{ product.name }}">
+                                    </a>
+                                </div>
+                                <div class="card-footer bg-white">
+                                    <div class="row">
+                                        <div class="col">
+                                            <p class="card-text mb-0">{{ product.name }}</p>
+                                            <p class="mb-0 text-start fw-bold">£{{ product.price }}</p>
+                                            {% if product.rating %}
+                                                <p><i class="fas fa-star mr-1"></i> {{ product.rating }} / 5.00</p>
+                                            {% else %}
+                                                <p>No Rating</p>
+                                            {% endif %}
+
+                                            {% if request.user.is_superuser %}
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <button class="delete-button">
+                                                            <a href="{% url 'delete_product' product.id %}">Delete</a>
+                                                        </button>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <button class="edit-button">
+                                                            <a href="{% url 'modify_product' product.id %}">Edit</a>
+                                                        </button>
+                                                    </div>
                                                 </div>
-                                                <div class="card-footer bg-white pt-0">
-                                                    <p class="price">£{{ product.price }} / 100g</p>
-                                                    {% if product.category %}
-                                                    <p class="label">
-                                                        <a href="{% url 'products' %}?category={{ product.category.name }}">
-                                                            <i class="fas fa-tag mr-2">{{ product.category.friendly_name }}</i>
-                                                        </a>
-                                                    </p>
-                                                    {% endif %}
-                                                    
-                                                    {% if product.rating %}
-                                                        <p><i class="fas fa-star mr-1"></i> {{ product.rating }} / 5.00</p>
-                                                    {% else %}
-                                                        <p>No Rating</p>
-                                                    {% endif %}
-                                                    
-                                                    {% if request.user.is_superuser %}
-                                                    <p class="ml-3">
-                                                        <a href="{% url 'modify_product' product.id %}">Edit</a>
-                                                        <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
-                                                    </p>
-                                                    {% endif %}
-                                                </div>
-                                            </div>
-                                        </div>   
-                                    {% endfor %}
+                                            {% endif %}
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    {% endfor %}
-
-                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
+                        {% endfor %}
+                    </div>
                 </div>
             </div>
         </div>
@@ -125,6 +116,12 @@
             <div class="col-6 col-md-4 col-lg-3 col-xl-2 logo-container"><img class="logo" src="/media/Logo_Swizzels.webp" alt=""></div>
             <div class="col-6 col-md-4 col-lg-3 col-xl-2 logo-container"><img class="logo" src="/media/Logo_Warheads.webp" alt=""></div>
             <div class="col-6 col-md-4 col-lg-3 col-xl-2 logo-container"><img class="logo" src="/media/Logo_Wonka.webp" alt=""></div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <h2 class="home-heading">Sign up for our newsletter...</h2>
+            </div>
         </div>
     </div>
 {% endblock %}

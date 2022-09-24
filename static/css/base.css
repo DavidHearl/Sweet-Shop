@@ -110,6 +110,17 @@ a {
     border: 1px solid #0C0404;
 }
 
+.carousel {
+    margin-bottom: 30px;
+    margin-top: 4px;
+}
+
+.card-group {
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin: auto 6px;
+}
+
 /* Profile Buttons */
 .form-control {
     margin-top: 10px;
@@ -308,7 +319,7 @@ p {
     text-align: center;
 }
 
-.product-image {
+.product-detail-image {
     width: 100%;
     height: 100%;
     max-width: 275px;
