@@ -231,7 +231,7 @@ See Below to see marking criteria
 |4.5|Ensure the current login state is reflected to the user ||
 |4.6|Users should not be permitted to access restricted content or functionality before role-based login ||
 |5.1|Create a Facebook Business Page dedicated to your product |[x]|
-|5.2|Add a newsletter signup form to your application. ||
+|5.2|Add a newsletter signup form to your application. |[x]|
 |6.1|Document the e-commerce business model underlying your application |[x]|
 
 ## E-Commerce Business Model & Business Page
@@ -246,6 +246,16 @@ We aim to be accessible to the mass market and will sell our product via our web
 Below I have included our business model canvas for The Sweet Shop. 
 
 ![Business Model](./media/Business_Model.png "Title")
+
+## Newsletter
+
+The newsletter was created using mailchimp
+
+Once the user signs up, for the news letter they show up in the dashboard as can be seen in the example below.
+
+![Newsletter](./media/Mailchimp.png "Newsletter screenshot")
+
+Disclaimer : The address has been blanked out on the image above
 
 ## Bugs found
 

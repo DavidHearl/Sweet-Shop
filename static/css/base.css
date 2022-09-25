@@ -13,6 +13,10 @@ a {
     text-decoration: none;
 }
 
+.table-borderless>:not(caption)>*>* {
+    padding-left: 0;
+}
+
 /* Navigation */
 .title {
     font-family: "Permanent Marker";
@@ -206,6 +210,10 @@ a {
 .featured-card {
     border: 1px solid black;
     max-width: 200px;
+}
+
+.featured {
+    margin-bottom: 30px;
 }
 
 .product-image {
@@ -411,14 +419,19 @@ p {
     border: 1px solid #0C0404;
 }
 
-/* Footer */
-footer {
-    position: absolute;
-    bottom: 0;
-    margin-top: 25px;
-    width: 100%;
-    height: 100px;
+.copyright {
+    padding: 10px;
+    border-top: 1px solid black;
+    color: white;
     background-image: linear-gradient(to right top, #ffc6cf, #feb3be, #fb9fad, #f88b9c, #f4768a);
+}
+
+/* Mailchamp */
+#mc_embed_signup{
+    background:#fff;
+    clear:left;
+    font:14px Helvetica,Arial,sans-serif;
+    width:80%;
 }
 
 @media only screen and (max-width: 1000px) {
