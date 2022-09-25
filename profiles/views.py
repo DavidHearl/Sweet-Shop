@@ -24,7 +24,7 @@ def user_profile(request):
                            correct and there are no missing fields')
     else:
         form = UserProfileForm(instance=profile)
-        orders = profile.orders.all()
+    orders = profile.orders.all()
 
     template = 'profiles/user_profiles.html'
     context = {
