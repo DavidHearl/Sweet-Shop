@@ -24,7 +24,7 @@
 
         <div class="row">
             <div class="col-12">
-                <form method="POST" action="{% url 'modify_pricing' product.id %}" class="form" enctype="multipart/form-data">
+                <form method="POST" action="{% url 'modify_product' product.id %}" class="form" enctype="multipart/form-data">
                     {% csrf_token %}
                     {% for field in edit_product %}
                         {% if field.name != 'image' %}

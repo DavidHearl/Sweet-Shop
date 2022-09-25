@@ -202,11 +202,11 @@ See Below to see marking criteria
 |1.10|Write Python code that includes functions with compound statements such as if conditions and loops |[x]|
 |1.11|Design a relational database schema with clear relationships between entities ||
 |1.12|Create at least THREE original custom Django models. ||
-|1.13|All CRUD (create, select/read, update, delete) functionality is implemented. ||
+|1.13|All CRUD (create, select/read, update, delete) functionality is implemented. |[x]|
 |1.14|Deploy the final version of your code to a hosting platform and test that it matches the development version. ||
-|1.15|Ensure that all final deployed code is free of commented out code and has no broken internal links ||
+|1.15|Ensure that all final deployed code is free of commented out code and has no broken internal links |[x]|
 |1.16|Ensure the security of the deployed version, making sure to not include any passwords in the git repository, that all secret keys are hidden in environment variables or in files that are in .gitignore, and that DEBUG mode is turned off |[x]|
-|1.17|Use a git-based version control system for the entire application, generating documentation through regular commits and in the project README. ||
+|1.17|Use a git-based version control system for the entire application, generating documentation through regular commits and in the project README. |[x]|
 |1.18|Create a project README that is well-structured and written using a consistent markdown format |[x]|
 |1.19|Document the complete deployment procedure, including the database, and the testing procedure, in a README file that also explains the application’s purpose and the value that it provides to its users |[x]|
 |2.1|Design a Front-End for a full stack web application that meets accessibility guidelines, follows the principles of UX design, meets its given purpose and provide a set of user interactions ||
@@ -221,15 +221,15 @@ See Below to see marking criteria
 |3.3|Include a site title on the parent template |[x]|
 |3.4|When defining the relationship between the current document and a linked document, ensure the following: Use “nofollow” for any paid links and distrusted content. Use “sponsored” for any sponsored or compensated links. |[x]|
 |3.5|Include a sitemap on your application to allow search engine bot crawling |[x]|
-|3.6|Include a robots.txt file to control search engine bot crawling ||
+|3.6|Include a robots.txt file to control search engine bot crawling |[x]|
 |3.7|Include a 404 response page with an appropriate redirect for attempted access to non-existent content |[x]|
 |3.8|Ensure all text content supports the purpose of the application - no Lorem Ipsum text to be used. |[x]|
-|4.1|Implement an authentication mechanism, allowing a user to register and log in, addressing a clear reason as to why the users would need to do so. ||
+|4.1|Implement an authentication mechanism, allowing a user to register and log in, addressing a clear reason as to why the users would need to do so. |[x]|
 |4.2|Implement login and registration pages that are only available to anonymous users. |[x]|
-|4.3|Implement functionality that prevents non-admin users from accessing the data store directly without going through the code ||
-|4.4|Apply role-based login and registration functionality ||
-|4.5|Ensure the current login state is reflected to the user ||
-|4.6|Users should not be permitted to access restricted content or functionality before role-based login ||
+|4.3|Implement functionality that prevents non-admin users from accessing the data store directly without going through the code |[x]|
+|4.4|Apply role-based login and registration functionality |[x]|
+|4.5|Ensure the current login state is reflected to the user |[x]|
+|4.6|Users should not be permitted to access restricted content or functionality before role-based login |[x]|
 |5.1|Create a Facebook Business Page dedicated to your product |[x]|
 |5.2|Add a newsletter signup form to your application. |[x]|
 |6.1|Document the e-commerce business model underlying your application |[x]|

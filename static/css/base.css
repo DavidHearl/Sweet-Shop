@@ -446,7 +446,8 @@ p {
     background:#fff;
     clear:left;
     font:14px Helvetica,Arial,sans-serif;
-    width:80%;
+    width:95%;
+    max-width: 1000px;
 }
 
 @media only screen and (max-width: 1000px) {
