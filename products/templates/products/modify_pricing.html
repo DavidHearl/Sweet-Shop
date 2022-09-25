@@ -25,9 +25,12 @@
         </div>
         
         {% for product in products %}
-            <form method="POST" action="{% url 'modify_product' product.id %}" class="form" enctype="multipart/form-data">
+            <form method="POST" action="{% url 'post_price' product.id %}" class="form" enctype="multipart/form-data">
                 {% csrf_token %}
-                {{ manage_inventory | crispy }}
+
+                {{ product.name }}
+                {{ manage_inventory.price | as_crispy_field }}
+
                 <div class="text-end">
                     <input type="submit" class="modify-pricing" value="Modify">
                 </div>
@@ -42,7 +45,6 @@
             </div>
         {% endfor %}
     </div>
-
 {% endblock %}
 
 {% block postloadjs %}

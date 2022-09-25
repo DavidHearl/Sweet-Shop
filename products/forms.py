@@ -26,7 +26,7 @@ class ManageInventoryForm(forms.ModelForm):
     """ Form to modify the pricing of products """
     class Meta:
         model = Product
-        fields = ('name', 'price')
+        fields = ('price',)
 
 
 class ReviewForm(forms.ModelForm):

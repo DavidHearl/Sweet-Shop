@@ -152,10 +152,10 @@ def modify_product(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
 
     if request.method == 'POST':
-        modify_product = ModifyProductsForm(
+        edit_product = ModifyProductsForm(
             request.POST, request.FILES, instance=product)
-        if modify_product.is_valid():
-            modify_product.save()
+        if edit_product.is_valid():
+            edit_product.save()
             messages.success(request, 'Product has been Updated')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
@@ -163,12 +163,12 @@ def modify_product(request, product_id):
                            'Product could not be modified, Please ensure the \
                            form is correct and there are no missing fields')
     else:
-        modify_product = ModifyProductsForm(instance=product)
+        edit_product = ModifyProductsForm(instance=product)
         messages.info(request, f'{product.name} is being modified')
 
     template = 'products/modify_product.html'
     context = {
-        'modify_product': modify_product,
+        'edit_product': edit_product,
         'product': product,
     }
 
@@ -178,23 +178,37 @@ def modify_product(request, product_id):
 @login_required()
 def modify_pricing(request):
     """ Modify Pricing for the whole database """
-
+    
     products = Product.objects.all()
-    manage_inventory = None
-
-    # if request.method == 'POST':
-    #     manage_inventory = ManageInventoryForm(data=request.POST)
-    #     if manage_inventory.is_valid():
-    #         new_review = manage_inventory.save(commit=False)
-    #         new_review.username = request.user
-    #         new_review.product = product
-    #         new_review.save()
-    #     else:
-    #         manage_inventory = ManageInventoryForm() 
+    price = None
+    manage_inventory = ManageInventoryForm() 
 
     context = {
         'products': products,
         'manage_inventory': manage_inventory,
+        'price': price
+    }
+
+    return render(request, 'products/modify_pricing.html', context)
+
+
+@login_required()
+def post_price(request, product_id):
+    products = Product.objects.all()
+    price = None
+    product = get_object_or_404(Product, pk=product_id)
+    if request.method == 'POST':
+        manage_inventory = ManageInventoryForm(data=request.POST, instance=product)
+        if manage_inventory.is_valid():
+            form = manage_inventory.save(commit=False)
+            form.name = product.name
+            form.save()
+        print(manage_inventory.errors)
+
+    context = {
+        'products': products,
+        'manage_inventory': manage_inventory,
+        'price': price
     }
 
     return render(request, 'products/modify_pricing.html', context)
