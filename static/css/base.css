@@ -231,9 +231,9 @@ a {
 
 /* Forms */
 
-.form {
+/* .form {
     margin-top: 175px;
-}
+} */
 
 label {
     margin-top: 4px;
@@ -426,6 +426,21 @@ p {
     background-image: linear-gradient(to right top, #ffc6cf, #feb3be, #fb9fad, #f88b9c, #f4768a);
 }
 
+.pricing-form {
+    border: 1px solid gray;
+    padding: 6px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.pricing-form > p {
+    font-size: 0.86rem;
+}
+
+.modify-pricing {
+    margin: 10px 0 0 0;
+}
+
 /* Mailchamp */
 #mc_embed_signup{
     background:#fff;
@@ -445,7 +460,7 @@ p {
         margin-top: 64px;
     }
 
-    .form {
+    /* .form {
         margin-top: 100px;
-    }
+    } */
 }

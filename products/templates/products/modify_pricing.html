@@ -24,28 +24,33 @@
             </div>
         </div>
         
-        {% for product in products %}
-            <form method="POST" action="{% url 'post_price' product.id %}" class="form" enctype="multipart/form-data">
-                {% csrf_token %}
-
-                {{ product.name }}
-                {{ manage_inventory.price | as_crispy_field }}
-
-                <div class="text-end">
-                    <input type="submit" class="modify-pricing" value="Modify">
+        <div class="row">
+            {% for product in products %}
+                <div class="col-6 col-lg-4 col-xl-3">
+                    <form method="POST" action="{% url 'post_price' product.id %}" class="form" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="pricing-form">
+                            <p><strong>{{ product.name }}</strong> : £{{ product.price }}</p>
+                            <p>{{ manage_inventory.price | as_crispy_field }}</p>
+                            <input type="submit" class="modify-pricing full-width-action-button" value="Modify">
+                        </div>
+                    </form>
                 </div>
-            </form>
-        {% endfor %}
-
-        {% for product in products %}
-            <div class="row">
-                <div class="col-12">
-                    {{ product.name }} - £{{ product.price }} / 100g
-                </div>
-            </div>
-        {% endfor %}
+            {% endfor %}
+        </div>
     </div>
 {% endblock %}
+
+{% if forloop.counter|divisibleby:2 %}
+    <div class="col-12 d-sm-none">
+        <hr>
+    </div>
+{% endif %}
+{% if forloop.counter|divisibleby:3 %}
+    <div class="col-12 d-none d-sm-block d-md-block d-lg-none">
+        <hr>
+    </div>
+{% endif %}
 
 {% block postloadjs %}
     {{ block.super }}
