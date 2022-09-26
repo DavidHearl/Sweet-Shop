@@ -23,9 +23,8 @@ def view_favourites(request):
     if not favourites_items:
         messages.info(request, 'Your favourites list is empty!')
 
-
     context = {
-        # 'favourites_items': favourites_items,
+        'favourites_items': favourites_items,
         'favourites_items_count': favourites_items_count
     }
 

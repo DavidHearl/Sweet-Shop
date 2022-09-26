@@ -4,6 +4,8 @@ https://the-sweet-shop-davidhearl.herokuapp.com
 
 ## About
 ---
+The Sweet Shop is a place 
+
 The Sweet Shop, is your one stop shop to find any popular sweets often found in pick and mixes.
 Order anything between 0.1 and 3.0 Kg
 
@@ -65,11 +67,28 @@ Order anything between 0.1 and 3.0 Kg
 |As a store owner I want to be able to edit/update products in my store so that I can adjust price, descriptions, images and other criteria|[x]|
 |As a store owner I want to be able to delete a product so that I can remove items that are no longer in stock or are not for sale|[x]|
 
+## Agile Development Tool
+For the agile methodology I used the GitHub canban board, it was here where I created the user stories, first as a draft then progressed the items to issues in the to do column. You can see a snap shot below.
+
+![In progress canban](./media/Canban%20Inprogress.png "Canban")
+
+When I wanted to start working on a feature, I moved the issue from the 'todo' list to the 'in progress' list. Once the task was completed it was moved in to the completed list.
+
+![Completed Canban](./media/Canban%20Board.png "Canban")
+
+The user stories detailed above are aligned with the project goals. Which was to produce a simple, interactive online store where users could find all types of confectionary items. They would have the abilty to select a seemingly infinite combination of sweets and chocolate.
+
+## Design
+
+It was important for me to try and keep the styling consistent but also inviting to many different users.
+
+I decided to chose a light pink and purple overview to reflect the content present in the store.
+
+It was also important to keep the store simple. This would make it easier for customers of all ages and abilities to easily find the products they were looking for.
+
 ## Wireframes
 ---
 Wireframes created with Balsamiq. The project was developed from initial wireframes.
-
-I wanted to keep the design for the website simple yet elegant so I have gone for a minimalistic approach.
 
 ![Desktop Home Page](./media/Desktop%20Home%20Page.png "Title")
 ![Desktop Products Page](./media/Desktop%20Products%20Page.png "Title")
@@ -190,7 +209,7 @@ See Below to see marking criteria
 ---
 | Number | Marking Criteria | Met |
 |:-:|:----------|:---:|
-|1.1|Implement at least one Django app containing some e-commerce functionality using an online payment processing system (e.g. Stripe). This may be a shopping cart checkout, subscription-based payments or single payments, donations, etc. ||
+|1.1|Implement at least one Django app containing some e-commerce functionality using an online payment processing system (e.g. Stripe). This may be a shopping cart checkout, subscription-based payments or single payments, donations, etc. |[x]|
 |1.2|Implement a feedback system that reports successful and unsuccessful purchases to the user, with a helpful message |[x]|
 |1.3|Develop and implement a Full-Stack web application built using the Django framework, to incorporate a relational database, an interactive Front-End and multiple apps (an app for each potentially reusable component) |[x]|
 |1.4|Implement at least one form, with validation, that allows users to create and edit models in the backend |[x]|
@@ -198,12 +217,12 @@ See Below to see marking criteria
 |1.6|Write code that demonstrates characteristics of ‘clean code.’ ||
 |1.7|Define application URLs in a consistent manner |[x]|
 |1.8|Incorporate a main navigation menu and structured layout |[x]|
-|1.9|Demonstrate proficiency in the Python language by including sufficient custom logic in your project ||
+|1.9|Demonstrate proficiency in the Python language by including sufficient custom logic in your project |[x]|
 |1.10|Write Python code that includes functions with compound statements such as if conditions and loops |[x]|
-|1.11|Design a relational database schema with clear relationships between entities ||
-|1.12|Create at least THREE original custom Django models. ||
+|1.11|Design a relational database schema with clear relationships between entities |[x]|
+|1.12|Create at least THREE original custom Django models. |[x]|
 |1.13|All CRUD (create, select/read, update, delete) functionality is implemented. |[x]|
-|1.14|Deploy the final version of your code to a hosting platform and test that it matches the development version. ||
+|1.14|Deploy the final version of your code to a hosting platform and test that it matches the development version. |[x]|
 |1.15|Ensure that all final deployed code is free of commented out code and has no broken internal links |[x]|
 |1.16|Ensure the security of the deployed version, making sure to not include any passwords in the git repository, that all secret keys are hidden in environment variables or in files that are in .gitignore, and that DEBUG mode is turned off |[x]|
 |1.17|Use a git-based version control system for the entire application, generating documentation through regular commits and in the project README. |[x]|
