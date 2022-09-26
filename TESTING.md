@@ -17,6 +17,7 @@
 
 ### Home
 - Home Page
+
 - Sign Up Page
 - Sign In Page
 - Logout Page
@@ -87,17 +88,17 @@
 
 - Views.py
 
-![](./testing_images/favourites-views.png "")
+![Favourites Views](./testing_images/favourites-views.png "Favourites Views")
 
 #### Home
 
 - Urls.py
 
-![](./testing_images/home-urls.png"")
+![](./testing_images/home-urls.png "")
 
 - Views.py
 
-![](./testing_images/home-views.png"")
+![](./testing_images/home-views.png "")
 
 #### Products
 
