@@ -97,7 +97,7 @@ def product_detail(request, product_id):
             new_review.product = product
             new_review.save()
         else:
-            review_form = ReviewForm() 
+            review_form = ReviewForm()
 
     context = {
         # 'product_in_favourites': product_in_favourites,
@@ -189,10 +189,10 @@ def modify_product(request, product_id):
 @login_required()
 def modify_pricing(request):
     """ Modify Pricing for the whole database """
-    
+
     products = Product.objects.all()
     price = None
-    manage_inventory = ManageInventoryForm() 
+    manage_inventory = ManageInventoryForm()
 
     context = {
         'products': products,
@@ -209,7 +209,8 @@ def post_price(request, product_id):
     price = None
     product = get_object_or_404(Product, pk=product_id)
     if request.method == 'POST':
-        manage_inventory = ManageInventoryForm(data=request.POST, instance=product)
+        manage_inventory = ManageInventoryForm(
+            data=request.POST, instance=product)
         if manage_inventory.is_valid():
             form = manage_inventory.save(commit=False)
             form.name = product.name

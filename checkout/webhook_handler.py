@@ -49,7 +49,7 @@ class Stripe_Web_Hook_Handler:
 		pid = intent.id
 		shopping_bag = intent.metadata.shopping_bag
 		save_info = intent.metadata.save_info
-		
+
 		billing_details = intent.charges.data[0].billing_details
 		shipping_details = intent.shipping
 		grand_total = round(intent.charges.data[0].amount / 100, 2)

@@ -1,13 +1,6 @@
 # The Sweet Shop - [Live Website](https://the-sweet-shop.herokuapp.com)
 
-https://the-sweet-shop-davidhearl.herokuapp.com
-
-## About
----
-The Sweet Shop is a place 
-
-The Sweet Shop, is your one stop shop to find any popular sweets often found in pick and mixes.
-Order anything between 0.1 and 3.0 Kg
+The live website can be viewed using the link : https://the-sweet-shop-davidhearl.herokuapp.com
 
 ## Table of Contents
 ---
@@ -20,6 +13,26 @@ Order anything between 0.1 and 3.0 Kg
 7. [Bugs Found](#BugsFound)
 8. [Deployment](#Deployment)
 9. [Acknowledgement](#Acknowledgement)
+
+## Aim
+
+The Sweet Shop is an ecommerce website that allows users to purchase a selection of confectionary items.
+The sweetshop was developed for my 5th portfolio project as part of my Diploma in software development.
+
+## About
+---
+The Sweet Shop website provides the user the ability to purchase a wide variety of sweets.
+Upon landing on the site you are greeted with three main options which indicate the purpose of the site.
+
+As a non logged in user you can browse all the products and add them to your bag ready for checkout.
+You can then checkout by entering your details along with a valid card. Once your order is comple you will see a confirmation page and a confirmation email will be sent.
+As a logged in user you will be able to checkout faster as you can save your information to your profile. You will also be able to view your order history and leave reviews on your favourite products.
+A logged in user will also be able to add there favourite sweets to their own page for quick and easy access for repeat purchases.
+
+## User registration
+
+An important aspect of the site was to give the user an option to purchase items from the site without having to sign up.
+Some users can find it frustrating being forced to sign up to a site before a purchase so I felt it was important to avoid this to limit any negative feedback on the site.
 
 ## Project Installation Requirements
 ---
@@ -34,6 +47,30 @@ Order anything between 0.1 and 3.0 Kg
 - pip3 install gunicorn
 - pip3 install boto3
 - pip3 install django-storages
+
+## Scope
+---
+- A simple intuitive UX experience;
+- An easy navigation for the user;
+- A site that is visually appealing and responsive across multiple devices
+
+## Structure
+- A straghtforward and clear layout is present to ensure users can navigate inutitvely and have a pleasant experience
+- The navbar is fixed to the top of the page to ensure that the user can navigate the depths of the site with a couple of clicks at all time
+- Footer is fixed on the bottom of all pages.
+
+## Wireframes
+---
+Wireframes created with Balsamiq. The project was developed from initial wireframes.
+
+![Desktop Home Page](./media/Desktop%20Home%20Page.png "Title")
+![Desktop Products Page](./media/Desktop%20Products%20Page.png "Title")
+
+![iPad Home Page](./media/iPad%20Home%20Page.png "Title")
+![iPad Products Page](./media/iPad%20Products%20Page.png "Title")
+
+![iPhone Home Page](./media/iPhone%20Home%20Page.png "Title")
+![iPhone Products Page](./media/iPhone%20Products%20Page.png "Title")
 
 ## User Stories
 
@@ -78,27 +115,6 @@ When I wanted to start working on a feature, I moved the issue from the 'todo' l
 
 The user stories detailed above are aligned with the project goals. Which was to produce a simple, interactive online store where users could find all types of confectionary items. They would have the abilty to select a seemingly infinite combination of sweets and chocolate.
 
-## Design
-
-It was important for me to try and keep the styling consistent but also inviting to many different users.
-
-I decided to chose a light pink and purple overview to reflect the content present in the store.
-
-It was also important to keep the store simple. This would make it easier for customers of all ages and abilities to easily find the products they were looking for.
-
-## Wireframes
----
-Wireframes created with Balsamiq. The project was developed from initial wireframes.
-
-![Desktop Home Page](./media/Desktop%20Home%20Page.png "Title")
-![Desktop Products Page](./media/Desktop%20Products%20Page.png "Title")
-
-![iPad Home Page](./media/iPad%20Home%20Page.png "Title")
-![iPad Products Page](./media/iPad%20Products%20Page.png "Title")
-
-![iPhone Home Page](./media/iPhone%20Home%20Page.png "Title")
-![iPhone Products Page](./media/iPhone%20Products%20Page.png "Title")
-
 ## Models
 ---
 
@@ -130,6 +146,18 @@ Wireframes created with Balsamiq. The project was developed from initial wirefra
 ||Rating|DecimalField|
 ||Image|ImageField|
 
+### Review
+| Key | Name | Type |
+|:-:|:----------:|:-:|
+|FK|Product||
+|FK|Username||
+||name|CharField|
+||rating|DecimalField|
+||content|TextField|
+||created|DateTimeField|
+||updated|DateTimeField|
+||active|BooleanField|
+
 ### Order
 | Key | Name | Type |
 |:-:|:----------:|:-:|
@@ -158,6 +186,25 @@ Wireframes created with Balsamiq. The project was developed from initial wirefra
 |FK|Product||
 ||Quantity|IntgerField|
 ||Line Item Total|DecimalField|
+
+### User Profile
+| Key | Name | Type |
+|:-:|:----------:|:-:|
+||user|OneToOneField|
+||default_phone_number|CharField|
+||default_country|CountryField|
+||default_postcode|CharField|
+||default_town_or_city|CharField|
+||default_street_address1|CharField|
+||default_street_address2|CharField|
+||default_county|CharField|
+
+### Favourites
+| Key | Name | Type |
+|:-:|:----------:|:-:|
+||products|ManyToMany|
+||username|OneToOneField|
+
 
 ## Technologies Used
 ---
@@ -201,11 +248,12 @@ Wireframes created with Balsamiq. The project was developed from initial wirefra
 ## Testing
 ---
 
-Visit the testing Page to view testing Information
+Testing is required on all features. All clickable links must be redirected to the correct pages. 
+All forms linked to the database must be tested to ensure they post all the correct data.
 
-See Below to see marking criteria
+Full Testing details can be found here [Testing](./TESTING.md)
 
-## Pass Criteria
+## Pass Criteria - Checklist
 ---
 | Number | Marking Criteria | Met |
 |:-:|:----------|:---:|
@@ -278,27 +326,56 @@ Disclaimer : The address has been blanked out on the image above
 
 ## Bugs found
 
-## Deployment
+## Deployment to Heroku
+---
 
-- Create a new app on heroku
-- Add the postgres database the the herkou app
-- Copy the value from the config vars
-- Change the settings.py database file to either point to the herkoku postgres database or the
-SQLite database in the local environment
-- Create an env.py file and add a "DATABASE_URL" add the valuec copied from herkou
-- Comment out the heroku postgres database and ensure you are conencted to the local SQLite database
-- dump the database into a json file with this command "python3 manage.py dumpdata app_name > filename.json"
-- now connect back to the heroku postgres database and load data with this command "python3 manage.py loaddata filename.json"
-- install guinicorn with "pip3 install gunicorn"
-- create a procfile
-- freeze the requirements with "pip3 freeze > requirements.txt"
-- login to heroku with the CLI "heroku login -i"
-- temporarily disable collect static files with "heroku config:set DISABLE_COLLECTSTATIC=1"
-- add the heroku website link to the allowed hosts in settings.py
-- commit to github
-- set up a git remote with "heroku git:remote -a the-sweet-shop-davidhearl"
-- push to heroku main
+This project was deployed with Heroku using the following method:
 
+
+### Requirements and Procfile
+
+Heroku needs to know which technologies are being used and any requirements the project may have. 
+The best way to do this is to create a requirements.txt file.
+
+- In the terminal type: 'pip3 freeze --local > requirements.txt' to create your requirements file.
+- Create your Procfile and copy the following code: 'web: gunicorn sweet_shop.wsgi:application' Make sure that there is no blank lines at the end of the file
+- Add, Commit then Push these files to your repository
+
+### Creating the Heroku Application
+
+- Login to heroku
+- Select 'Create New App' from within your dashboard
+- Choose a name for your application. Note: This name must be unique
+- Select the region best suited to you
+- Click 'Create App'
+
+### Connecting to github
+
+- From the dashboard, click the 'Deploy' tab
+- Scroll down till you find 'Deployment Method' and choose 'GitHub'
+- From the search bar, locate your repository
+- When you have found your repository, click 'Connect'
+
+### Environment Variables
+
+- Click the 'Settings' tab at the top of the page
+- Locate 'Config Vars' and click 'Reveal Config Vars' (This is essentially your env.py file)
+- Enter all variables required
+    - SECRET_KEY
+    - DATABASE_URL
+    - USE_AWS
+    - AWS_ACCESS_KEY_ID
+    - AWS_SECRET_ACCESS_KEY
+    - STRIPE_PUBLIC_KEY
+    - STRIPE_SECRET_KEY
+    - STRIPE_WEBHOOK_KEY
+    - EMAIL_ADDRESS
+    - EMAIL_PASSWORD
+
+### Postgres Database
+
+- AWS S3 Buckets
+- Past Variable into Heroku Config vars
 
 ## Acknowledgements
 

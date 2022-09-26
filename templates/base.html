@@ -1,8 +1,8 @@
 {% load static %}
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
+    
 <head>
     {% block meta %}
         <meta http-equiv="X-UA-Compatible" content="ie-edge">
@@ -139,6 +139,15 @@
 
     {% block content %}
     {% endblock %}
+
+    <footer>
+        <div class="container-fluid">
+            <div class="row text-center copyright">
+                <p>© The Sweet Shop</p>
+            </div>
+        </div>
+    </footer>
+    
 
     {% block postloadjs %}
         <script type="text/javascript">
