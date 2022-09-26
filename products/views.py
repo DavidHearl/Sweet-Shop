@@ -1,4 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.http import Http404
+
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
@@ -6,6 +8,7 @@ from django.db.models.functions import Lower
 
 from .models import Product, Category, Review
 from .forms import ManageInventoryForm, ModifyProductsForm, ReviewForm
+from favourites.models import Favourites
 
 
 def all_products(request):
@@ -79,6 +82,13 @@ def product_detail(request, product_id):
     review_form = None
     new_review = None
 
+    # try:
+    #     favourites = get_object_or_404(Favourites, username=request.user.id)
+    # except Http404:
+    #     product_in_favourites = False
+    # else:
+    #     product_in_favourites = bool(product in favourites.products.all())
+
     if request.method == 'POST':
         review_form = ReviewForm(data=request.POST)
         if review_form.is_valid():
@@ -90,8 +100,9 @@ def product_detail(request, product_id):
             review_form = ReviewForm() 
 
     context = {
+        # 'product_in_favourites': product_in_favourites,
         'product': product,
-        'review': reviews,
+        'reviews': reviews,
         'new_review': new_review,
         'review_form': review_form,
     }
@@ -107,7 +118,7 @@ def delete_review(request, review_id):
     review.delete()
     messages.success(request, f"Your review has been removed")
 
-    return redirect(reverse('product/product_detail.html'))
+    return redirect(reverse('products'))
 
 
 @login_required()

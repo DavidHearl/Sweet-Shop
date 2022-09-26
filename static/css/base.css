@@ -83,7 +83,8 @@ a {
     margin-bottom: 20px;
 }
 
-.action-button {
+.action-button,
+.action-button-detail {
     background-image: linear-gradient(to right top, #c593f9, #df86df, #ef7cc2, #f577a6, #f4768a);
     justify-content: center;
     width: 200px;
@@ -91,12 +92,19 @@ a {
     border-radius: 30px;
     border: none;
     color: black;
-    margin: 20px auto;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     color: white;
     font-family: "Permanent Marker";
     font-size: 1.1rem;
     border: 1px solid #0C0404;
+}
+
+.action-button {
+    margin: 20px auto;
+}
+
+.action-button-detail {
+    margin: 20px;
 }
 
 .full-width-action-button {
@@ -228,6 +236,7 @@ a {
 .label {
     font-size: 0.9rem;
 }
+
 
 /* Forms */
 
@@ -387,6 +396,18 @@ p {
     background-color: #dc3545;
 }
 
+.delete-review {
+    background-color: #dc3545;
+    border-radius: 8px;
+    padding: 4px 8px;
+    border: none;
+    float: right;
+}
+
+.delete-review > a {
+    color: white;
+}
+
 /* Alerts */
 .alert {
     margin-top: 12px;
@@ -439,6 +460,10 @@ p {
 
 .modify-pricing {
     margin: 10px 0 0 0;
+}
+
+.edit-delete {
+    margin: 4px 0;
 }
 
 /* Mailchamp */

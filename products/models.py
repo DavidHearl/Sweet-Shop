@@ -53,4 +53,4 @@ class Review(models.Model):
         ordering = ('created',)
 
     def __str__(self):
-        return f'Review by {self.name} on {self.post}'
+        return f'Review by {self.name} on {self.product}'

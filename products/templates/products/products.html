@@ -18,9 +18,9 @@
         <div class="col mt-4">
             <h2>All Products</h2>
                 {% for current in current_categories %}
-                <a href="{% url 'products' %}?categories={{ current.name }}">
-                    <span>{{ current.friendly_name }}</span>
-                </a>
+                    <a href="{% url 'products' %}?categories={{ current.name }}">
+                        <span>{{ current.friendly_name }}</span>
+                    </a>
                 {% endfor %}
             <hr class="my-0">
         </div>
@@ -80,10 +80,12 @@
                                 {% endif %}
 
                                 {% if request.user.is_superuser %}
-                                    <p class="ml-3">
+                                    <button class="edit-button edit-delete">
                                         <a href="{% url 'modify_product' product.id %}">Edit</a>
-                                        <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
-                                    </p>
+                                    </button>
+                                    <button class="delete-button edit-delete">
+                                        <a href="{% url 'delete_product' product.id %}">Delete</a>
+                                    </button>
                                 {% endif %}
                             </div>
                         </div>
@@ -113,9 +115,6 @@
         {% endfor %}
         <a class="back-to-top">Back to Top</a>
     </div>
-</div>
-<div>
-    
 </div>
 {% endblock %}
 

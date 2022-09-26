@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container">
+    <div class="row">
+        <div class="col">
+
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="cover"></div>
+<div class="container push-down">
+    <div class="row">
+        <div class="col mt-4">
+            <h2>Favourites ({{ favourites_items_count }})</h2>
+            <hr class="my-0">
+        </div>
+    </div>
+</div>
+<div class="product-container col-10 offset-1">
+    <div class="row">
+        {% for item in favourites_items %}
+            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-3">
+                <div class="card h-100 border-0 align-items-center">
+                    <a href="{% url 'product_detail' product.id %}">
+                        <img class="card-img-top img-fluid product-image" src="{{ product.image.url }}" alt="{{ product.name }}">
+                    </a>
+                    <div class="card-body pb-0">
+                        <p class="mb-0">{{ item.name }}</p>
+                    </div>
+                    <div class="card-footer bg-white pt-0 border-0 text-left">
+                        <div class="row">
+                            <div class="col">
+                                <p class="lead mb-0 text-left font-weight-bold">{{ item.abv }}%ABV</p>
+                                <p class="lead mb-0 text-left font-weight-bold">£{{ item.price }}</p>
+                                {% if item.category %}
+                                    <p class="small mt-1 mb-0">
+                                        <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
+                                            <i class="fas fa-tag mr-1"></i>{{ item.category.friendly_name }}
+                                        </a>
+                                    </p>
+                                {% endif %}
+                                {% if item.rating %}
+                                    <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ item.rating }} / 5</small>
+                                {% else %}
+                                    <small class="text-muted">No Rating</small>
+                                {% endif %}
+                                <br>
+                                <a href="{% url 'remove_from_favourites' item.id 'favourites' %}" class="btn btn-danger rounded-0">Delete from favourites</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% if forloop.counter|divisibleby:1 %}
+                <div class="col-12 d-sm-none mb-5">
+                    <hr>
+                </div>
+            {% endif %}                        
+            {% if forloop.counter|divisibleby:2 %}
+                <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
+                    <hr>
+                </div>
+            {% endif %}
+            {% if forloop.counter|divisibleby:3 %}
+                <div class="col-12 d-none d-lg-block d-xl-none mb-5">
+                    <hr>
+                </div>
+            {% endif %}
+            {% if forloop.counter|divisibleby:4 %}
+                <div class="col-12 d-none d-xl-block mb-5">
+                    <hr>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path, include
 from . import views
 
 urlpatterns = [
@@ -10,5 +10,7 @@ urlpatterns = [
      path('modify_pricing/', views.modify_pricing, name='modify_pricing'),
      path('delete/<int:product_id>/',
           views.delete_product, name='delete_product'),
+     path('delete_review/<int:review_id>/', views.delete_review,
+          name='delete_review'),
      path('post_price/<int:product_id>/', views.post_price, name='post_price')
 ]

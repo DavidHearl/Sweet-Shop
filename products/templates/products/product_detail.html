@@ -39,6 +39,7 @@
                 </a>
             </div>
         </div>
+
         <!-- Content/Desciption -->
         <div class="col-12 col-md-8">
             <div>
@@ -59,6 +60,13 @@
                 {% endif %}
 
                 <p>{{ product.description }}</p>
+
+                <!-- Product Rating -->
+                {% if is_product_in_favourites %}
+                    <a href="{% url 'remove_from_favourites' product.id 'products' %}" aria-label="remove product from favourites" class="text-danger">Favourite: <i class="fas fa-heart"></i></a>
+                {% else %}
+                    <a href="{% url 'add_to_favourites' product.id %}" aria-label="add product to favourites" class="text-danger">Favourite: <i class="far fa-heart"></i></a>
+                {% endif %}
 
                 <hr>
                 <!-- Add item to basket form -->
@@ -89,23 +97,16 @@
                             </div>
                         </div>
                         
-                        <div class="row">
-                            <div class="col-6 text-center">
-                                <button class="action-button">
-                                    <a href="{% url 'products' %}">
-                                        <span>
-                                            <i class="fas fa-chevron-left"></i>
-                                        </span>
-                                        <span>Keep Shopping</span>
-                                    </a>
-                                </button>
-                            </div>
-                            <div class="col-6 text-center">
-                                <input class="action-button" type="submit" value="Add to Bag">
-                                <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                            </div>
+                        <div class="col-12 text-center">
+                            <a href="{% url 'products' %}" class="action-button-detail">
+                                <span>
+                                    <i class="fas fa-chevron-left"></i>
+                                </span>
+                                <span>Keep Shopping</span>
+                            </a>
+                            <input class="action-button-detail" type="submit" value="Add to Bag">
+                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </div>
-                        
                     </div>
                 </form>
             </div>
@@ -113,13 +114,13 @@
     </div>
     <hr>
 
-    <!-- Reviews -->
+    <!-- Product Reviews -->
     <div class="row">
         <div class="col">
             {% with reviews.count as total_reviews %}
                 <h2 class="review-title">
                     <i class="far fa-comments"></i>
-                    {{ total_reviews }} Reviews{{ total_reviews|pluralize}}
+                    {{ total_reviews }} Review{{ total_reviews|pluralize}}
                 </h2>
             {% endwith %}
         </div>
@@ -132,11 +133,12 @@
                 {{ review.name }} - {{ review.created }}
                 {% if request.user.id == review.username.id %}
                     <button class="delete-review">
-                        <a href="">Delete</a>
+                        <a href="{% url 'delete_review' review.id %}">Delete</a>
                     </button>
                 {% endif %}
             </p>
             {{ review.content|linebreaks }}
+            <hr>
         </div>
     {% empty %}
         <p>There are no reviews yet.</p>
