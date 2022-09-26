@@ -8,6 +8,7 @@ from products.models import Product
 from profiles.models import UserProfile
 
 import json
+import time
 
 
 class Stripe_Web_Hook_Handler:
@@ -37,8 +38,8 @@ class Stripe_Web_Hook_Handler:
 	def handle_event(self, event):
 		""" Handle a generic/unknown/unexpected webhook event """
 		return HttpResponse(
-		content=f'Webhook recieved: {event["type"]}',
-		status=200)
+			content=f'Webhook recieved: {event["type"]}',
+			status=200)
 
 	def handle_payment_intent_succeeded(self, event):
 		"""
@@ -48,6 +49,7 @@ class Stripe_Web_Hook_Handler:
 		pid = intent.id
 		shopping_bag = intent.metadata.shopping_bag
 		save_info = intent.metadata.save_info
+		
 		billing_details = intent.charges.data[0].billing_details
 		shipping_details = intent.shipping
 		grand_total = round(intent.charges.data[0].amount / 100, 2)
