@@ -52,46 +52,48 @@
     </div>
     <div class="row">
         {% for product in products %}
-            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
-                <div class="card h-100">
-                    <a href="{% url 'product_detail' product.id %}">
-                        <img class="card-img-top img-fluid product-image" src="{{ product.image.url }}" alt="{{ product.name }}">
-                    </a>
-                    <div class="card-body">
-                        <div>{{ product.name }}</div>
-                    </div>
-                    <div class="card-footer bg-white">
-                        <div class="row">
-                            <div class="col">
-                                <p class="price">£{{ product.price }} / 100g</p>
+            {% if product.image %}
+                <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                    <div class="card h-100">
+                        <a href="{% url 'product_detail' product.id %}">
+                            <img class="card-img-top img-fluid product-image" src="{{ product.image.url }}" alt="{{ product.name }}">
+                        </a>
+                        <div class="card-body">
+                            <div>{{ product.name }}</div>
+                        </div>
+                        <div class="card-footer bg-white">
+                            <div class="row">
+                                <div class="col">
+                                    <p class="price">£{{ product.price }} / 100g</p>
 
-                                {% if product.category %}
-                                    <p class="label">
-                                        <a href="{% url 'products' %}?category={{ product.category.name }}">
-                                            <i class="fas fa-tag mr-2">{{ product.category.friendly_name }}</i>
-                                        </a>
-                                    </p>
-                                {% endif %}
+                                    {% if product.category %}
+                                        <p class="label">
+                                            <a href="{% url 'products' %}?category={{ product.category.name }}">
+                                                <i class="fas fa-tag mr-2">{{ product.category.friendly_name }}</i>
+                                            </a>
+                                        </p>
+                                    {% endif %}
 
-                                {% if product.rating %}
-                                    <p><i class="fas fa-star mr-1"></i> {{ product.rating }} / 5.00</p>
-                                {% else %}
-                                    <p>No Rating</p>
-                                {% endif %}
+                                    {% if product.rating %}
+                                        <p><i class="fas fa-star mr-1"></i> {{ product.rating }} / 5.00</p>
+                                    {% else %}
+                                        <p>No Rating</p>
+                                    {% endif %}
 
-                                {% if request.user.is_superuser %}
-                                    <button class="edit-button edit-delete">
-                                        <a href="{% url 'modify_product' product.id %}">Edit</a>
-                                    </button>
-                                    <button class="delete-button edit-delete">
-                                        <a href="{% url 'delete_product' product.id %}">Delete</a>
-                                    </button>
-                                {% endif %}
+                                    {% if request.user.is_superuser %}
+                                        <button class="edit-button edit-delete">
+                                            <a href="{% url 'modify_product' product.id %}">Edit</a>
+                                        </button>
+                                        <button class="delete-button edit-delete">
+                                            <a href="{% url 'delete_product' product.id %}">Delete</a>
+                                        </button>
+                                    {% endif %}
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            {% endif %}
             {% if forloop.counter|divisibleby:2 %}
                 <div class="col-12 d-sm-none">
                     <hr>
