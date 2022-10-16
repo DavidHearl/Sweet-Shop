@@ -1,3 +1,9 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 /* General */
 .cover {
 	height: 100%;
@@ -440,13 +446,6 @@ p {
     border: 1px solid #0C0404;
 }
 
-.copyright {
-    padding: 10px;
-    border-top: 1px solid black;
-    color: white;
-    background-image: linear-gradient(to right top, #ffc6cf, #feb3be, #fb9fad, #f88b9c, #f4768a);
-}
-
 .pricing-form {
     border: 1px solid gray;
     padding: 6px;
@@ -466,6 +465,24 @@ p {
     margin: 4px 0;
 }
 
+/* Product Page */
+.back-to-top {
+    margin-bottom: 24px;
+    padding: 10px;
+    border-radius: 8px;
+    background-image: linear-gradient(to right top, #f5b1fb, #e2a0e9, #d08fd7, #be7ec6, #ac6eb5);
+    color: white;
+    border: 1px solid black;
+}
+
+.btt-text {
+    padding: 8px;
+}
+
+.product-card {
+    margin-bottom: 24px;
+}
+
 /* Mailchamp */
 #mc_embed_signup{
     background:#fff;
@@ -473,6 +490,18 @@ p {
     font:14px Helvetica,Arial,sans-serif;
     width:95%;
     max-width: 1000px;
+}
+
+/* Footer Styling */
+footer{
+    margin-top: auto;
+}
+
+.copyright {
+    padding: 16px;
+    border-top: 1px solid black;
+    color: white;
+    background-image: linear-gradient(to right top, #ffc6cf, #feb3be, #fb9fad, #f88b9c, #f4768a);
 }
 
 @media only screen and (max-width: 1000px) {
@@ -485,8 +514,6 @@ p {
     .push-down{
         margin-top: 64px;
     }
-
-    /* .form {
-        margin-top: 100px;
-    } */
 }
+
+
