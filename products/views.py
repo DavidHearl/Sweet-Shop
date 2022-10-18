@@ -82,12 +82,12 @@ def product_detail(request, product_id):
     review_form = None
     new_review = None
 
-    # try:
-    #     favourites = get_object_or_404(Favourites, username=request.user.id)
-    # except Http404:
-    #     product_in_favourites = False
-    # else:
-    #     product_in_favourites = bool(product in favourites.products.all())
+    try:
+        favourites = get_object_or_404(Favourites, username=request.user.id)
+    except Http404:
+        product_in_favourites = False
+    else:
+        product_in_favourites = bool(product in favourites.products.all())
 
     if request.method == 'POST':
         review_form = ReviewForm(data=request.POST)
@@ -100,7 +100,7 @@ def product_detail(request, product_id):
             review_form = ReviewForm()
 
     context = {
-        # 'product_in_favourites': product_in_favourites,
+        'product_in_favourites': product_in_favourites,
         'product': product,
         'reviews': reviews,
         'new_review': new_review,
