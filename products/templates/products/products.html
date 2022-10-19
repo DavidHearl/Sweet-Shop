@@ -14,6 +14,7 @@
 {% block content %}
     <div class="cover"></div>
     <div class="container push-down">
+        <!-- Title Block -->
         <div class="row">
             <div class="col mt-4">
                 <h2>All Products</h2>
@@ -25,31 +26,31 @@
                 <hr>
             </div>
         </div>
+        <!-- Sorting -->
         <div class="row mt-1 mb-2">
-            <div class="row">
-                <div class="col-12 col-md-6 my-auto order-md-last d-flex justifiy-content-center justify-content-md-end">
-                    <select class="" id="sort-selector">
-                        <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
-                        <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
-                        <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
-                        <option value="rating_asc" {% if current_sorting == 'rating_asc' %}selected{% endif %}>Rating (low to high)</option>
-                        <option value="rating_desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>Rating (high to low)</option>
-                        <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
-                        <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
-                    </select>
-                </div>
-                <div class="col-12 col-md-6 order-md-first">
-                    <p>
-                        {% if search_term or current_categories or current_sorting != 'None_None' %}
-                            <span>
-                                <a href="{% url 'products' %}">Products Home</a> |
-                            </span>
-                        {% endif %}
-                        {{ products|length }} Products {% if search_term %} found for {{ search_term }}{% endif %}
-                    </p>
-                </div>
+            <div class="col-12 col-md-6 my-auto order-md-last d-flex justifiy-content-center justify-content-md-end">
+                <select id="sort-selector">
+                    <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
+                    <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
+                    <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
+                    <option value="rating_asc" {% if current_sorting == 'rating_asc' %}selected{% endif %}>Rating (low to high)</option>
+                    <option value="rating_desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>Rating (high to low)</option>
+                    <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
+                    <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
+                </select>
+            </div>
+            <div class="col-12 col-md-6 order-md-first">
+                <p>
+                    {% if search_term or current_categories or current_sorting != 'None_None' %}
+                        <span>
+                            <a href="{% url 'products' %}">Products Home</a> |
+                        </span>
+                    {% endif %}
+                    {{ products|length }} Products {% if search_term %} found for {{ search_term }}{% endif %}
+                </p>
             </div>
         </div>
+        <!-- Display Products -->
         <div class="row">
             {% for product in products %}
                 {% if product.image %}
@@ -59,23 +60,22 @@
                                 <img class="card-img-top img-fluid product-image" src="{{ product.image.url }}" alt="{{ product.name }}">
                             </a>
                             <div class="card-body">
-                                <div>{{ product.name }}</div>
+                                <div class="text-center">{{ product.name }}</div>
                             </div>
                             <div class="card-footer bg-white">
                                 <div class="row">
                                     <div class="col">
-                                        <p class="price">£{{ product.price }} / 100g</p>
-
+                                        <p class="price text-center">£{{ product.price }} / 100g</p>
                                         {% if product.category %}
-                                            <p class="label">
+                                            <p class="catagory-label text-center">
                                                 <a href="{% url 'products' %}?category={{ product.category.name }}">
-                                                    <i class="fas fa-tag">{{ product.category.friendly_name }}</i>
+                                                    <i class="fas fa-tag"> {{ product.category.friendly_name }}</i>
                                                 </a>
                                             </p>
                                         {% endif %}
 
                                         {% if product.rating %}
-                                            <p><i class="fas fa-star"></i> {{ product.rating }} / 5.00</p>
+                                            <p class="text-center"><i class="fas fa-star"></i> {{ product.rating }} / 5.00</p>
                                         {% else %}
                                             <p>No Rating</p>
                                         {% endif %}
@@ -99,16 +99,16 @@
                     {% if request.user.is_superuser %}
                         <div class="col-6 col-md-4 col-lg-3 col-xl-2 product-card">
                             <div class="card h-100">
-                                <div class="card-body">
+                                <div class="card-body text-center">
                                     <div>{{ product.name }}</div>
                                 </div>
                                 <div class="card-footer bg-white">
                                     <div class="row">
                                         <div class="col">
-                                            <p class="price">£{{ product.price }} / 100g</p>
+                                            <p class="price text-center">£{{ product.price }} / 100g</p>
 
                                             {% if product.category %}
-                                                <p class="label">
+                                                <p class="catagory-label text-center">
                                                     <a href="{% url 'products' %}?category={{ product.category.name }}">
                                                         <i class="fas fa-tag">{{ product.category.friendly_name }}</i>
                                                     </a>
@@ -116,7 +116,7 @@
                                             {% endif %}
 
                                             {% if product.rating %}
-                                                <p><i class="fas fa-star"></i> {{ product.rating }} / 5.00</p>
+                                                <p class="text-center"><i class="fas fa-star"></i> {{ product.rating }} / 5.00</p>
                                             {% else %}
                                                 <p>No Rating</p>
                                             {% endif %}

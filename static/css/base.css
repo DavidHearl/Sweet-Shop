@@ -1,10 +1,31 @@
+/* -------------------- Direct Element Styles -------------------- */
 body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-/* General */
+a {
+    text-decoration: none;
+}
+
+label {
+    margin-top: 4px;
+}
+
+hr {
+    margin: 8px 0;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+footer{
+    margin-top: auto;
+}
+
+/* -------------------- General -------------------- */
 .cover {
 	height: 100%;
 	width: 100%;
@@ -13,10 +34,6 @@ body {
 	position: fixed;
 	background: white;
 	z-index: -1;
-}
-
-a {
-    text-decoration: none;
 }
 
 .table-borderless>:not(caption)>*>* {
@@ -128,11 +145,6 @@ a {
     border: 1px solid #0C0404;
 }
 
-.carousel {
-    margin-bottom: 30px;
-    margin-top: 4px;
-}
-
 .card-group {
     border: 1px solid gray;
     border-radius: 5px;
@@ -217,8 +229,9 @@ a {
 /* Cards */
 
 .card-body {
-    margin: 8px 8px 2px 8px;
-    padding: 4px;
+    margin: 0;
+    padding: 5px;
+    position: relative;
 }
 
 .featured-card {
@@ -231,7 +244,7 @@ a {
 }
 
 .product-image {
-    max-height: 209px;
+    max-height: 190px;
 }
 
 .price {
@@ -239,23 +252,12 @@ a {
     font-size: 1rem;
 }
 
-.label {
+.catagory-label {
     font-size: 0.9rem;
-}
-
-
-/* Forms */
-
-/* .form {
-    margin-top: 175px;
-} */
-
-label {
-    margin-top: 4px;
-}
-
-hr {
-    margin: 8px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
 }
 
 .login-button,
@@ -282,10 +284,6 @@ hr {
 
 #div_id_login {
     margin: 8px 0;
-}
-
-p {
-    margin-bottom: 0;
 }
 
 #search-bar{
@@ -492,17 +490,17 @@ p {
     max-width: 1000px;
 }
 
-/* Footer Styling */
-footer{
-    margin-top: auto;
-}
-
 .copyright {
     padding: 16px;
     border-top: 1px solid black;
     color: white;
     background-image: linear-gradient(to right top, #ffc6cf, #feb3be, #fb9fad, #f88b9c, #f4768a);
 }
+
+@media only screen and (max-width: 1400px) {
+    .product-image {
+        max-height: 160px;
+    }
 
 @media only screen and (max-width: 1000px) {
     .navigation-text {

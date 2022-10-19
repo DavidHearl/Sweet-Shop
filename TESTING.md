@@ -164,6 +164,8 @@
 
 ## Automated Testing
 
+Terminal Command : python3 manage.py test
+
 ![Business Model](./media/test_urls.png "Title")
 
 ## Responsive Testing

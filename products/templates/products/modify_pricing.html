@@ -41,17 +41,6 @@
     </div>
 {% endblock %}
 
-{% if forloop.counter|divisibleby:2 %}
-    <div class="col-12 d-sm-none">
-        <hr>
-    </div>
-{% endif %}
-{% if forloop.counter|divisibleby:3 %}
-    <div class="col-12 d-none d-sm-block d-md-block d-lg-none">
-        <hr>
-    </div>
-{% endif %}
-
 {% block postloadjs %}
     {{ block.super }}
     <script type="text/javascript">
