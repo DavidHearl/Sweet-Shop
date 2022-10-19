@@ -43,7 +43,14 @@
         <!-- Content/Desciption -->
         <div class="col-12 col-md-8">
             <div>
-                <p class="home-heading product-heading">{{ product.name }}</p>
+                <p class="home-heading product-heading">
+                    {{ product.name }}
+                    {% if product_in_favourites %}
+                        <a href="{% url 'remove_from_favourites' product.id 'products' %}" aria-label="remove product from favourites"> <i class="fas fa-heart"></i></a>
+                    {% else %}
+                        <a href="{% url 'add_to_favourites' product.id %}" aria-label="add product to favourites"> <i class="far fa-heart"></i></a>
+                    {% endif %}
+                </p>
                 <p class="lead">Price : £{{ product.price }} / 100g</p>
                 {% if product.category %}
                     <p>
@@ -53,6 +60,7 @@
                     </p>
                 {% endif %}
 
+                <!-- Product Rating -->
                 {% if product.rating %}
                     <p>{{ product.rating }} <i class="fas fa-star"></i></p>
                 {% else %}
@@ -61,12 +69,8 @@
 
                 <p>{{ product.description }}</p>
 
-                <!-- Product Rating -->
-                {% if is_product_in_favourites %}
-                    <a href="{% url 'remove_from_favourites' product.id 'products' %}" aria-label="remove product from favourites" class="text-danger">Favourite: <i class="fas fa-heart"></i></a>
-                {% else %}
-                    <a href="{% url 'add_to_favourites' product.id %}" aria-label="add product to favourites" class="text-danger">Favourite: <i class="far fa-heart"></i></a>
-                {% endif %}
+                <!-- Favourite Item -->
+                
 
                 <hr>
                 <!-- Add item to basket form -->
