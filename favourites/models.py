@@ -11,11 +11,5 @@ class Favourites(models.Model):
     username = models.OneToOneField(User, on_delete=models.CASCADE)
 
     def __str__(self):
-        """
-        Return object string
-        Args:
-            self (object): self object.
-        Returns:
-            str: users favourite string
-        """
+        """ Return object string """
         return f"{self.username}'s Favourites"

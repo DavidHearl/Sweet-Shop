@@ -501,6 +501,7 @@ footer{
     .product-image {
         max-height: 160px;
     }
+}
 
 @media only screen and (max-width: 1000px) {
     .navigation-text {
@@ -513,5 +514,3 @@ footer{
         margin-top: 64px;
     }
 }
-
-
