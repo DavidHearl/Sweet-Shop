@@ -52,43 +52,81 @@
                     <h2 class="home-heading">Some of our favorites...</h2>
                     <div class="main-carousel" data-flickity='{ "wrapAround": true, "imagesLoaded": true }'>
                         {% for product in products %}
-                        <div class="card-group col-sm-6 col-md-4 col-lg-3 col-xl-2 bg-white">
-                            <div class="card card-featured h-100">
-                                <div class="card-img-top flex-fill">
-                                    <a href="{% url 'product_detail' product.id %}">
-                                        <img class="card-img-top img-fluid product-image" src="{{ product.image.url }}" alt="{{ product.name }}">
-                                    </a>
-                                </div>
-                                <div class="card-footer bg-white">
-                                    <div class="row">
-                                        <div class="col">
-                                            <p class="card-text mb-0">{{ product.name }}</p>
-                                            <p class="mb-0 text-start fw-bold">£{{ product.price }}</p>
-                                            {% if product.rating %}
-                                                <p><i class="fas fa-star mr-1"></i> {{ product.rating }} / 5.00</p>
-                                            {% else %}
-                                                <p>No Rating</p>
-                                            {% endif %}
-
-                                            {% if request.user.is_superuser %}
-                                                <div class="row">
-                                                    <div class="col-6">
-                                                        <button class="delete-button">
-                                                            <a href="{% url 'delete_product' product.id %}">Delete</a>
-                                                        </button>
-                                                    </div>
-                                                    <div class="col-6">
-                                                        <button class="edit-button">
-                                                            <a href="{% url 'modify_product' product.id %}">Edit</a>
-                                                        </button>
-                                                    </div>
+                            {% if product.image %}
+                                <div class="col-6 col-md-4 col-lg-3 col-xl-2 product-spacing-container">
+                                    <div class="card h-100 product-card">
+                                        <!-- Image, category and Name -->
+                                        <a href="{% url 'product_detail' product.id %}">
+                                            <img class="card-img-top img-fluid product-image" src="{{ product.image.url }}" alt="{{ product.name }}">
+                                        </a>
+                                        {% if product.category %}
+                                            <div class="category-label text-center">
+                                                <a class="category-text" href="{% url 'products' %}?category={{ product.category.name }}">
+                                                    <i class="fas fa-tag"></i> {{ product.category.friendly_name }}
+                                                    
+                                                </a>
+                                            </div>
+                                        {% endif %}
+                                        <div class="card-body">
+                                            <div class="text-center">{{ product.name }}</div>
+                                        </div>
+        
+                                        <!-- Price, rating and edit buttons-->
+                                        <div class="card-footer bg-white">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <p class="price text-center">£{{ product.price }} / 100g</p>
+                                                    {% if product.rating %}
+                                                        <div class="text-center">
+                                                            {% if product.rating >= 1 %}
+                                                                <i class="fas fa-star"></i>
+                                                                {% if product.rating >= 2 %}
+                                                                    <i class="fas fa-star"></i>
+                                                                    {% if product.rating >= 3 %}
+                                                                        <i class="fas fa-star"></i>
+                                                                        {% if product.rating >= 4 %}
+                                                                            <i class="fas fa-star"></i>
+                                                                            {% if product.rating >= 5 %}
+                                                                                <i class="fas fa-star"></i>
+                                                                            {% endif %}
+                                                                        {% endif %}
+                                                                    {% endif %}
+                                                                {% endif %}
+                                                            {% endif %}
+            
+                                                            {% if product.rating <= 4 %}
+                                                                <i class="fa-regular fa-star"></i>
+                                                                {% if product.rating <= 3 %}
+                                                                    <i class="fa-regular fa-star"></i>
+                                                                    {% if product.rating <= 2 %}
+                                                                        <i class="fa-regular fa-star"></i> 
+                                                                        {% if product.rating <= 1 %}
+                                                                            <i class="fa-regular fa-star"></i> 
+                                                                        {% endif %}
+                                                                    {% endif %}
+                                                                {% endif %}
+                                                            {% endif %}
+                                                        </div>
+                                                    {% else %}
+                                                        <p>No Rating</p>
+                                                    {% endif %}
+            
+                                                    {% if request.user.is_superuser %}
+                                                        <div>
+                                                            <button class="edit-button edit-delete">
+                                                                <a href="{% url 'modify_product' product.id %}">Edit</a>
+                                                            </button>
+                                                            <button class="delete-button edit-delete">
+                                                                <a href="{% url 'delete_product' product.id %}">Delete</a>
+                                                            </button>
+                                                        </div>
+                                                    {% endif %}
                                                 </div>
-                                            {% endif %}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
+                            {% endif %}
                         {% endfor %}
                     </div>
                 </div>

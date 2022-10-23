@@ -12,11 +12,13 @@
                 All Products
             </a>
             <div class="dropdown-menu" aria-labelledby="all-sweets-link">
+                <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
+                <hr>
                 <a href="{% url 'products' %}?category=sweets" class="dropdown-item">Sweets</a>
                 <a href="{% url 'products' %}?category=chocolate" class="dropdown-item">Chocolate</a>
+                <hr>
                 <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item">By Rating</a>
                 <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
-                <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
             </div>
         </li>
 

@@ -26,6 +26,7 @@
                 <hr>
             </div>
         </div>
+
         <!-- Sorting -->
         <div class="row mt-1 mb-2">
             <div class="col-12 col-md-6 my-auto order-md-last d-flex justifiy-content-center justify-content-md-end">
@@ -50,32 +51,65 @@
                 </p>
             </div>
         </div>
+
         <!-- Display Products -->
         <div class="row">
             {% for product in products %}
                 {% if product.image %}
-                    <div class="col-6 col-md-4 col-lg-3 col-xl-2 product-card">
-                        <div class="card h-100">
+                    <div class="col-6 col-md-4 col-lg-3 col-xl-2 product-spacing-container">
+                        <div class="card h-100 product-card">
+                            <!-- Image, category and Name -->
                             <a href="{% url 'product_detail' product.id %}">
                                 <img class="card-img-top img-fluid product-image" src="{{ product.image.url }}" alt="{{ product.name }}">
                             </a>
+                            {% if product.category %}
+                                <div class="category-label text-center">
+                                    <a class="category-text" href="{% url 'products' %}?category={{ product.category.name }}">
+                                        <i class="fas fa-tag"></i> {{ product.category.friendly_name }}
+                                        
+                                    </a>
+                                </div>
+                            {% endif %}
                             <div class="card-body">
                                 <div class="text-center">{{ product.name }}</div>
                             </div>
+
+                            <!-- Price, rating and edit buttons-->
                             <div class="card-footer bg-white">
                                 <div class="row">
                                     <div class="col">
                                         <p class="price text-center">£{{ product.price }} / 100g</p>
-                                        {% if product.category %}
-                                            <p class="catagory-label text-center">
-                                                <a href="{% url 'products' %}?category={{ product.category.name }}">
-                                                    <i class="fas fa-tag"> {{ product.category.friendly_name }}</i>
-                                                </a>
-                                            </p>
-                                        {% endif %}
-
                                         {% if product.rating %}
-                                            <p class="text-center"><i class="fas fa-star"></i> {{ product.rating }} / 5.00</p>
+                                            <div class="text-center">
+                                                {% if product.rating >= 1 %}
+                                                    <i class="fas fa-star"></i>
+                                                    {% if product.rating >= 2 %}
+                                                        <i class="fas fa-star"></i>
+                                                        {% if product.rating >= 3 %}
+                                                            <i class="fas fa-star"></i>
+                                                            {% if product.rating >= 4 %}
+                                                                <i class="fas fa-star"></i>
+                                                                {% if product.rating >= 5 %}
+                                                                    <i class="fas fa-star"></i>
+                                                                {% endif %}
+                                                            {% endif %}
+                                                        {% endif %}
+                                                    {% endif %}
+                                                {% endif %}
+
+                                                {% if product.rating <= 4 %}
+                                                    <i class="fa-regular fa-star"></i>
+                                                    {% if product.rating <= 3 %}
+                                                        <i class="fa-regular fa-star"></i>
+                                                        {% if product.rating <= 2 %}
+                                                            <i class="fa-regular fa-star"></i> 
+                                                            {% if product.rating <= 1 %}
+                                                                <i class="fa-regular fa-star"></i> 
+                                                            {% endif %}
+                                                        {% endif %}
+                                                    {% endif %}
+                                                {% endif %}
+                                            </div>
                                         {% else %}
                                             <p>No Rating</p>
                                         {% endif %}
@@ -97,8 +131,8 @@
                     </div>
                 {% else %}
                     {% if request.user.is_superuser %}
-                        <div class="col-6 col-md-4 col-lg-3 col-xl-2 product-card">
-                            <div class="card h-100">
+                        <div class="col-6 col-md-4 col-lg-3 col-xl-2 product-spacing-container">
+                            <div class="card h-100 product-card">
                                 <div class="card-body text-center">
                                     <div>{{ product.name }}</div>
                                 </div>
@@ -108,7 +142,7 @@
                                             <p class="price text-center">£{{ product.price }} / 100g</p>
 
                                             {% if product.category %}
-                                                <p class="catagory-label text-center">
+                                                <p class="category-label text-center">
                                                     <a href="{% url 'products' %}?category={{ product.category.name }}">
                                                         <i class="fas fa-tag">{{ product.category.friendly_name }}</i>
                                                     </a>
@@ -116,7 +150,36 @@
                                             {% endif %}
 
                                             {% if product.rating %}
-                                                <p class="text-center"><i class="fas fa-star"></i> {{ product.rating }} / 5.00</p>
+                                                <div class="text-center">
+                                                    {% if product.rating >= 1 %}
+                                                        <i class="fas fa-star"></i>
+                                                        {% if product.rating >= 2 %}
+                                                            <i class="fas fa-star"></i>
+                                                            {% if product.rating >= 3 %}
+                                                                <i class="fas fa-star"></i>
+                                                                {% if product.rating >= 4 %}
+                                                                    <i class="fas fa-star"></i>
+                                                                    {% if product.rating >= 5 %}
+                                                                        <i class="fas fa-star"></i>
+                                                                    {% endif %}
+                                                                {% endif %}
+                                                            {% endif %}
+                                                        {% endif %}
+                                                    {% endif %}
+
+                                                    {% if product.rating <= 4 %}
+                                                        <i class="fa-regular fa-star"></i>
+                                                        {% if product.rating <= 3 %}
+                                                            <i class="fa-regular fa-star"></i>
+                                                            {% if product.rating <= 2 %}
+                                                                <i class="fa-regular fa-star"></i> 
+                                                                {% if product.rating <= 1 %}
+                                                                    <i class="fa-regular fa-star"></i> 
+                                                                {% endif %}
+                                                            {% endif %}
+                                                        {% endif %}
+                                                    {% endif %}
+                                                </div>
                                             {% else %}
                                                 <p>No Rating</p>
                                             {% endif %}

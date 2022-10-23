@@ -252,12 +252,19 @@ footer{
     font-size: 1rem;
 }
 
-.catagory-label {
-    font-size: 0.9rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 100;
+.category-label {
+    background-image: linear-gradient(to right top, #ffc6cf, #feb3be, #fb9fad, #f88b9c, #f4768a);
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    color: white;
+}
+
+.category-text{
+    color: white;
+}
+
+.fa-tag {
+    color: white !important;
 }
 
 .login-button,
@@ -477,8 +484,12 @@ footer{
     padding: 8px;
 }
 
-.product-card {
+.product-spacing-container {
     margin-bottom: 24px;
+}
+
+.product-card {
+    border: 1px solid black;
 }
 
 /* Mailchamp */
@@ -499,7 +510,7 @@ footer{
 
 @media only screen and (max-width: 1400px) {
     .product-image {
-        max-height: 160px;
+        max-height: 180px;
     }
 }
 
