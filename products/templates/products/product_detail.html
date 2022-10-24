@@ -33,10 +33,18 @@
                 </div>
             {% endif %}
             <!-- Image -->
-            <div class="image-container">
+            <div class="product-detail-image-container">
                 <a href="{{ product.image.url }}" target="_blank">
                     <img class="product-detail-image product-detail-image" src="{{ product.image.url }}" alt="{{ product.name }}">
                 </a>
+
+                {% if product.category %}
+                    <p class="category-label text-center">
+                        <a href="{% url 'products' %}?category={{ product.category.name }}">
+                            <i class="fas fa-tag">{{ product.category.friendly_name }}</i>
+                        </a>
+                    </p>
+                {% endif %}
             </div>
         </div>
 
@@ -51,27 +59,44 @@
                         <a href="{% url 'add_to_favourites' product.id %}" aria-label="add product to favourites"> <i class="far fa-heart"></i></a>
                     {% endif %}
                 </p>
-                <p class="lead">Price : £{{ product.price }} / 100g</p>
-                {% if product.category %}
-                    <p>
-                        <a href="{% url 'products' %}?category={{ product.category.name }}">
-                            <i class="fas fa-tag"> {{ product.category.friendly_name }}</i>
-                        </a>
-                    </p>
-                {% endif %}
+                <p class="product-detail-spacing text-center lead">Price : £{{ product.price }} / 100g</p>
 
                 <!-- Product Rating -->
                 {% if product.rating %}
-                    <p>{{ product.rating }} <i class="fas fa-star"></i></p>
+                    <div class="product-detail-spacing text-center">
+                        {% if product.rating >= 1 %}
+                            <i class="fas fa-star"></i>
+                            {% if product.rating >= 2 %}
+                                <i class="fas fa-star"></i>
+                                {% if product.rating >= 3 %}
+                                    <i class="fas fa-star"></i>
+                                    {% if product.rating >= 4 %}
+                                        <i class="fas fa-star"></i>
+                                        {% if product.rating >= 5 %}
+                                            <i class="fas fa-star"></i>
+                                        {% endif %}
+                                    {% endif %}
+                                {% endif %}
+                            {% endif %}
+                        {% endif %}
+
+                        {% if product.rating <= 4 %}
+                            <i class="fa-regular fa-star"></i>
+                            {% if product.rating <= 3 %}
+                                <i class="fa-regular fa-star"></i>
+                                {% if product.rating <= 2 %}
+                                    <i class="fa-regular fa-star"></i> 
+                                    {% if product.rating <= 1 %}
+                                        <i class="fa-regular fa-star"></i> 
+                                    {% endif %}
+                                {% endif %}
+                            {% endif %}
+                        {% endif %}
+                    </div>
                 {% else %}
                     <p>No Rating</p>
                 {% endif %}
-
-                <p>{{ product.description }}</p>
-
-                <!-- Favourite Item -->
-                
-
+                <p class="product-detail-spacing text-center">{{ product.description }}</p>
                 <hr>
                 <!-- Add item to basket form -->
                 <form action="{% url 'add_to_shopping_bag' product.id %}" method="POST">
@@ -100,19 +125,25 @@
                                 </div>
                             </div>
                         </div>
-                        
-                        <div class="col-12 text-center">
-                            <a href="{% url 'products' %}" class="action-button-detail">
-                                <span>
-                                    <i class="fas fa-chevron-left"></i>
-                                </span>
-                                <span>Keep Shopping</span>
-                            </a>
-                            <input class="action-button-detail" type="submit" value="Add to Bag">
-                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                        </div>
                     </div>
                 </form>
+            </div>
+            <!-- Keep Shopping / Add to bag buttons -->
+            <div class="row text-center">
+                <div class="col-6 text-center action-button-detail">
+                    <button>
+                        <a href="{% url 'products' %}">
+                            <i class="fas fa-chevron-left"></i>
+                            <span>Keep Shopping</span>
+                        </a>
+                    </button>
+                </div>
+                <div class="col-6 text-center action-button-detail">
+                    <button>
+                        <input type="submit" value="Add to Bag">
+                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                    </button>
+                </div>
             </div>
         </div>
     </div>

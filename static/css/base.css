@@ -40,7 +40,7 @@ footer{
     padding-left: 0;
 }
 
-/* Navigation */
+/* -------------------- Navigation -------------------- */
 .title {
     font-family: "Permanent Marker";
 }
@@ -76,7 +76,7 @@ footer{
     background-color: white;
 }
 
-/* Home */
+/* -------------------- Home -------------------- */
 
 .main-banner {
     margin: 10px;
@@ -151,7 +151,7 @@ footer{
     margin: auto 6px;
 }
 
-/* Profile Buttons */
+/* -------------------- Profile Buttons -------------------- */
 .form-control {
     margin-top: 10px;
 }
@@ -210,7 +210,7 @@ footer{
     min-width: 100%;
 }
 
-/* Carousel */
+/* -------------------- Carousel -------------------- */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
     background-color: black;
@@ -222,7 +222,7 @@ footer{
     border: 1px solid black;
 }
 
-/* Cards */
+/* -------------------- Cards -------------------- */
 
 .card-body {
     margin: 0;
@@ -296,6 +296,10 @@ footer{
     margin-left: 0;
 }
 
+.mobile-search {
+    margin-top: 0px;
+}
+
 .dropdown-menu {
     width: 96% !important;
     margin-left: 2%;
@@ -335,13 +339,18 @@ footer{
     overflow-y: auto;    
 }
 
-/* Product Detail */
+/* -------------------- Product Detail -------------------- */
 .product-heading {
     text-decoration: underline;
 }
 
-.image-container {
+.product-detail-image-container {
     text-align: center;
+    border: 1px solid black;
+}
+
+.product-detail-spacing {
+    margin-bottom: 4px;
 }
 
 .product-detail-image {
@@ -362,10 +371,12 @@ footer{
 }
 
 .input-group>:not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
-    margin-left: 8px;
+    margin-left: auto;
     margin-top: 2px;
     background: none;
     border: none;
+    text-align: center;
+    max-width: 400px;
 }
 
 .fa-tag {
@@ -404,6 +415,11 @@ footer{
     background-color: #dc3545;
 }
 
+/* -------------------- Review -------------------- */
+.review-title {
+    font-size: 1.3rem;
+}
+
 .delete-review {
     background-color: #dc3545;
     border-radius: 8px;
@@ -416,12 +432,18 @@ footer{
     color: white;
 }
 
-/* Alerts */
+.fa-heart:before {
+    font-size: 1.5rem;
+    text-decoration: underline;
+    color: #f4677f;
+}
+
+/* -------------------- Alerts -------------------- */
 .alert {
     margin-top: 12px;
 }
 
-/* Account */
+/* -------------------- Account -------------------- */
 .account-forms {
     max-width: 800px;
     justify-content: center;
@@ -467,7 +489,7 @@ footer{
     margin: 4px 0;
 }
 
-/* Product Page */
+/* -------------------- Product Page -------------------- */
 .back-to-top {
     margin-bottom: 24px;
     padding: 10px;
@@ -489,7 +511,7 @@ footer{
     border: 1px solid black;
 }
 
-/* Mailchamp */
+/* -------------------- Mailchamp -------------------- */
 #mc_embed_signup{
     background:#fff;
     clear:left;

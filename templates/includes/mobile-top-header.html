@@ -1,17 +1,20 @@
 <!-- <ul> -->
     <li class="list-inline-item">
+        <!-- Hamburger Menu -->
         <a class="nav-link d-block d-lg-none" href="#" id="mobile-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <div class="text-center">
                 <div><i class="fas fa-search fa-lg navigation-text-mobile"></i></div>
                 <p class="navigation-text-mobile my-auto">Search</p>
             </div>
         </a>
-        <div class="dropdown-menu w-100 p-3 rounded-0 my-0" aria-labelledby="mobile-search">
+        
+        <!-- Search -->
+        <div class="dropdown-menu w-100 p-3 my-0" aria-labelledby="mobile-search">
             <form class="form" method="GET" action="{% url 'products' %}">
                 <div class="input-group w-100">
-                    <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search our site">
+                    <input class="form-control mobile-search" type="text" name="q" placeholder="Search our site">
                     <div class="input-group-append">
-                        <button class="form-control form-control btn btn-black border border-black rounded-0" type="submit">
+                        <button class="form-control btn btn-black border border-black" type="submit">
                             <span class="icon">
                                 <i class="fas fa-search"></i>
                             </span>
@@ -21,6 +24,8 @@
             </form>
         </div>
     </li>
+
+    <!-- My Account -->
     <li class="list-inline-item dropdown">
         <a class="nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <div class="text-center">
@@ -43,6 +48,8 @@
             {% endif %}
         </div>
     </li>
+
+    <!-- Shopping Bag -->
     <li class="list-inline-item">
         <a class="nav-link d-block d-lg-none" href="{% url 'view_shopping_bag' %}">
             <div class="text-center">
