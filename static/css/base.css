@@ -85,8 +85,8 @@ footer{
 
 .home-heading {
     font-family: "Permanent Marker";
-    color: #f4768a;
-    font-size: 1.5rem;
+    color: #f4677f;
+    font-size: 1.8rem;
     text-align: center;
     margin-top: 10px;
 }
@@ -173,18 +173,9 @@ footer{
     border-radius: 10px;
 }
 
-.home-main {
-    background-image: linear-gradient(to right top, #874087, #a34d9b, #c15aaf, #df67c2, #ff74d5);
-    margin-bottom: 12px;
-}
-
-.home-left {
-    background-image: linear-gradient(to right top, #ebc7cd, #efbbc3, #f3afba, #f6a2af, #f895a5);
-}
-
-.home-right {
-    background-image: linear-gradient(to right top, #964817, #854a21, #754b2b, #654a35, #55493f);
-}
+.home-main {background-image: linear-gradient(to right top, #874087, #a34d9b, #c15aaf, #df67c2, #ff74d5);}
+.home-left {background-image: linear-gradient(to right top, #ebc7cd, #efbbc3, #f3afba, #f6a2af, #f895a5);}
+.home-right {background-image: linear-gradient(to right top, #964817, #854a21, #754b2b, #654a35, #55493f);}
 
 .home-main,
 .home-left,
@@ -192,7 +183,7 @@ footer{
     border-radius: 25px;
     border: 1px solid black;
     min-height: 250px;
-    margin-top: 10px;
+    margin-bottom: 12px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -226,6 +217,11 @@ footer{
     border-radius: 5px;
 }
 
+.carousel-card {
+    margin: 0 8px;
+    border: 1px solid black;
+}
+
 /* Cards */
 
 .card-body {
@@ -257,6 +253,7 @@ footer{
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     color: white;
+    padding: 2px;
 }
 
 .category-text{

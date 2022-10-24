@@ -54,7 +54,7 @@
                         {% for product in products %}
                             {% if product.image %}
                                 <div class="col-6 col-md-4 col-lg-3 col-xl-2 product-spacing-container">
-                                    <div class="card h-100 product-card">
+                                    <div class="card h-100 carousel-card">
                                         <!-- Image, category and Name -->
                                         <a href="{% url 'product_detail' product.id %}">
                                             <img class="card-img-top img-fluid product-image" src="{{ product.image.url }}" alt="{{ product.name }}">
@@ -62,8 +62,8 @@
                                         {% if product.category %}
                                             <div class="category-label text-center">
                                                 <a class="category-text" href="{% url 'products' %}?category={{ product.category.name }}">
-                                                    <i class="fas fa-tag"></i> {{ product.category.friendly_name }}
-                                                    
+                                                    <i class="fas fa-tag"></i>
+                                                    <span class="category-value">{{ product.category.friendly_name }}</span>
                                                 </a>
                                             </div>
                                         {% endif %}
@@ -145,16 +145,56 @@
                     <img class="logo" src="./media/Logo_Cadbury.webp" alt="">
                 </a>
             </div>
-            <div class="col-6 col-md-4 col-lg-3 col-xl-2 logo-container"><img class="logo" src="./media/Logo_Haribo.webp" alt=""></div>
-            <div class="col-6 col-md-4 col-lg-3 col-xl-2 logo-container"><img class="logo" src="./media/Logo_Hershey.webp" alt=""></div>
-            <div class="col-6 col-md-4 col-lg-3 col-xl-2 logo-container"><img class="logo" src="./media/Logo_Jelly_Belly.webp" alt=""></div>
-            <div class="col-6 col-md-4 col-lg-3 col-xl-2 logo-container"><img class="logo" src="./media/Logo_Kinder.webp" alt=""></div>
-            <div class="col-6 col-md-4 col-lg-3 col-xl-2 logo-container"><img class="logo" src="./media/Logo_Maoam.webp" alt=""></div>
-            <div class="col-6 col-md-4 col-lg-3 col-xl-2 logo-container"><img class="logo" src="./media/Logo_Nestle.webp" alt=""></div>
-            <div class="col-6 col-md-4 col-lg-3 col-xl-2 logo-container"><img class="logo" src="./media/Logo_Reese.webp" alt=""></div>
-            <div class="col-6 col-md-4 col-lg-3 col-xl-2 logo-container"><img class="logo" src="./media/Logo_Swizzels.webp" alt=""></div>
-            <div class="col-6 col-md-4 col-lg-3 col-xl-2 logo-container"><img class="logo" src="./media/Logo_Warheads.webp" alt=""></div>
-            <div class="col-6 col-md-4 col-lg-3 col-xl-2 logo-container"><img class="logo" src="./media/Logo_Wonka.webp" alt=""></div>
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2 logo-container">
+                <a href="">
+                    <img class="logo" src="./media/Logo_Haribo.webp" alt="">
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2 logo-container">
+                <a href="">
+                    <img class="logo" src="./media/Logo_Hershey.webp" alt="">
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2 logo-container">
+                <a href="">
+                    <img class="logo" src="./media/Logo_Jelly_Belly.webp" alt="">
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2 logo-container">
+                <a href="">
+                    <img class="logo" src="./media/Logo_Kinder.webp" alt="">
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2 logo-container">
+                <a href="">
+                    <img class="logo" src="./media/Logo_Maoam.webp" alt="">
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2 logo-container">
+                <a href="">
+                    <img class="logo" src="./media/Logo_Nestle.webp" alt="">
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2 logo-container">
+                <a href="">
+                    <img class="logo" src="./media/Logo_Reese.webp" alt="">
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2 logo-container">
+                <a href="">
+                    <img class="logo" src="./media/Logo_Swizzels.webp" alt="">
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2 logo-container">
+                <a href="">
+                    <img class="logo" src="./media/Logo_Warheads.webp" alt="">
+                </a>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2 logo-container">
+                <a href="">
+                    <img class="logo" src="./media/Logo_Wonka.webp" alt="">
+                </a>
+            </div>
         </div>
 
         <div class="row">

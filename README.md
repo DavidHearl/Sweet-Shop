@@ -331,7 +331,6 @@ Disclaimer : The address has been blanked out on the image above
 
 This project was deployed with Heroku using the following method:
 
-
 ### Requirements and Procfile
 
 Heroku needs to know which technologies are being used and any requirements the project may have. 

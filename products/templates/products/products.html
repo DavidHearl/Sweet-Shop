@@ -186,10 +186,10 @@
 
                                             <div>
                                                 <button class="edit-button edit-delete">
-                                                    <a href="{% url 'modify_product' product.id %}">Edit</a>
+                                                    <a href="{% url 'modify_product' product.id %}" aria-hidden="true">Edit</a>
                                                 </button>
                                                 <button class="delete-button edit-delete">
-                                                    <a href="{% url 'delete_product' product.id %}">Delete</a>
+                                                    <a href="{% url 'delete_product' product.id %}" aria-hidden="true">Delete</a>
                                                 </button>
                                             </div>
                                         </div>
