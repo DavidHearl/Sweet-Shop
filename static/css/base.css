@@ -88,7 +88,7 @@ footer{
     color: #f4677f;
     font-size: 1.8rem;
     text-align: center;
-    margin-top: 10px;
+    margin: 12px 0;
 }
 
 .hero-heading {
@@ -345,12 +345,26 @@ footer{
 }
 
 .product-detail-image-container {
+    margin: auto;
     text-align: center;
     border: 1px solid black;
+    max-width: 275px;
+    border-radius: 10px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.product-detail-category-label {
+    background-image: linear-gradient(to right top, #ffc6cf, #feb3be, #fb9fad, #f88b9c, #f4768a);
+    border-top: 1px solid black;
+    color: white;
+    padding: 2px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 .product-detail-spacing {
-    margin-bottom: 4px;
+    margin-bottom: 6px;
 }
 
 .product-detail-image {
@@ -358,10 +372,29 @@ footer{
     height: 100%;
     max-width: 275px;
     max-height: 275px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
-.product-detail-image {
-    margin-top: 30px;
+.product-detail-button-container {
+    margin: 30px 0 10px 0;
+}
+
+.product-detail-button {
+    min-width: 200px;
+    max-width: 300px;
+    width: 100%;
+    padding: 14px;
+    text-decoration: none;
+    background-image: linear-gradient(to right top, #f5b1fb, #e2a0e9, #d08fd7, #be7ec6, #ac6eb5);
+    color: white;
+    border: 1px solid black;
+    border-radius: 28px;
+    font-size: 1.1rem;
+}
+
+.product-detail-button > a {
+    color: white;
 }
 
 .quantity_input {
@@ -372,11 +405,23 @@ footer{
 
 .input-group>:not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
     margin-left: auto;
-    margin-top: 2px;
     background: none;
     border: none;
     text-align: center;
-    max-width: 400px;
+    max-width: 500px
+}
+
+.product-detail-form {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.product-deatail-form > p {
+    margin-bottom: 10px;
+}
+
+.quantity {
+    margin: 0;
 }
 
 .fa-tag {
@@ -388,8 +433,16 @@ footer{
     border: 1px solid black;
     background: none;
     border-radius: 4px;
-    padding: 4px 8px 4px 10px;
-    margin-top: 1px;
+    padding: 6px 10px 6px 12px;
+    margin-top: 10px;
+}
+
+.decrement-quantity {
+    margin-right: 5px;
+}
+
+.increment-quantity {
+    margin-left: 5px;
 }
 
 .edit-button,
@@ -542,5 +595,15 @@ footer{
 @media only screen and (max-width: 991px) {
     .push-down{
         margin-top: 64px;
+    }
+
+    .product-detail-image-container {
+        margin-top: 60px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .product-detail-image-container {
+        margin-top: 30px;
     }
 }
