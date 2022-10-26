@@ -305,7 +305,7 @@ footer{
 }
 
 .mobile-search {
-    margin-top: 0px;
+    margin-top: 0px !important;
 }
 
 .dropdown-menu {
@@ -479,14 +479,16 @@ footer{
 /* -------------------- Review -------------------- */
 .review-title {
     font-size: 1.3rem;
+    text-align: center;
 }
 
 .delete-review {
     background-color: #dc3545;
-    border-radius: 8px;
-    padding: 4px 8px;
+    border-radius: 4px;
+    padding: 4px 12px;
     border: none;
     float: right;
+    margin-top: 8px;
 }
 
 .delete-review > a {
