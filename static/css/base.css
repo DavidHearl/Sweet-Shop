@@ -72,8 +72,16 @@ footer{
     border: none;
 }
 
+.mobile-navigation {
+    margin: 0 12px;
+}
+
 .top-navigation {
     background-color: white;
+}
+
+.dropdown-hr {
+    margin: 0;
 }
 
 /* -------------------- Home -------------------- */

@@ -13,10 +13,10 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="all-sweets-link">
                 <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
-                <hr>
+                <hr class="dropdown-hr">
                 <a href="{% url 'products' %}?category=sweets" class="dropdown-item">Sweets</a>
                 <a href="{% url 'products' %}?category=chocolate" class="dropdown-item">Chocolate</a>
-                <hr>
+                <hr class="dropdown-hr">
                 <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item">By Rating</a>
                 <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
             </div>
@@ -38,7 +38,7 @@
                 <a href="{% url 'products' %}?color=Pink" class="dropdown-item">Pink</a>
                 <a href="{% url 'products' %}?color=Purple" class="dropdown-item">Purple</a>
                 <a href="{% url 'products' %}?color=Yellow" class="dropdown-item">Yellow</a>
-                <hr>
+                <hr class="dropdown-hr">
                 <a href="{% url 'products' %}?color=Assorted" class="dropdown-item">Assorted</a>
                 <a href="{% url 'products' %}?color=Rainbow" class="dropdown-item">Rainbow</a>
             </div>
@@ -48,7 +48,7 @@
             <a class="nav-link navigation-text" href="#" id="sweet-flavour-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Sweets By Flavour
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="sweet-flavour-link">
+            <div class="dropdown-menu" aria-labelledby="sweet-flavour-link">
                 <!-- Toffee, Strawberry, Lemon, Raspberry, Mint, Blackcurrant, Cola, Banana, Watermelon, Cherry, Peach, Bubblegum, Coconut, Butterscotch, Chocolate, Apple -->
                 <a href="{% url 'products' %}?flavour=Apple" class="dropdown-item">Apple</a>
                 <a href="{% url 'products' %}?flavour=Strawberry" class="dropdown-item">Strawberry</a>
@@ -75,7 +75,7 @@
             <a class="nav-link navigation-text" href="#" id="sweet-manufacturer-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Sweets By Brand
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="sweet-manufacturer-link">
+            <div class="dropdown-menu" aria-labelledby="sweet-manufacturer-link">
                 <!-- Haribo, Maynards, Hannahs, Kingsway, Maxons -->
                 <a href="{% url 'products' %}?brand=Haribo" class="dropdown-item">Haribo</a>
                 <a href="{% url 'products' %}?brand=Maynards" class="dropdown-item">Maynards</a>
