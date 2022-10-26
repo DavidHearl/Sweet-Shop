@@ -76,6 +76,10 @@ footer{
     margin: 0 12px;
 }
 
+.navigation-icon-container {
+    margin: 8px 0;
+}
+
 .top-navigation {
     background-color: white;
 }
@@ -87,16 +91,17 @@ footer{
 /* -------------------- Home -------------------- */
 
 .main-banner {
-    margin: 10px;
+    margin-bottom: 10px;
     text-align: center;
 }
 
 .home-heading {
     font-family: "Permanent Marker";
-    color: #f4677f;
-    font-size: 1.8rem;
+    color: #f3647c;
+    font-size: 2rem;
     text-align: center;
-    margin: 12px 0;
+    margin-bottom: 16px;
+    text-shadow: -1px 0 black, 0 2px black, 1px 0 black, 0 -1px black;
 }
 
 .hero-heading {
@@ -247,10 +252,6 @@ footer{
     margin-bottom: 30px;
 }
 
-.product-image {
-    max-height: 190px;
-}
-
 .price {
     margin: 4px 0px;
     font-size: 1rem;
@@ -302,6 +303,11 @@ footer{
     margin-top: 8px !important;
     left: 0;
     margin-left: 0;
+}
+
+.desktop-search {
+    margin-top: 10px;
+    margin-left: 4px;
 }
 
 .mobile-search {
@@ -480,6 +486,7 @@ footer{
 .review-title {
     font-size: 1.3rem;
     text-align: center;
+    margin-top: 12px;
 }
 
 .delete-review {
@@ -588,12 +595,6 @@ footer{
     border-top: 1px solid black;
     color: white;
     background-image: linear-gradient(to right top, #ffc6cf, #feb3be, #fb9fad, #f88b9c, #f4768a);
-}
-
-@media only screen and (max-width: 1400px) {
-    .product-image {
-        max-height: 180px;
-    }
 }
 
 @media only screen and (max-width: 1000px) {

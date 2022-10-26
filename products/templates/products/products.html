@@ -16,7 +16,7 @@
     <div class="container push-down">
         <!-- Title Block -->
         <div class="row">
-            <div class="col mt-4">
+            <div class="col">
                 <h2>All Products</h2>
                     {% for current in current_categories %}
                         <a href="{% url 'products' %}?categories={{ current.name }}">

@@ -56,7 +56,7 @@
                                 <div class="col-6 col-md-4 col-lg-3 col-xl-2 product-spacing-container">
                                     <div class="card h-100 carousel-card">
                                         <!-- Image, category and Name -->
-                                        <a href="{% url 'product_detail' product.id %}">
+                                        <a href="{% url 'product_detail' product.id %}" aria-hidden="true">
                                             <img class="card-img-top img-fluid product-image" src="{{ product.image.url }}" alt="{{ product.name }}">
                                         </a>
                                         {% if product.category %}
@@ -113,10 +113,10 @@
             
                                                     {% if request.user.is_superuser %}
                                                         <div>
-                                                            <button class="edit-button edit-delete">
+                                                            <button class="edit-button edit-delete" aria-hidden="true">
                                                                 <a href="{% url 'modify_product' product.id %}">Edit</a>
                                                             </button>
-                                                            <button class="delete-button edit-delete">
+                                                            <button class="delete-button edit-delete" aria-hidden="true">
                                                                 <a href="{% url 'delete_product' product.id %}">Delete</a>
                                                             </button>
                                                         </div>

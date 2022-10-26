@@ -27,7 +27,6 @@
     {% endblock %}
 
     {% block corejs %}
-        <!-- <script src="https://kit.fontawesome.com/e9c73d7092.js" crossorigin="anonymous"></script> -->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
@@ -51,7 +50,7 @@
                     <div class="input-group w-100">
                         <input class="form-control border border-black rounded-3" type="text" name="q"
                             placeholder="Search for your favourite Sweets">
-                        <button class="search" type="submit">
+                        <button class="search desktop-search-icon" type="submit" aria-label="product search">
                             <span class="search-icon">
                                 <i class="fas fa-search"></i>
                             </span>
@@ -69,7 +68,7 @@
 
             <!-- My account and shopping cart -->
             <div class="col-12 col-lg-4 py-auto my-auto">
-                <ul class="list-inline list-unstyled text-center text-lg-end">
+                <ul class="list-inline list-unstyled text-center navigation-icon-container text-lg-end">
                     <li class="list-inline-item dropdown">
                         <a class="nav-link" href="#" data-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="false">
