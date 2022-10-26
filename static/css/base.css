@@ -499,6 +499,11 @@ footer{
     color: white;
 }
 
+.no-reviews {
+    text-align: center;
+    margin: 8px 0;
+}
+
 .fa-heart:before {
     font-size: 1.5rem;
     color: #f4677f;
@@ -549,6 +554,18 @@ footer{
 
 .modify-pricing {
     margin: 10px 0 0 0;
+    float: right;
+    padding: 4px;
+}
+
+.modify-pricing-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.modify-pricing-container > label {
+    margin-right: 10px;
+    margin-top: 0;
 }
 
 .edit-delete {
@@ -577,6 +594,13 @@ footer{
     border: 1px solid black;
 }
 
+/* -------------------- Extras -------------------- */
+.close-toast {
+    border: none;
+    background: none;
+    margin-left: 10px;
+}
+
 /* -------------------- Mailchamp -------------------- */
 #mc_embed_signup{
     background:#fff;
@@ -601,7 +625,7 @@ footer{
 
 @media only screen and (max-width: 991px) {
     .push-down{
-        margin-top: 64px;
+        margin-top: 72px;
     }
 
     .product-detail-image-container {

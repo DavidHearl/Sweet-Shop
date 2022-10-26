@@ -30,9 +30,11 @@
                     <form method="POST" action="{% url 'post_price' product.id %}" class="form" enctype="multipart/form-data">
                         {% csrf_token %}
                         <div class="pricing-form">
-                            <p><strong>{{ product.name }}</strong> : £{{ product.price }}</p>
-                            <p>{{ manage_inventory.price | as_crispy_field }}</p>
-                            <input type="submit" class="modify-pricing full-width-action-button" value="Modify">
+                            <p class="text-center"><strong>{{ product.name }}</strong> : £{{ product.price }}</p>
+                            <div class="modify-pricing-container">
+                                <p>{{ manage_inventory.price | as_crispy_field }}</p>
+                                <input type="submit" class="modify-pricing full-width-action-button" value="Modify">
+                            </div>
                         </div>
                     </form>
                 </div>

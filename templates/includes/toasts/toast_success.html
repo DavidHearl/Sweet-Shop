@@ -1,9 +1,9 @@
-<div class="toast custom-toast rounded-0 border-top-0" data-autohide="false">
+<div class="toast custom-toast" data-autohide="false">
     <div class="arrow-up arrow-success"></div>
     <div class="w-100 toast-capper bg-success"></div>
     <div class="toast-header">
         <strong class="mr-auto">Success!</strong>
-        <button type="button" class="ml-2 mb-1" data-dismiss="toast" aria-label="Close">
+        <button class="close-toast" type="button" data-dismiss="toast" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>
     </div>
@@ -11,7 +11,6 @@
         <div class="row">
             <div class="col">
                 {{ message }}
-                <hr class="mt-1 mb-3">
             </div>
         </div>
         {% if grand_total and not on_profile_page %}

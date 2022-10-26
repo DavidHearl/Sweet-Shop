@@ -181,15 +181,13 @@
             <hr>
         </div>
     {% empty %}
-        <p>There are no reviews yet.</p>
+        <p class="no-reviews">There are no reviews yet.</p>
     {% endfor %}
 
     <!-- Add a review -->
     <div class="row">
         <div class="col">
-            {% if new_review %}
-                <p>There are no reviews yet</p>
-            {% else %}
+            {% if new_review == false %}
                 {% if user.is_authenticated %}
                     <form class="add-review-form" method="post">
                         {{ review_form | crispy }}
