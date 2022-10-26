@@ -302,7 +302,7 @@ footer{
 #search-bar{
     margin-top: 8px !important;
     left: 0;
-    margin-left: 0;
+    margin-left: -25px;
 }
 
 .desktop-search {
@@ -354,9 +354,6 @@ footer{
 }
 
 /* -------------------- Product Detail -------------------- */
-.product-heading {
-    text-decoration: underline;
-}
 
 .product-detail-image-container {
     margin: auto;
@@ -504,7 +501,6 @@ footer{
 
 .fa-heart:before {
     font-size: 1.5rem;
-    text-decoration: underline;
     color: #f4677f;
 }
 
@@ -599,7 +595,7 @@ footer{
 
 @media only screen and (max-width: 1000px) {
     .navigation-text {
-        margin: 0 29px;
+        margin: 0 25px;
     }
 }
 

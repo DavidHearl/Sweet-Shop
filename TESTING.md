@@ -15,28 +15,7 @@
 ## HTML Validation - https://validator.w3.org/
 ---
 
-### Home
-- Home Page
-
-- Sign Up Page
-- Sign In Page
-- Logout Page
-
-### Products
-- Products Page
-- Product Details
-- Update Product
-
-### Favourites
-- Favourites Page
-
-### Shopping Bag 
-- Shopping bag Page
-
-### Checkout
-- Checkout Summary Page
-- Checkout Page
-- Checkout Success Page=
+![HTML Validation](./testing_images/html-validation.png "HTML Validation")
 
 ## CSS Validation - https://jigsaw.w3.org/css-validator/validator.html.en
 ---

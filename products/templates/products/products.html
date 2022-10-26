@@ -200,9 +200,7 @@
                     {% endif %}
                 {% endif %}
             {% endfor %}
-            <button class="back-to-top">
-                <a>Back to Top</a>
-            </button>
+            <button class="back-to-top">Back to Top</button>
         </div>
     </div>
 {% endblock %}
@@ -210,7 +208,7 @@
 {% block postloadjs %}
 {{ block.super }}
 
-<script type="text/javascript">
+<script>
     $('.back-to-top').click(function(e) {
         window.scrollTo(0,0)
     })

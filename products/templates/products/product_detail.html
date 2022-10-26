@@ -54,7 +54,7 @@
         <div class="col-12 col-md-8">
             <div>
                 <!-- Product name and favourite status -->
-                <p class="home-heading product-heading">
+                <p class="home-heading">
                     {{ product.name }}
                     {% if product_in_favourites %}
                         <a href="{% url 'remove_from_favourites' product.id 'products' %}" aria-label="remove product from favourites"> <i class="fas fa-heart"></i></a>
