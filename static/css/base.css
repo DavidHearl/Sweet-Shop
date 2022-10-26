@@ -152,6 +152,7 @@ footer{
     border: none;
     color: black;
     margin: 10px auto;
+    margin-bottom: 2px;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     color: white;
     font-size: 1.1rem;
@@ -305,7 +306,8 @@ footer{
     margin-left: -25px;
 }
 
-.desktop-search {
+.desktop-search,
+.desktop-search-icon {
     margin-top: 10px;
     margin-left: 4px;
 }
@@ -326,10 +328,6 @@ footer{
     font-style: italic;
     text-decoration: underline;
     text-decoration-style: wavy;
-}
-
-.page-title {
-    margin-top: 12px;
 }
 
 .push-down{
@@ -546,6 +544,7 @@ footer{
     padding: 6px;
     margin-bottom: 20px;
     border-radius: 4px;
+
 }
 
 .pricing-form > p {
@@ -601,6 +600,35 @@ footer{
     margin-left: 10px;
 }
 
+.toast {
+    border: 1px solid rgb(50, 50, 50);
+}
+
+.toast-header {
+    border-bottom: 2px solid rgb(101, 177, 84);
+    background-color: rgb(240, 252, 240);
+}
+
+.toast-body {
+    background-color: rgb(240, 252, 240);
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+#div_id_price {
+    display: flex;
+    flex-direction: row;
+    max-width: 240px;
+}
+
+#id_price {
+    display: flex;
+    flex-direction: row;
+    margin: 2px 0 0 8px;
+    padding: 2px;
+    text-align: end;
+}
+
 /* -------------------- Mailchamp -------------------- */
 #mc_embed_signup{
     background:#fff;
@@ -617,7 +645,7 @@ footer{
     background-image: linear-gradient(to right top, #ffc6cf, #feb3be, #fb9fad, #f88b9c, #f4768a);
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1075px) {
     .navigation-text {
         margin: 0 25px;
     }
@@ -630,6 +658,10 @@ footer{
 
     .product-detail-image-container {
         margin-top: 60px;
+    }
+
+    #div_id_price {
+        max-width: 225px;
     }
 }
 
