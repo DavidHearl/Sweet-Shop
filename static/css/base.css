@@ -620,6 +620,15 @@ footer{
     border-bottom-right-radius: 6px;
 }
 
+.go-to-checkout-button {
+    text-align: center;
+    width: 100%;
+    padding: 4px;
+    border: 1px solid black;
+    margin-top: 8px;
+    border-radius: 4px;
+}
+
 #div_id_price {
     display: flex;
     flex-direction: row;

@@ -34,12 +34,13 @@
                         Total: 
                         <span class="float-right">£{{ total|floatformat:2 }}</span>
                     </p>
-                    <a href="{% url 'view_shopping_bag' %}" class="btn btn-black btn-block rounded-0">
-                        <span>Go To Secure Checkout</span>
-                        <span class="icon">
+                    <div class="go-to-checkout-button">
+                        <a href="{% url 'view_shopping_bag' %}" >
+                            Go To Secure Checkout
                             <i class="fas fa-lock"></i>
-                        </span>
-                    </a>
+                        </a>
+                    </div>
+                    
                 </div>
             </div>
         {% endif %}

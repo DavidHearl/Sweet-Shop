@@ -28,17 +28,20 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
-DEBUG = 'DEVELOPMENT' in os.environ
+DEBUG = True
+# DEBUG = 'DEVELOPMENT' in os.environ
 
 # ALLOWED_HOSTS = ['the-sweet-shop-davidhearl.herokuapp.com', 'localhost']
 ALLOWED_HOSTS = [
     '*',
     'localhost',
-    'the-sweet-shop-davidhearl.herokuapp.com', 
+    'the-sweet-shop-davidhearl.herokuapp.com'
 ]
 
-CSRF_TRUSTED_ORIGINS = ['the-sweet-shop-davidhearl.herokuapp.com']
+CSRF_TRUSTED_ORIGINS = [
+    'http://the-sweet-shop-davidhearl.herokuapp.com',
+    'https://8000-davidhearl-sweetshop-kaycha5tcft.ws-eu72.gitpod.io'
+]
 
 # Application definition
 
