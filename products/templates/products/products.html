@@ -66,12 +66,11 @@
                                 <div class="category-label text-center">
                                     <a class="category-text" href="{% url 'products' %}?category={{ product.category.name }}">
                                         <i class="fas fa-tag"></i> {{ product.category.friendly_name }}
-                                        
                                     </a>
                                 </div>
                             {% endif %}
                             <div class="card-body">
-                                <div class="text-center">{{ product.name }}</div>
+                                <h5 class="text-center">{{ product.name }}</h5>
                             </div>
 
                             <!-- Price, rating and edit buttons-->
@@ -133,22 +132,27 @@
                     {% if request.user.is_superuser %}
                         <div class="col-6 col-md-4 col-lg-3 col-xl-2 product-spacing-container">
                             <div class="card h-100 product-card">
-                                <div class="card-body text-center">
-                                    <div>{{ product.name }}</div>
+                                <!-- Placeholder, category and Name -->
+                                <div class="placeholder-div">
+                                    <p class="text-center">Placeholder</p>
                                 </div>
+
+                                {% if product.category %}
+                                    <div class="category-label text-center">
+                                        <a class="category-text" href="{% url 'products' %}?category={{ product.category.name }}">
+                                            <i class="fas fa-tag"></i> {{ product.category.friendly_name }}
+                                        </a>
+                                    </div>
+                                {% endif %}
+                                <div class="card-body">
+                                    <h5 class="text-center">{{ product.name }}</h5>
+                                </div>
+                                
+                                <!-- Price, rating and edit buttons-->
                                 <div class="card-footer bg-white">
                                     <div class="row">
                                         <div class="col">
                                             <p class="price text-center">£{{ product.price }} / 100g</p>
-
-                                            {% if product.category %}
-                                                <p class="category-label text-center">
-                                                    <a href="{% url 'products' %}?category={{ product.category.name }}">
-                                                        <i class="fas fa-tag">{{ product.category.friendly_name }}</i>
-                                                    </a>
-                                                </p>
-                                            {% endif %}
-
                                             {% if product.rating %}
                                                 <div class="text-center">
                                                     {% if product.rating >= 1 %}
@@ -184,14 +188,16 @@
                                                 <p>No Rating</p>
                                             {% endif %}
 
-                                            <div>
-                                                <button class="edit-button edit-delete">
-                                                    <a href="{% url 'modify_product' product.id %}" aria-hidden="true">Edit</a>
-                                                </button>
-                                                <button class="delete-button edit-delete">
-                                                    <a href="{% url 'delete_product' product.id %}" aria-hidden="true">Delete</a>
-                                                </button>
-                                            </div>
+                                            {% if request.user.is_superuser %}
+                                                <div>
+                                                    <button class="edit-button edit-delete">
+                                                        <a href="{% url 'modify_product' product.id %}">Edit</a>
+                                                    </button>
+                                                    <button class="delete-button edit-delete">
+                                                        <a href="{% url 'delete_product' product.id %}">Delete</a>
+                                                    </button>
+                                                </div>
+                                            {% endif %}
                                         </div>
                                     </div>
                                 </div>
