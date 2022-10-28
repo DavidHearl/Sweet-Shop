@@ -9,4 +9,3 @@ class TestHomeViews(TestCase):
         """ Test the home page """
         response = self.client.get('/')
         self.assertEqual(response.status_code, 200)
-        

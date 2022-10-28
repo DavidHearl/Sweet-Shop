@@ -1,6 +1,8 @@
+""" Test Checkout Urls work correctly """
 from django.test import TestCase
 from django.urls import reverse, resolve
-from checkout.views import checkout, checkout_completed_successfully, cache_checkout_data
+from checkout.views import checkout, \
+    checkout_completed_successfully, cache_checkout_data
 
 
 class TestUrls(TestCase):

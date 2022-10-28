@@ -27,7 +27,7 @@ class TestCheckoutModels(TestCase):
             county='Test country',
         )
 
-    def test_order_str_method(self):
+    def test_order_string(self):
         """ Test the order number string """
         order = Order.objects.get(email='test@test.com')
         self.assertEqual(str(order), order.order_number)
