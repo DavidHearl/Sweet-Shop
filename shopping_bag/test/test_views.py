@@ -12,6 +12,7 @@ class TestViews(TestCase):
         self.assertEqual(response.status_code, 200)
 
     def test_add_to_bag(self):
+        """ Test Adding product to shopping bag """
         product = Product.objects.create(
             name='Test Product',
             price='0.99',
@@ -24,25 +25,8 @@ class TestViews(TestCase):
             'redirect_url': f'/products/{product.id}/'})
         self.assertRedirects(response, f'/products/{product.id}/')
 
-    # def test_update_bag(self):
-    #     product = Product.objects.create(
-    #         name='Test Product',
-    #         price='0.99',
-    #         vegetarian=False,
-    #         description='Test Description',
-    #         image="Test image",
-    #         )
-    #     self.client.post(f'/shopping_bag/add/{product.id}/', {
-    #         'quantity': 1,
-    #         'redirect_url': f'/products/{product.id}/'})
-    #     response = self.client.post(f'/shopping_bag/adjust/{product.id}/', {
-    #         'quantity': 3
-    #         })
-    #     shopping_bag = self.client.session['shopping_bag']
-    #     self.assertEqual(shopping_bag['1'], 3)
-    #     self.assertRedirects(response, '/view_shopping_bag/')
-
     def test_remove_item_from_bag(self):
+        """ Test removing products from the shopping bag """
         product = Product.objects.create(
             name='Test Product',
             price='0.99',

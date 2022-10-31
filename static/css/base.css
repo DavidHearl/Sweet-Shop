@@ -623,10 +623,10 @@ footer{
 .go-to-checkout-button {
     text-align: center;
     width: 100%;
-    padding: 4px;
+    padding: 8px;
     border: 1px solid black;
-    margin-top: 8px;
-    border-radius: 4px;
+    margin-top: 10px;
+    border-radius: 8px;
 }
 
 #div_id_price {

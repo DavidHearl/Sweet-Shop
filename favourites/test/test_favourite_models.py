@@ -6,9 +6,7 @@ from products.models import Product
 
 
 class TestFavouriteModels(TestCase):
-    """
-    Testing for favourites models
-    """
+    """ Test the favourites models """
     def setUp(self):
         """
         Create test users, product and favourite
@@ -27,9 +25,7 @@ class TestFavouriteModels(TestCase):
             username=test_user
         )
 
-    def test_favourites_str_method(self):
-        """
-        This test tests the favourites str method
-        """
+    def test_favourites_string_method(self):
+        """ Test the favourite string method """
         favourite = Favourites.objects.get()
         self.assertEqual((favourite.__str__()), "test_user's Favourites")
