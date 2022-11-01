@@ -29,7 +29,6 @@
                             <thead>
                                 <tr>
                                     <th scope="col">Product Information</th>
-                                    <th scope="col"></th>
                                     <th scope="col">Price</th>
                                     <th scope="col">Quantity</th>
                                     <th scope="col">Subtotal</th>
@@ -38,11 +37,16 @@
 
                             {% for item in shopping_bag_items %}
                                 <tr>
-                                    <td class="p-3 w-25">
-                                        <img class="img-fluid rounded" src="{{ item.product.image.url }}" alt="product image">
-                                    </td>
-                                    <td class="p-3">
-                                        <p class="my-0">{{ item.product.name }}</p>
+                                    <td class="w-25">
+                                        <div class="product-detail-image-container">
+                                            <img class="img-fluid rounded" src="{{ item.product.image.url }}" alt="product image">
+                                            {{ item.product.name }}
+                                            {% if product.category %}
+                                                <a href="">
+                                                    <i class="fas fa-tag">{{ product.category.friendly_name }}</i>
+                                                </a>
+                                            {% endif %}
+                                        </div>
                                     </td>
                                     <td class="p-3">
                                         <p class="my-0">£{{ item.product.price }}</p>
@@ -86,14 +90,14 @@
                             </tr>
                             <tr>
                                 <td colspan="5" class="text-end">
-                                    <a href="{% url 'products' %}" class="btn">
+                                    <a href="{% url 'products' %}" class="product-detail-button">
                                         <span>
                                             <i class="fas fa-chevron-left"></i>
                                         </span>
                                         <span>Keep Shopping</span>
                                     </a>
-                                    <a href="{% url 'checkout' %}" class="btn">
-                                        <span>Secure Checkout</span>
+                                    <a href="{% url 'checkout' %}" class="serious-button">
+                                        Secure Checkout
                                         <span>
                                             <i class="fas fa-lock"></i>
                                         </span>
