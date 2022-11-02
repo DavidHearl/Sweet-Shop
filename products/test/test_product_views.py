@@ -44,7 +44,7 @@ class TestProductModels(TestCase):
 
     # Issue : The test is trying to open the product detail page
     # As there is a possibility of no image therefor no product 
-    # detail, the test fails
+    # detail, the test fails.
     # def test_get_product_detail(self):
     #     """ Test product detail view """
     #     product = Product.objects.get()

@@ -59,20 +59,30 @@ Some users can find it frustrating being forced to sign up to a site before a pu
 - The navbar is fixed to the top of the page to ensure that the user can navigate the depths of the site with a couple of clicks at all time
 - Footer is fixed on the bottom of all pages.
 
-## Wireframes
----
-Wireframes created with Balsamiq. The project was developed from initial wireframes.
+## Skeleton
 
+Wireframes created with Balsamiq. The project was then developed from the inital wire frames.
+
+### Home Page
 ![Desktop Home Page](./media/Desktop%20Home%20Page.png "Title")
-![Desktop Products Page](./media/Desktop%20Products%20Page.png "Title")
-
 ![iPad Home Page](./media/iPad%20Home%20Page.png "Title")
-![iPad Products Page](./media/iPad%20Products%20Page.png "Title")
-
 ![iPhone Home Page](./media/iPhone%20Home%20Page.png "Title")
+
+### All Products Page
+![Desktop Products Page](./media/Desktop%20Products%20Page.png "Title")
+![iPad Products Page](./media/iPad%20Products%20Page.png "Title")
 ![iPhone Products Page](./media/iPhone%20Products%20Page.png "Title")
 
-## User Stories
+### Product Detail Page
+
+### Checkout Summary Page
+
+### Checkout Page
+
+### Profile Page
+
+## User Experience
+---
 
 | User Stories | Met |
 |:----------|:---:|
@@ -115,96 +125,10 @@ When I wanted to start working on a feature, I moved the issue from the 'todo' l
 
 The user stories detailed above are aligned with the project goals. Which was to produce a simple, interactive online store where users could find all types of confectionary items. They would have the abilty to select a seemingly infinite combination of sweets and chocolate.
 
-## Models
+## Database Design
 ---
 
-### Order Line Item
-| Key | Name | Type |
-|:-:|:----------:|:-:|
-|FK|Order|CharField|
-|FK|Product Name|CharField|
-||Quantity|Integer Field|
-||Line Item Total|Decimal Field|
-
-### Category
-| Key | Name | Type |
-|:-:|:----------:|:-:|
-||Name|CharField|
-||Friendly Name|CharField|
-
-### Products
-| Key | Name | Type |
-|:-:|:----------:|:-:|
-|FK|Category|CharField|
-||Name|CharField|
-||Description|TextField|
-||Price|DecimalField|
-||Color|CharField|
-||Flavour|CharField|
-||Brand|CharField|
-||Vegiterian|BooleanField|
-||Rating|DecimalField|
-||Image|ImageField|
-
-### Review
-| Key | Name | Type |
-|:-:|:----------:|:-:|
-|FK|Product||
-|FK|Username||
-||name|CharField|
-||rating|DecimalField|
-||content|TextField|
-||created|DateTimeField|
-||updated|DateTimeField|
-||active|BooleanField|
-
-### Order
-| Key | Name | Type |
-|:-:|:----------:|:-:|
-||Order Number|CharField|
-|FK|User Profile||
-||Full Name|CharField|
-||Email|EmailField|
-||Phone Number|CharField|
-||Country|CountryField|
-||Postcode|CharField|
-||Town or City|CharField|
-||Street Address 1|CharField|
-||Street Address 2|CharField|
-||County|CharField|
-||Date|DateTimeField|
-||Delivery Cost|DecimalField|
-||Order Total|DecimalField|
-||Grand Total|DecimalField|
-||Original Shopping Bag|Text Field|
-||Stripe ID|CharField|
-
-### Order Line Item
-| Key | Name | Type |
-|:-:|:----------:|:-:|
-|FK|Order||
-|FK|Product||
-||Quantity|IntgerField|
-||Line Item Total|DecimalField|
-
-### User Profile
-| Key | Name | Type |
-|:-:|:----------:|:-:|
-||user|OneToOneField|
-||default_phone_number|CharField|
-||default_country|CountryField|
-||default_postcode|CharField|
-||default_town_or_city|CharField|
-||default_street_address1|CharField|
-||default_street_address2|CharField|
-||default_county|CharField|
-
-### Favourites
-| Key | Name | Type |
-|:-:|:----------:|:-:|
-||products|ManyToMany|
-||username|OneToOneField|
-
+![Database Schema](./testing_images/database-diagram.PNG "Canban")
 
 ## Technologies Used
 ---
@@ -248,10 +172,18 @@ The user stories detailed above are aligned with the project goals. Which was to
 ## Testing
 ---
 
-Testing is required on all features. All clickable links must be redirected to the correct pages. 
+Testing is required on all features, which are outlined and documented in the TESTING.md file which is linked below in this section. All clickable links must be redirected to the correct pages. 
 All forms linked to the database must be tested to ensure they post all the correct data.
 
-Full Testing details can be found here [Testing](./TESTING.md)
+HTML Code must pass through the [W3C HTML Validator](https://validator.w3.org/#validate_by_uri)
+
+CSS Code must pass through the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
+
+JavaScript code must pass through the [JSHint Validator](https://jshint.com/)
+
+Python Code must pass through the [PEP8 Validator](http://pep8online.com/)
+
+Full details on testing can be found here [Testing](./TESTING.md)
 
 ## Pass Criteria - Checklist
 ---

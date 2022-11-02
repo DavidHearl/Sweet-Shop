@@ -14,7 +14,7 @@ class TestProfileModels(TestCase):
             email='test@test.com')
         testuser.save()
 
-    def test_profile_str_method(self):
+    def test_profile_string_method(self):
         """ Test the userprofle username """
         testuser = User.objects.get(username='test_user')
         profile = UserProfile.objects.get(user=testuser)
