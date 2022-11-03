@@ -1,9 +1,9 @@
-# The Sweet Shop - [Live Website](https://the-sweet-shop.herokuapp.com)
+# The Sweet Shop - [Live Website](https://the-sweet-shop-davidhearl.herokuapp.com)
 
 The live website can be viewed using the link: https://the-sweet-shop-davidhearl.herokuapp.com
 
 ## Table of Contents
----
+
 [User Experience](#user-experience)
 
 [Agile Development](#agile-development-tool)
@@ -26,7 +26,6 @@ The live website can be viewed using the link: https://the-sweet-shop-davidhearl
 
 
 ## Objective
----
 
 The Sweet Shop is an e-commerce website that allows users to purchase a selection of confectionary items.
 The sweetshop was developed for my 5th portfolio project as part of my Diploma in software development.
@@ -46,7 +45,7 @@ An important aspect of the site was to give the user an option to purchase items
 Some users can find it frustrating being forced to sign up to a site before a purchase so I felt it was important to avoid this to limit any negative feedback on the site.
 
 ## Project Installation Requirements
----
+
 - pip3 install Django==3.2
 - pip3 install django-allauth
 - pip3 install Pillow
@@ -60,19 +59,19 @@ Some users can find it frustrating being forced to sign up to a site before a pu
 - pip3 install django-storages
 
 ## Scope
----
+
 - A simple intuitive UX experience;
 - Easy navigation for the user;
 - A site that is visually appealing and responsive across multiple devices
 
 ## Structure
----
+
 - A straightforward and clear layout is present to ensure users can navigate intuitively and have a pleasant experience
 - The navbar is fixed to the top of the page to ensure that the user can navigate the depths of the site with a couple of clicks at all time
 - The footer is fixed on the bottom of all pages.
 
 ## Skeleton
----
+
 
 Wireframes created with Balsamiq. The project was then developed from the initial wireframes.
 
@@ -89,7 +88,7 @@ Wireframes created with Balsamiq. The project was then developed from the initia
 ![Checkout Page](./testing_images/wireframes/checkout_wire.PNG "Checkout")
 
 ## User Experience
----
+
 
 [Back To Top](#table-of-contents)
 
@@ -124,7 +123,7 @@ Wireframes created with Balsamiq. The project was then developed from the initia
 |25|As a store owner I want to be able to delete a product so that I can remove items that are no longer in stock or are not for sale|[x]|
 
 ## Agile Development Tool
----
+
 [Back To Top](#table-of-contents)
 
 For the agile methodology, I used the GitHub kanban board, it was here where I created the user stories, first as a draft then progressed the items to issues in the to-do column. You can see a snapshot below.
@@ -138,17 +137,17 @@ When I wanted to start working on a feature, I moved the issue from the 'todo' l
 The user stories detailed above are aligned with the project goals. Which was to produce a simple, interactive online store where users could find all types of confectionary items. They would have the ability to select a seemingly infinite combination of sweets and chocolate.
 
 ## Database Design
----
+
 [Back To Top](#table-of-contents)
 
 ![Database Schema](./testing_images/database-diagram.PNG "Canban")
 
 ## Technologies Used
----
+
 [Back To Top](#table-of-contents)
 
 ### Languages
----
+
 
 | Key | Name |
 |:-:|:----------:|
@@ -160,7 +159,7 @@ The user stories detailed above are aligned with the project goals. Which was to
 |Markdown|https://en.wikipedia.org/wiki/Markdown|
 
 ### Tools, Libraries and Frameworks
----
+
 
 | Libraries / Frameworks / Tools | Description | Link |
 |:-:|:----------:|:-:|
@@ -184,7 +183,7 @@ The user stories detailed above are aligned with the project goals. Which was to
 |Stripe|online payments||
 
 ## Testing
----
+
 [Back To Top](#table-of-contents)
 
 Testing is required on all features, which are outlined and documented in the TESTING.md file which is linked below in this section. All clickable links must be redirected to the correct pages. 
@@ -201,7 +200,7 @@ Python Code must pass through the [PEP8 Validator](http://pep8online.com/)
 Full details on testing can be found here [Testing](./TESTING.md)
 
 ## Pass Criteria - Checklist
----
+
 [Back To Top](#table-of-contents)
 | Number | Marking Criteria | Met |
 |:-:|:----------|:---:|
@@ -250,7 +249,7 @@ Full details on testing can be found here [Testing](./TESTING.md)
 |6.1|Document the e-commerce business model underlying your application |[x]|
 
 ## E-Commerce Business Model and Business Page
----
+
 
 [Back To Top](#table-of-contents)
 
@@ -278,7 +277,7 @@ Once the user signs up, for the newsletter they show up in the dashboard as can 
 Disclaimer: The address has been blanked out on the image above
 
 ## Bugs
----
+
 
 [Back To Top](#table-of-contents)
 
@@ -291,7 +290,7 @@ Disclaimer: The address has been blanked out on the image above
 - Line errors will occur when lines are deemed to be longer than 79 characters. As a general rule, for all the files I have created, all lines that exceed 79 characters have been shortened unless it has a detrimental effect on readability or causes bugs. In these situations, leniency to 99 characters has been allowed.
 
 ## Deployment to Heroku
----
+
 
 [Back To Top](#table-of-contents)
 

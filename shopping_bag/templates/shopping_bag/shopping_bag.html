@@ -31,14 +31,14 @@
                                     <th scope="col">Product Information</th>
                                     <th scope="col">Price</th>
                                     <th scope="col">Quantity</th>
-                                    <th scope="col">Subtotal</th>
+                                    <th class="text-end scope="col">Subtotal</th>
                                 </tr>
                             </thead>
 
                             {% for item in shopping_bag_items %}
-                                <tr>
-                                    <td class="w-25">
-                                        <div class="product-detail-image-container">
+                                <tr class="shopping-bag-row">
+                                    <td class="shopping-bag-product-information">
+                                        <div class="shopping-bag-image-container">
                                             <img class="img-fluid rounded" src="{{ item.product.image.url }}" alt="product image">
                                             {{ item.product.name }}
                                             {% if product.category %}
@@ -48,10 +48,10 @@
                                             {% endif %}
                                         </div>
                                     </td>
-                                    <td class="p-3">
+                                    <td>
                                         <p class="my-0">£{{ item.product.price }}</p>
                                     </td>
-                                    <td class="p-3">
+                                    <td>
                                         <form class="form update-form" method="POST" action="{% url 'modify_shopping_bag' item.item_id %}">
                                             {% csrf_token %}
                                             <div class="form-group">
@@ -78,7 +78,7 @@
                                         <a class="update-link">Update</a>
                                         <a class="remove-item float-end" id="remove_{{ item.item_id }}">Remove</a>
                                     </td>
-                                    <td class="p-3">
+                                    <td class="text-end">
                                         <p class="my-0">£{{ item.product.price | calculate_subtotal:item.quantity }}</p>
                                     </td>
                                 </tr>
@@ -91,21 +91,15 @@
 
                             <!-- Keep Shopping / Checkout Buttons -->
                             <tr>
-                                <td colspan="5" class="text-center">
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <a href="{% url 'products' %}" class="serious-button">
-                                                <i class="fas fa-chevron-left"></i>
-                                                <span>Keep Shopping</span>
-                                            </a>
-                                        </div>
-                                        <div class="col-6">
-                                            <a href="{% url 'checkout' %}" class="serious-button">
-                                                Secure Checkout
-                                                <i class="fas fa-lock"></i>
-                                            </a>
-                                        </div>
-                                    </div>
+                                <td colspan="5" class="text-end shopping-bag-buttons">
+                                    <a href="{% url 'products' %}" class="serious-button">
+                                        <i class="fas fa-chevron-left"></i>
+                                        <span>Keep Shopping</span>
+                                    </a>
+                                    <a href="{% url 'checkout' %}" class="serious-button">
+                                        Secure Checkout
+                                        <i class="fas fa-lock"></i>
+                                    </a>
                                 </td>
                             </tr>
                         </table>

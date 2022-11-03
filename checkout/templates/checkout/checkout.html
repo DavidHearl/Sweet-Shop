@@ -28,7 +28,7 @@
         </div>
         <div class="row">
             <div class="col-12 col-lg-6 order-lg-last mb-5">
-                <p>Order Summary ({{ product_count }})</p>
+                <p class="text-center">Order Summary ({{ product_count }})</p>
                 <div class="row">
                     <div class="col-7 offset-2">
                         <p>Item</p>
@@ -56,13 +56,12 @@
             {% endfor %}
             <hr class="my-0">
             <div class="row text-end">
-                <div class="col-7 offset-2">
-                    <p class="my-0">Order Total</p>
-                    <p class="my-0">Grand Total</p>
+                <div class="col">
+                    <p class="mx-0 text-end"><strong>Grand Total</strong> </p>
+                    <p class="mx-0">£{{ grand_total | floatformat:2 }}</p>
                 </div>
-                <div>
-                    <p class="my-0">£{{ total | floatformat:2 }}</p>
-                    <p class="my-0">£{{ grand_total | floatformat:2 }}</p>
+            <div>
+                    
                 </div>
             </div>
             <div class="col-12 col-lg-6">
@@ -110,24 +109,21 @@
                         <input type="hidden" value="{{ client_secret }}" name="client_secret">
                     </fieldset>
 
-                    <div class="submit-button mt-5 mb-2">
-                        <a href="{% url 'view_shopping_bag' %}" class="serious-button">
-                            <span>
-                                <i class="fas fa-chevron-left"></i>
-                            </span>
-                            <span>Modify Shopping Bag</span>
+                    <div class="submit-button shopping-bag-checkout">
+                        <a href="{% url 'view_shopping_bag' %}" class="serious-button-a">
+                            <i class="fas fa-chevron-left"></i>
+                            Modify Shopping Bag
                         </a>
                         <button id="submit-button" class="serious-button">
-                            <span>Complete Order</span>
-                            <span>
-                                <i class="fas fa-lock"></i>
-                            </span>
+                            Complete Order
+                            <i class="fas fa-lock"></i>
                         </button>
-                        <p class="text-center">
-                            <span>
-                                <i class="fas fa-exclamation-circle"></i>
-                            </span>
-                            <span>Your card will be charged £{{ grand_total|floatformat:2}}</span>
+                        
+                    </div>
+                    <div class="text-center card-charge">
+                        <p>
+                            <i class="fas fa-exclamation-circle"></i>
+                            Your card will be charged £{{ grand_total|floatformat:2}}
                         </p>
                     </div>
                 </form>
