@@ -88,20 +88,24 @@
                                     <h6>Total: £{{ total|floatformat:2 }}</h6>
                                 </td>
                             </tr>
+
+                            <!-- Keep Shopping / Checkout Buttons -->
                             <tr>
-                                <td colspan="5" class="text-end">
-                                    <a href="{% url 'products' %}" class="product-detail-button">
-                                        <span>
-                                            <i class="fas fa-chevron-left"></i>
-                                        </span>
-                                        <span>Keep Shopping</span>
-                                    </a>
-                                    <a href="{% url 'checkout' %}" class="serious-button">
-                                        Secure Checkout
-                                        <span>
-                                            <i class="fas fa-lock"></i>
-                                        </span>
-                                    </a>
+                                <td colspan="5" class="text-center">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <a href="{% url 'products' %}" class="serious-button">
+                                                <i class="fas fa-chevron-left"></i>
+                                                <span>Keep Shopping</span>
+                                            </a>
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="{% url 'checkout' %}" class="serious-button">
+                                                Secure Checkout
+                                                <i class="fas fa-lock"></i>
+                                            </a>
+                                        </div>
+                                    </div>
                                 </td>
                             </tr>
                         </table>

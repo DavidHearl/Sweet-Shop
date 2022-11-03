@@ -4,7 +4,6 @@
   height: 40px;
   padding: 10px 12px;
   border: 1px solid transparent;
-  border-radius: 0px;
   background-color: white;
   box-shadow: 0 1px 3px 0 #e6ebf1;
   -webkit-transition: box-shadow 150ms ease;
@@ -43,14 +42,14 @@
 	left: 0;
 	height: 100%;
 	width: 100%;
-	background:#f4768aB3;
+	background:#f476c2b3;
 	z-index: 9999;
 }
 
 #payment-processing-spinner {
 	display: flex;
 	align-items: center;
-	justify-content: center;
-	margin: 0;
+  text-align: center;
+  margin-top: 100px;
 	height: 100%;
 }

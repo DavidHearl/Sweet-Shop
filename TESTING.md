@@ -2,34 +2,49 @@
 
 ## Table of Contents
 
-- Google's Lighthouse Performance
 - HTML Validation
 - CSS Validation
 - JS Validation
 - PEP8 Validation
+- User Story Testing
+- Google's Lighthouse Performance
 - Manual Testing
 - Automated Testing
 - Responsive Testing
-- Bugs
+
 
 ## HTML Validation - https://validator.w3.org/
 ---
 
 Home
 
+![Home HTML Validation](./testing_images/html_validation/html_home.png "HTML Home Validation")
+
 All Products
+
+![All Products HTML Validation](./testing_images/html_validation/html_all_products.png "HTML All Products Validation")
 
 Product Detail
 
 Add Products
 
+![Add Products HTML Validation](./testing_images/html_validation/html_add_product.png "HTML Add Product Validation")
+
 Manage Inventory
+
+![Manage Inventory HTML Validation](./testing_images/html_validation/html_manage_inventory.png "HTML Manage Inventory Validation")
 
 My Profile
 
+![Profile HTML Validation](./testing_images//html_validation/html_profile_validation.png "HTML Profile Validation")
+
 My Favourites
 
+![Favourite HTML Validation](./testing_images//html_validation/html_favourites.png "HTML Favourite Validation")
+
 Shopping Bag (Empty)
+
+![Shopping Bag Empty HTML Validation](./testing_images//html_validation/html_shopping_bag_empty.png "HTML Shopping Bag Empty Validation")
 
 Shopping Bag (Items)
 
@@ -40,39 +55,34 @@ Checkout
 
 ![CSS Validation](./testing_images/CSS%20Validator.png "CSS Validation")
 
+CSS Passes all validation. However, sometimes parse erros can be returned by the validator. If you follow the URL which the error is associated with you can see that it is an issue associated with bootstrap so can be disregarded.
+
 ## PEP 8 Validation - http://pep8online.com/
 ---
 
-#### Checkout
-- Admin.py
+Upon time of writing the pep 8 website is currently down. This means it is impossible to get screenshots of python files passing validation. As a work around I have installed pycodestyle as a linter. This shows up any issues in the development environment.
+
+The Screen shots below were taken before the website went down.
+
+Checkout / Admin.py
 
 ![Checkout Admin](./testing_images/pep8_validation/checkout-admin.png "Checkout Admin")
 
-- Forms.py
+Checkout / Forms.py
 
 ![Checkout Forms](./testing_images/pep8_validation/checkout-forms.png "Checkout Forms")
 
-- Models.py
+Checkout / Models.py
 
 ![Checkout Models](./testing_images/pep8_validation/checkout-models.png "Checkout Models")
 
-- Urls.py
+Checkout / Urls.py
 
 ![Checkout Urls](./testing_images/pep8_validation/checkout-urls.png "Checkout Urls")
 
-- Views.py
+Checkout / Views.py
 
 ![Checkout Views](./testing_images/pep8_validation/checkout-views.png "Checkout Views")
-
-- Webhook handler.py
-- There seems to be an issue with the webhook handler where it is causing errors on the tab indentation. I have reformatted the document as indent with tabs instead of spaces. Since the warnings do not effect the site at all I have elected to ignore the issue .
-
-![Checkout Webhook Handler](./testing_images/pep8_validation/checkout-webhookhandler.png "Webhook Handler")
-
-- Webhook.py
-- In the webhook.py file an error is causes due to line length. The readability would be greatly reduced if I was to ammend this issue and Django allows an extension to 99 characters in certain circumstances. Therefore it is best to overlook this issue
-
-![Checkout Webhook](./testing_images/pep8_validation/checkout-webhook.png "Checkout Webhook")
 
 #### Favourites
 - Models.py
@@ -156,8 +166,57 @@ Checkout
 
 ![Shopping Bag Views](./testing_images/pep8_validation/shoppingbag-views.png "")
 
-## Manual Testing
+## Lighthouse Testing
 ---
+
+Home
+
+All Products
+
+Product Detail
+
+Add Products
+
+Manage Inventory
+
+My Profile
+
+My Favourites
+
+Shopping Bag (Empty)
+
+Shopping Bag (Items)
+
+Checkout
+
+## User Story Testing
+---
+
+1. As a site user I want to be able to easily register for an account so that I can have a personal account and be able to view my profile
+2. As a site user I want to be able to easily login and logout of an account so I can access my personal account information
+3. As a site user I want to be able to recover my password so that I can still login even if I have forgotten my details
+4. As a site user I want to recive an email confirmation after I have registered for an account so that I can verify my account was created successfully
+5. As a site user I want to have a personalised profile so that I can view my previous orders and order confirmations
+6. As a site user I want to be able to save my payment information so that I can checkout quicker next time I visit the site
+7. As a shopper I want to view a list of products so that I can choose items to purchase
+8. As a shopper I want to view individual product details so that I can see the product description, price, and rating
+9. As a shopper I want to identify deals easily so that I can take advantage of savings on products that I would like to purchase
+10. As a shopper I want to see my purchase total at all times so I can keep track of how much I am going to spend
+11. As a shopper I want to be able to sort the list of available products so that I can easily find the products with the best rating and best price
+12. As a shopper I want to be able to sort for a specific category of product so that I can look for products with the best price and best rating in that category
+13. As a shopper I want to be able to sort by price or rating within a specific category so that I can find products easily
+14. As a shopper I want to search for a product by name or description so I can find a specific product I would like to purchase
+15. As a shopper I want to see what I have searched for and how many result have been returned so I can quickly see if the product I want to purchase is available
+16. As a shopper I want to be able to select the quantity when purchasing an item so that I can order more then 1 item
+17. As a shopper I want to view the items currently in my bad to summarise my purchases and the cost
+18. As a shopper I want to adjust the quantity of items in my shopping bag so I can easily make changes to my purchases before checkout
+19. As a shopper I want to be able to easily enter in my payment information so I can have a hassel free experience
+20. As a shopper I want to feel that my personal information is safe so that I can confiently provide the information required to make a purchase
+21. As a shopper I want to view and order confirmation after checkout to verify that I haven't made any mistakes
+22. As a shopper I want to recieve and email confirmation after checkout so I can keep the confirmation of the purchase for my records
+23. As a store owner I want to be able to add new items to my store so that I can add newly released products to the store
+24. As a store owner I want to be able to edit/update products in my store so that I can adjust price, descriptions, images and other criteria
+25. As a store owner I want to be able to delete a product so that I can remove items that are no longer in stock or are not for sale
 
 ## Automated Testing
 ---
@@ -226,16 +285,25 @@ It is important to note the file structure required for the tests. Within each a
 
 ## Responsive Testing
 
-## Bugs
----
+Home
 
-## Known Issues
+All Products
 
-- Highlighted when created the unit tests, accessing the product detail page fails for products that do not have images. This is not an issue in production as they cannot phyisically get to the page from the all products page. Products that do not have images will also not show up on the home page for non superusers
+Product Detail
 
-## Pylint and Flake8 Errros
+Add Products
 
-- Line errors will occur when lines are deemed to be longer then 79 characters. As a general rule, for all the files i have created, all lines that exceed the 79 characters have been shortened unless, it has a detremential effect on readability or causes bugs. In these situations a leniency to 99 characters has been allowed.
+Manage Inventory
+
+My Profile
+
+My Favourites
+
+Shopping Bag (Empty)
+
+Shopping Bag (Items)
+
+Checkout
 
 ## Credentials
 ---

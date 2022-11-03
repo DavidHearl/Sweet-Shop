@@ -20,8 +20,7 @@
     <div class="container push-down">
         <div class="row">
             <div class="col">
-                <hr>
-                <h2 class="mb-4">
+                <h2>
                     Checkout
                 </h2>
                 <hr>
@@ -71,13 +70,13 @@
                 <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                     {% csrf_token %}
                     <fieldset class="rounded px-3 mb-5">
-                        <legend class="fieldset-label px-2">Details
+                        <legend class="fieldset-label">Details
                             {{ order_form.full_name | as_crispy_field }}
                             {{ order_form.email | as_crispy_field }}
                         </legend>
                     </fieldset>
                     <fieldset class="px-3 mb-5">
-                        <legend class="fieldset-label px-2 w-auto">Delivery
+                        <legend class="fieldset-label">Delivery
                             {{ order_form.phone_number | as_crispy_field }}
                             {{ order_form.country | as_crispy_field }}
                             {{ order_form.postcode | as_crispy_field }}
@@ -86,7 +85,7 @@
                             {{ order_form.street_address2 | as_crispy_field }}
                             {{ order_form.county | as_crispy_field }}
                         </legend>
-                        <div class="form-check form-check-inline mr-0">
+                        <div class="form-check form-check-inline text-center">
                             {% if user.is_authenticated %}
                                 <label for="id-save-info">
                                     Save this information to my profile
@@ -112,19 +111,19 @@
                     </fieldset>
 
                     <div class="submit-button mt-5 mb-2">
-                        <a href="{% url 'view_shopping_bag' %}" class="btn">
+                        <a href="{% url 'view_shopping_bag' %}" class="serious-button">
                             <span>
                                 <i class="fas fa-chevron-left"></i>
                             </span>
                             <span>Modify Shopping Bag</span>
                         </a>
-                        <button id="submit-button" class="btn">
+                        <button id="submit-button" class="serious-button">
                             <span>Complete Order</span>
                             <span>
                                 <i class="fas fa-lock"></i>
                             </span>
                         </button>
-                        <p class="my-0">
+                        <p class="text-center">
                             <span>
                                 <i class="fas fa-exclamation-circle"></i>
                             </span>
@@ -137,9 +136,7 @@
     </div>
     <div id="payment-processing-overlay">
         <h1 class="payment-processing-spinner">
-            <span>
-                <i class="fas fa-3x fa-sync-alt fa-spin"></i>
-            </span>
+            <i class="fas fa-3x fa-sync-alt fa-spin"></i>
         </h1>
     </div>
 
