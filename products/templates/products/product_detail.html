@@ -37,14 +37,10 @@
                 {% if request.user.is_superuser %}
                     <div class="row">
                         <div class="col-6">
-                            <button class="delete-button">
-                                <a href="{% url 'delete_product' product.id %}">Delete</a>
-                            </button>
+                            <a class="delete-button" href="{% url 'delete_product' product.id %}">Delete</a>
                         </div>
                         <div class="col-6">
-                            <button class="edit-button">
-                                <a href="{% url 'modify_product' product.id %}">Edit</a>
-                            </button>
+                            <a class="edit-button" href="{% url 'modify_product' product.id %}">Edit</a>
                         </div>
                     </div>
                 {% endif %}
@@ -135,12 +131,10 @@
                     <!-- Keep Shopping / Add to bag buttons -->
                     <div class="row text-center product-detail-button-container">
                         <div class="col-6">
-                            <button class="product-detail-button">
-                                <a href="{% url 'products' %}">
-                                    <i class="fas fa-chevron-left"></i>
-                                    <span>Keep Shopping</span>
-                                </a>
-                            </button>
+                            <a href="{% url 'products' %}" class="product-detail-button">
+                                <i class="fas fa-chevron-left"></i>
+                                <span>Keep Shopping</span>
+                            </a>
                         </div>
                         <div class="col-6">
                             <input class="product-detail-button" type="submit" value="Add to Bag">

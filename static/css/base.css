@@ -448,6 +448,7 @@ footer{
     border: 1px solid black;
     border-radius: 28px;
     font-size: 1.1rem;
+    display: inline-block;
 }
 
 .product-detail-button > a {
@@ -510,6 +511,8 @@ footer{
     border-radius: 8px;
     color: white;
     border: 1px solid black;
+    display: inline-block;
+    text-align: center;
 }
 
 .edit-button > a,

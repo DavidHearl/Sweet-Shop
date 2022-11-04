@@ -36,19 +36,23 @@ Manage Inventory
 
 My Profile
 
-![Profile HTML Validation](./testing_images//html_validation/html_profile_validation.png "HTML Profile Validation")
+![Profile HTML Validation](./testing_images/html_validation/html_profile_validation.png "HTML Profile Validation")
 
 My Favourites
 
-![Favourite HTML Validation](./testing_images//html_validation/html_favourites.png "HTML Favourite Validation")
+![Favourite HTML Validation](./testing_images/html_validation/html_favourites.png "HTML Favourite Validation")
 
 Shopping Bag (Empty)
 
-![Shopping Bag Empty HTML Validation](./testing_images//html_validation/html_shopping_bag_empty.png "HTML Shopping Bag Empty Validation")
+![Shopping Bag Empty HTML Validation](./testing_images/html_validation/html_shopping_bag_empty.png "HTML Shopping Bag Empty Validation")
 
 Shopping Bag (Items)
 
+![Shopping Bag Items HTML Validation](./testing_images/html_validation/html_shopping_bag_items.png" HTML Shopping Bag Items Validation")
+
 Checkout
+
+![Checkout HTML Validation](./testing_images/html_validation/html_checkout.png" HTML Checkout Validation")
 
 ## CSS Validation - https://jigsaw.w3.org/css-validator/validator.html.en
 ---
@@ -285,25 +289,18 @@ It is important to note the file structure required for the tests. Within each a
 
 ## Responsive Testing
 
-Home
-
-All Products
-
-Product Detail
-
-Add Products
-
-Manage Inventory
-
-My Profile
-
-My Favourites
-
-Shopping Bag (Empty)
-
-Shopping Bag (Items)
-
-Checkout
+| Page | Desktop | Tablet | Mobile |
+|:-:|:-:|:-|:-:|
+|Home||||
+|All Products||||
+|Product Detail||||
+|Add Products||||
+|Manage Inventory||||
+|My Profile||||
+|My Favourites||||
+|Shopping Bag (Empty)||||
+|Shopping Bag (Items)||||
+|Checkout||||
 
 ## Credentials
 ---
