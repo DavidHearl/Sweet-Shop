@@ -1,7 +1,7 @@
 <script>
     // Disable Buttons
     function QuantityEnableDisable(itemId){
-        var currentValue = parseInt($(`#id_quantity_${itemId}`).val())
+        var currentValue = parseInt($(`#id_quantity_${itemId}`).val());
         var minusDisabled = currentValue < 2;
         var plusDisabled = currentValue > 29;
         $(`#decrement-quantity_${itemId}`).prop('disabled', minusDisabled);
@@ -39,5 +39,5 @@
         $(closestInput).val(currentValue - 1);
         var itemId = $(this).data('item_id');
         QuantityEnableDisable(itemId);
-    })
+    });
 </script>

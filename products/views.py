@@ -133,7 +133,7 @@ def add_product(request):
     if request.method == 'POST':
         modify_product = ModifyProductsForm(request.POST, request.FILES)
         if modify_product.is_valid():
-            modify_product.save()
+            product = modify_product.save()
             messages.success(request, 'New Product Added')
             return redirect(reverse('product_detail', args=[product.id]))
         else:

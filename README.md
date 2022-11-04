@@ -97,30 +97,29 @@ Wireframes created with Balsamiq. The project was then developed from the initia
 |1|As a site user I want to be able to easily register for an account so that I can have a personal account and be able to view my profile|[x]|
 |2|As a site user I want to be able to easily login and logout of an account so I can access my personal account information|[x]|
 |3|As a site user I want to be able to recover my password so that I can still login even if I have forgotten my details|[x]|
-|4|As a site user I want to receive an email confirmation after I have registered for an account so that I can verify my account was created successfully|[x]|
-|5|As a site user I want to have a personalised profile so that I can view my previous orders and order confirmations|[x]|
-|6|As a site user I want to be able to save my payment information so that I can checkout quicker next time I visit the site|[x]|
+|4|As a site user I want to have a personalised profile so that I can view my previous orders and order confirmations|[x]|
+|5|As a site user I want to be able to save my personal information so that I can checkout quicker next time I visit the site|[x]|
 ||||
-|7|As a shopper I want to view a list of products so that I can choose items to purchase|[x]|
-|8|As a shopper I want to view individual product details so that I can see the product description, price, and rating|[x]|
-|9|As a shopper I want to identify deals easily so that I can take advantage of savings on products that I would like to purchase|[x]|
-|10|As a shopper I want to see my purchase total at all times so I can keep track of how much I am going to spend|[x]|
-|11|As a shopper I want to be able to sort the list of available products so that I can easily find the products with the best rating and best price|[x]|
-|12|As a shopper I want to be able to sort for a specific category of product so that I can look for products with the best price and best rating in that category|[x]|
-|13|As a shopper I want to be able to sort by price or rating within a specific category so that I can find products easily|[x]|
-|14|As a shopper I want to search for a product by name or description so I can find a specific product I would like to purchase|[x]|
-|15|As a shopper I want to see what I have searched for and how many results have been returned so I can quickly see if the product I want to purchase is available|[x]|
-|16|As a shopper I want to be able to select the quantity when purchasing an item so that I can order more than 1 item|[x]|
-|17|As a shopper I want to view the items currently in my bad to summarise my purchases and the cost|[x]|
-|18|As a shopper I want to adjust the number of items in my shopping bag so I can easily make changes to my purchases before checkout|[x]|
-|19|As a shopper I want to be able to easily enter my payment information so I can have a hassle free experience|[x]|
-|20|As a shopper I want to feel that my personal information is safe so that I can confidently provide the information required to make a purchase|[x]|
-|21|As a shopper I want to view and order confirmation after checkout to verify that I haven't made any mistakes|[x]|
-|22|As a shopper I want to receive an email confirmation after checkout so I can keep the confirmation of the purchase for my records|[x]|
+|6|As a shopper I want to view a list of products so that I can choose items to purchase|[x]|
+|7|As a shopper I want to view individual product details so that I can see the product description, price, and rating|[x]|
+|8|As a shopper I want to identify deals easily so that I can take advantage of savings on products that I would like to purchase|[x]|
+|9|As a shopper I want to see my purchase total at all times so I can keep track of how much I am going to spend|[x]|
+|10|As a shopper I want to be able to sort the list of available products so that I can easily find the products with the best rating and best price|[x]|
+|11|As a shopper I want to be able to sort for a specific category of product so that I can look for products with the best price and best rating in that category|[x]|
+|12|As a shopper I want to be able to sort by price or rating within a specific category so that I can find products easily|[x]|
+|13|As a shopper I want to search for a product by name or description so I can find a specific product I would like to purchase|[x]|
+|14|As a shopper I want to see what I have searched for and how many results have been returned so I can quickly see if the product I want to purchase is available|[x]|
+|15|As a shopper I want to be able to select the quantity when purchasing an item so that I can order more than 1 item|[x]|
+|16|As a shopper I want to view the items currently in my bad to summarise my purchases and the cost|[x]|
+|17|As a shopper I want to adjust the number of items in my shopping bag so I can easily make changes to my purchases before checkout|[x]|
+|18|As a shopper I want to be able to easily enter my payment information so I can have a hassle-free experience|[x]|
+|19|As a shopper I want to feel that my personal information is safe so that I can confidently provide the information required to make a purchase|[x]|
+|20|As a shopper I want to view and order confirmation after checkout to verify that I haven't made any mistakes|[x]|
+|21|As a shopper I want to receive an email confirmation after checkout so I can keep the confirmation of the purchase for my records|[x]|
 ||||
-|23|As a store owner I want to be able to add new items to my store so that I can add newly released products to the store|[x]|
-|24|As a store owner I want to be able to edit/update products in my store so that I can adjust prices, descriptions, images and other criteria|[x]|
-|25|As a store owner I want to be able to delete a product so that I can remove items that are no longer in stock or are not for sale|[x]|
+|22|As a store owner I want to be able to add new items to my store so that I can add newly released products to the store|[x]|
+|23|As a store owner I want to be able to edit/update products in my store so that I can adjust prices, descriptions, images and other criteria|[x]|
+|24|As a store owner I want to be able to delete a product so that I can remove items that are no longer in stock or are not for sale|[x]|
 
 ## Agile Development Tool
 
