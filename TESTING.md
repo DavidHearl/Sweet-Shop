@@ -2,19 +2,29 @@
 
 ## Table of Contents
 
-- HTML Validation
-- CSS Validation
-- JS Validation
-- PEP8 Validation
-- User Story Testing
-- Google's Lighthouse Performance
-- Manual Testing
-- Automated Testing
-- Responsive Testing
+[HTML Validation](#html-validation)
 
+[CSS Validation](#css-validation)
 
-## HTML Validation - https://validator.w3.org/
----
+[JS Validation](#javascript-validation)
+
+[PEP8 Validation](#pep-8-validation)
+
+[Google's Lighthouse Performance](#lighthouse-testing)
+
+[User Story Testing](#user-story-testing)
+
+[Automated Testing](#automated-testing)
+
+[Responsive Testing](#responsive-testing)
+
+[Credentials](#credentials)
+
+## HTML Validation
+
+[Back To Top](#table-of-contents)
+
+https://validator.w3.org/
 
 Home
 
@@ -25,6 +35,8 @@ All Products
 ![All Products HTML Validation](./testing_images/html_validation/html_all_products.png "HTML All Products Validation")
 
 Product Detail
+
+![Product Detail HTML Validation](./testing_images/html_validation/html_product_detail.png "HTML Product Detail Validation")
 
 Add Products
 
@@ -48,21 +60,33 @@ Shopping Bag (Empty)
 
 Shopping Bag (Items)
 
-![Shopping Bag Items HTML Validation](./testing_images/html_validation/html_shopping_bag_items.png" HTML Shopping Bag Items Validation")
+![Shopping Bag Items HTML Validation](./testing_images/html_validation/html_shopping_bag_items.png "HTML Shopping Bag Items Validation")
 
 Checkout
 
-![Checkout HTML Validation](./testing_images/html_validation/html_checkout.png" HTML Checkout Validation")
+![Checkout HTML Validation](./testing_images/html_validation/html_checkout.png "HTML Checkout Validation")
 
-## CSS Validation - https://jigsaw.w3.org/css-validator/validator.html.en
----
+## CSS Validation 
+
+[Back To Top](#table-of-contents)
+
+https://jigsaw.w3.org/css-validator/validator.html.en
 
 ![CSS Validation](./testing_images/CSS%20Validator.png "CSS Validation")
 
 CSS Passes all validation. However, sometimes parse erros can be returned by the validator. If you follow the URL which the error is associated with you can see that it is an issue associated with bootstrap so can be disregarded.
 
-## PEP 8 Validation - http://pep8online.com/
----
+## Javascript Validation
+
+[Back To Top](#table-of-contents)
+
+https://jshint.com
+
+## PEP 8 Validation
+
+[Back To Top](#table-of-contents)
+
+http://pep8online.com/
 
 Upon time of writing the pep 8 website is currently down. This means it is impossible to get screenshots of python files passing validation. As a work around I have installed pycodestyle as a linter. This shows up any issues in the development environment.
 
@@ -155,7 +179,6 @@ Checkout / Views.py
 
 ![Profile Views](./testing_images/pep8_validation/profiles-views.png "")
 
-
 #### Shopping Bag
 
 - contexts.py
@@ -171,30 +194,14 @@ Checkout / Views.py
 ![Shopping Bag Views](./testing_images/pep8_validation/shoppingbag-views.png "")
 
 ## Lighthouse Testing
----
+
+[Back To Top](#table-of-contents)
 
 Home
 
-All Products
-
-Product Detail
-
-Add Products
-
-Manage Inventory
-
-My Profile
-
-My Favourites
-
-Shopping Bag (Empty)
-
-Shopping Bag (Items)
-
-Checkout
-
 ## User Story Testing
----
+
+[Back To Top](#table-of-contents)
 
 1. As a site user I want to be able to easily register for an account so that I can have a personal account and be able to view my profile
 2. As a site user I want to be able to easily login and logout of an account so I can access my personal account information
@@ -223,7 +230,9 @@ Checkout
 25. As a store owner I want to be able to delete a product so that I can remove items that are no longer in stock or are not for sale
 
 ## Automated Testing
----
+
+[Back To Top](#table-of-contents)
+
 Automated Unit Testing werer carried out using Django's inbuilt testing tools. Tools were written to cover a large variety of the site. Below Are instructions on how to run the tests, with an overview of the __29__ tests.
 
 Before testing can begin the database needs to be disabled. To do this we need to go into the env.py file and comment out the "DATABASE_URL" value which should be mapped to our postgres database. Once this is done, you can run the tests with the following command.
@@ -289,6 +298,8 @@ It is important to note the file structure required for the tests. Within each a
 
 ## Responsive Testing
 
+[Back To Top](#table-of-contents)
+
 | Page | Desktop | Tablet | Mobile |
 |:-:|:-:|:-|:-:|
 |Home||||
@@ -303,7 +314,9 @@ It is important to note the file structure required for the tests. Within each a
 |Checkout||||
 
 ## Credentials
----
+
+[Back To Top](#table-of-contents)
+
 To test higher functionality of the site, the admin credentials found below can be used
 
 __Username : admin__
