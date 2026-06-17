@@ -27,7 +27,7 @@
    "[html]": {
       "editor.defaultFormatter": "HookyQR.beautify"
    },
-   "workbench.preferredDarkColorTheme": "Default Dark+",
+   "workbench.preferredDarkColorTheme": "Dark+",
    "[python]": {
       "editor.defaultFormatter": "ms-python.python"
    },
